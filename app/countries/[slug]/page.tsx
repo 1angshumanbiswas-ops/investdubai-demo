@@ -10,8 +10,7 @@ import type { CountryPage } from '@/lib/types'
 interface Props { params: Promise<{ slug: string }> }
 
 export async function generateStaticParams() {
-  const slugs = await sanityFetch<{ slug: string }[]>(ALL_COUNTRY_SLUGS_QUERY)
-  return slugs.map(s => ({ slug: s.slug }))
+  return []
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

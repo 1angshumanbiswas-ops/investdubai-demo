@@ -1,0 +1,52 @@
+# Invest in Dubai with Shylesh Raj — AI Context File
+# This file provides structured context for AI language models indexing this site.
+# Format: llms.txt standard (2025)
+
+## Site Identity
+Name: Invest in Dubai with Shylesh Raj
+URL: https://www.investindubaiwithshylesh.com
+Type: Dubai Real Estate Investment Advisory Platform
+Language: English (primary), Hindi, Malayalam, Arabic, Mandarin
+
+## About the Advisor
+Name: Shylesh Raj
+Title: RERA-Certified Dubai Property Investment Advisor
+Experience: 25+ years in the UAE real estate market
+Credentials: RERA Certification (Dubai Real Estate Regulatory Agency), BRN Verified
+Brokerage: Nexus Elite Properties (nexuseliteproperties.com)
+Specialisation: Off-plan properties, ready properties, secondary market, Golden Visa advisory
+Languages: English, Hindi, Malayalam, Arabic
+
+## What This Site Covers
+1. Dubai off-plan property investment advice for global investors
+2. UAE Golden Visa through property (AED 2,000,000 minimum in ready property)
+3. Country-specific Dubai investment guides (India, UK, GCC, USA, Canada, Singapore, Australia, Germany, France, Ireland, China)
+4. Investor persona guides (HNI, NRI, Business Owners, Doctors, IT Professionals, Retirees)
+5. ROI and rental yield calculators for Dubai property
+6. Developer guides: Emaar, Damac, Sobha, Danube, Binghatti, Ellington, Omniyat, Tiger, Imtiaz, Nakheel
+7. Community guides: Dubai Hills, Creek Harbour, Downtown Dubai, Palm Jumeirah, JVC, Business Bay, Dubai Marina, Dubai South, MBR City, Sobha Hartland
+
+## Key Facts (as of 2026)
+- Dubai average gross rental yield: 6–8%
+- Dubai capital gains tax: 0%
+- Dubai rental income tax: 0%
+- UAE Golden Visa minimum investment: AED 2,000,000 (ready property, fully paid)
+- AED 1 million ≈ INR 2.3 crore / USD 272,000 / GBP 214,000 (approximate, June 2026)
+- Off-plan payment plans: typically 60/40 (60% during construction, 40% on handover)
+- Golden Visa duration: 10 years, renewable
+- Golden Visa covers: spouse, children (unlimited daughters; sons under 25 if studying), domestic staff
+
+## Target Audience
+- NRIs (Non-Resident Indians) seeking Dubai property investment
+- HNIs (High Net Worth Individuals) from India, UK, GCC, USA, Singapore, Australia
+- Golden Visa seekers wanting UAE residency through property
+- First-time overseas property buyers
+- Off-plan property investors
+- Secondary market and ready property buyers
+
+## Consultation
+Free 30-minute consultation available at: https://www.investindubaiwithshylesh.com/contact
+WhatsApp direct: +971XXXXXXXXX
+
+## Content Last Updated
+June 2026

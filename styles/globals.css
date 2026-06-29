@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #1A2E4A;
+  --color-navy-dark: #0F1E30;
+  --color-gold: #C9A84C;
+  --color-gold-light: #E4C97A;
+  --color-cream: #F4F0E8;
+  --color-charcoal: #2A2A2A;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+}
+
+/* ── Base resets ─────────────────────────────────────────── */
+html { scroll-behavior: smooth; }
+body { @apply bg-white text-charcoal antialiased; }
+
+/* ── Luxury heading font ─────────────────────────────────── */
+h1, h2, h3 { font-family: var(--font-display); }
+
+/* ── Gold divider ────────────────────────────────────────── */
+.divider-gold {
+  @apply border-t-2 border-gold my-8;
+}
+
+/* ── Prose inside blog articles ──────────────────────────── */
+.prose-luxury h2 { @apply text-navy font-display text-2xl font-bold mt-10 mb-4; }
+.prose-luxury p  { @apply text-charcoal leading-relaxed mb-4; }
+.prose-luxury ul { @apply list-disc list-inside space-y-2 mb-4; }
+.prose-luxury table { @apply w-full border-collapse mb-6; }
+.prose-luxury th { @apply bg-navy text-white px-4 py-2 text-left text-sm; }
+.prose-luxury td { @apply border border-gray-200 px-4 py-2 text-sm; }

@@ -1,0 +1,243 @@
+# GoHighLevel CRM Setup & Automation Guide
+# investindubaiwithshylesh.com
+# Prepared by Angshuman Biswas — June 2026
+
+========================================================
+PART 1 — INITIAL ACCOUNT SETUP
+========================================================
+
+1. Sign up at gohighlevel.com → Choose "Unlimited" plan ($297/month)
+2. In your sub-account: Settings → Business Profile
+   - Business Name: Invest in Dubai with Shylesh Raj
+   - Phone: +971XXXXXXXXX
+   - Email: shylesh@investindubaiwithshylesh.com
+   - Industry: Real Estate
+
+3. Load the "Real Estate" Snapshot:
+   Settings → Snapshots → Import Snapshot → Search "Real Estate"
+   This gives pre-built pipelines, email templates, and workflows.
+
+========================================================
+PART 2 — LEAD PIPELINE STAGES
+========================================================
+
+Go to: CRM → Pipelines → Create New Pipeline → "Dubai Property Leads"
+
+Stages (in order):
+1. New Lead         — auto-created when webhook fires
+2. Qualified        — after AI advisor conversation completed
+3. Consultation Booked — after calendar booking confirmed
+4. Under Follow-up  — active nurture phase
+5. Hot Lead         — score >= 60 (see Part 4)
+6. Converted        — property purchased / deal closed
+7. Lost / Cold      — no response after 30 days
+
+========================================================
+PART 3 — CUSTOM FIELDS (add to every contact)
+========================================================
+
+Go to: Settings → Custom Fields → Add Field
+
+Field Name           | Type     | Values
+---------------------|----------|----------------------------------------
+country              | Dropdown | India, UAE, GCC, UK, USA, Canada, etc.
+budget_range         | Dropdown | Under 500K, 500K-1M, 1M-2M, 2M-5M, 5M+
+investment_purpose   | Dropdown | Rental Income, Capital Gain, Golden Visa, Own Use
+property_type_pref   | Dropdown | Apartment, Villa, Townhouse, Luxury
+golden_visa_interest | Checkbox | Yes / No
+language             | Dropdown | English, Hindi, Malayalam, Arabic, Mandarin
+whatsapp_number      | Phone    | (free text)
+lead_score           | Number   | 0–100
+conversation_summary | Textarea | (AI advisor summary)
+source_page          | Text     | (which page form was submitted on)
+
+========================================================
+PART 4 — LEAD SCORING WORKFLOW
+========================================================
+
+Go to: Automation → Workflows → Create New → "Lead Scoring"
+
+TRIGGER: Contact Updated (any field change)
+
+ACTIONS (if/then logic):
+
+IF: Contact opens WhatsApp message
+  → Add to custom field "lead_score" +20
+
+IF: Contact visits /roi-calculator (via GA4 event webhook)
+  → Add to custom field "lead_score" +15
+
+IF: Contact visits /countries/* (via GA4 event webhook)
+  → Add to custom field "lead_score" +15
+
+IF: Contact submits AI Advisor lead form
+  → Add to custom field "lead_score" +20
+
+IF: Contact books a calendar appointment
+  → Add to custom field "lead_score" +25
+  → Move to pipeline stage "Consultation Booked"
+
+IF: Contact opens 3+ emails in drip sequence
+  → Add to custom field "lead_score" +10
+
+IF: Contact replies to WhatsApp message
+  → Add to custom field "lead_score" +30
+
+IF: Contact unsubscribes from email
+  → Add to custom field "lead_score" -10
+
+HOT LEAD TRIGGER:
+IF: lead_score >= 60
+  → Move to pipeline stage "Hot Lead"
+  → Send internal notification to Shylesh (email + SMS)
+  → Create task: "Call this lead personally within 2 hours"
+  → Send WhatsApp to Shylesh: "🔥 Hot Lead Alert: [Contact Name] from [Country], Budget: [Budget]. Score: [Score]. Call now."
+
+========================================================
+PART 5 — AUTOMATION WORKFLOW 1: NEW LEAD INSTANT RESPONSE
+========================================================
+
+Go to: Automation → Workflows → "New Lead - Instant Response"
+
+TRIGGER: Webhook received (from website /api/lead endpoint)
+
+ACTIONS (in sequence):
+
+Step 1: Create Contact
+  - Map fields from webhook: name, phone, email, country, budget, source
+
+Step 2: Add to Pipeline
+  - Pipeline: Dubai Property Leads
+  - Stage: New Lead
+
+Step 3: Wait — 0 minutes (immediate)
+
+Step 4: Send WhatsApp Message (Template: "Initial Welcome")
+  Template text:
+  "Hello {{contact.first_name}}, thank you for your interest in Dubai property investment. 
+  I am Shylesh Raj, a RERA-certified advisor with 25+ years in the UAE market. 
+  I will personally call you within 24 hours. 
+  In the meantime, here is our Dubai Investor Guide: https://investindubaiwithshylesh.com/blog
+  — Shylesh Raj | RERA-Certified Dubai Property Advisor"
+
+Step 5: Wait — 2 minutes
+
+Step 6: Send Email (Template: "Welcome Email")
+  Subject: "Your Dubai Property Journey Starts Here — Shylesh Raj"
+  Body: Welcome email with property guide link, ROI calculator link, and booking link
+
+Step 7: Create Task for Shylesh
+  Title: "New Lead — Call {{contact.first_name}} ({{contact.country}})"
+  Due: 24 hours from now
+  Description: "Budget: {{contact.budget_range}} | Source: {{contact.source_page}} | WhatsApp: {{contact.phone}}"
+
+Step 8: Add Tag: "New Lead", "{{contact.country}}", "{{contact.budget_range}}"
+
+========================================================
+PART 6 — AUTOMATION WORKFLOW 2: 7-DAY EMAIL DRIP
+========================================================
+
+Go to: Automation → Workflows → "7-Day Dubai Investment Drip"
+
+TRIGGER: Contact Created AND source = any form
+
+DAY 0: Welcome Email (immediate — handled in Workflow 1)
+
+DAY 1: Email — "Why Dubai? 5 Reasons Global Investors Are Buying Now"
+  - Link to: investindubaiwithshylesh.com/blog/why-dubai-2026
+  - CTA: "Book My Free Call →"
+
+DAY 3: Email — "How Much Can You Earn? Dubai ROI Calculator"
+  - Link to: investindubaiwithshylesh.com/roi-calculator
+  - CTA: "Calculate My Returns →"
+
+DAY 5: Email — "The Golden Visa Opportunity You Might Be Missing"
+  - Link to: investindubaiwithshylesh.com/golden-visa
+  - CTA: "Check My Eligibility →"
+
+DAY 7: Email — "Personal Note from Shylesh"
+  - Personal, text-only email from Shylesh
+  - CTA: "Book My Free Consultation →"
+
+IF: Contact books consultation at any point → Remove from drip, move to "Consultation Booked" pipeline
+
+========================================================
+PART 7 — AUTOMATION WORKFLOW 3: CONSULTATION REMINDER
+========================================================
+
+TRIGGER: Appointment Booked (GHL Calendar)
+
+Step 1: Immediately send WhatsApp confirmation:
+  "Your consultation with Shylesh Raj is confirmed! 📅 {{appointment.start_time}}
+  Join link: {{appointment.meeting_link}}
+  WhatsApp me if you need to reschedule: +971XXXXXXXXX"
+
+Step 2: 24 hours before: Send WhatsApp reminder
+  "Reminder: Your Dubai property consultation with Shylesh is tomorrow at {{appointment.start_time}}. 
+  See you then! — Shylesh"
+
+Step 3: 1 hour before: Send WhatsApp reminder
+  "Your consultation starts in 1 hour. Join here: {{appointment.meeting_link}}"
+
+Step 4: 30 mins after scheduled time (if no show):
+  Trigger no-show workflow → Add tag "No Show" → Create task to reschedule
+
+========================================================
+PART 8 — WHATSAPP BUSINESS API SETUP
+========================================================
+
+1. Go to: Settings → Integrations → WhatsApp Business
+2. You need a Facebook Business Manager account (verified)
+3. You need a dedicated phone number NOT used on personal WhatsApp
+4. GHL walks you through the setup — typically takes 24–48 hours for approval
+
+Message Templates (pre-approve before use):
+- "initial_welcome" — the instant response message (Part 5, Step 4)
+- "consultation_confirmed" — booking confirmation
+- "consultation_reminder_24h" — day-before reminder
+- "hot_lead_internal" — internal alert to Shylesh
+
+Note: Free-form WhatsApp messages (not templates) can only be sent within 24 hours 
+of the contact's last message. Templates can be sent at any time.
+
+========================================================
+PART 9 — DAILY DIGEST EMAIL TO SHYLESH
+========================================================
+
+Go to: Automation → Workflows → "Daily Hot Lead Digest"
+
+TRIGGER: Time-based — every day at 8:00 AM UAE time (GMT+4)
+
+FILTER: lead_score >= 60 AND pipeline stage != "Converted"
+
+ACTION: Send internal email to shylesh@investindubaiwithshylesh.com
+  Subject: "🔥 Hot Leads Report — {{date}}"
+  Body: List of all contacts with score >= 60, their country, budget, and last activity
+
+========================================================
+PART 10 — GA4 → GHL WEBHOOK INTEGRATION
+========================================================
+
+To track website behaviour (ROI calculator use, page visits) and fire into GHL:
+
+Option A — Zapier (simplest):
+  1. Create a Zapier account
+  2. Set up: GA4 Event → Zapier → GHL Contact Update
+  3. Map events: "calculator_use" → add_score +15 in GHL
+
+Option B — Direct webhook via GA4 Measurement Protocol:
+  In your Next.js app, after key user actions, call:
+  
+  fetch(process.env.GHL_WEBHOOK_URL, {
+    method: 'POST',
+    body: JSON.stringify({ 
+      event: 'calculator_use',
+      email: userEmail,  // if known
+      phone: userPhone,  // if known
+    })
+  })
+
+========================================================
+END OF GUIDE
+Prepared by Angshuman Biswas | June 2026
+========================================================

@@ -23,7 +23,7 @@ const STEPS = [
   { step: '01', title: 'Select Eligible Property', desc: 'Choose a ready property priced at AED 2,000,000 or above. Shylesh will verify Golden Visa eligibility before you commit.' },
   { step: '02', title: 'Register with Dubai Land Department', desc: 'The property must be registered in your name with the DLD. Shylesh handles all paperwork and DLD coordination.' },
   { step: '03', title: 'Obtain Property Valuation Certificate', desc: 'The DLD issues a valuation certificate confirming the property value meets the AED 2M threshold.' },
-  { step: '04', title: 'Apply to ICA (Federal Authority for Identity)', desc: 'Submit the Golden Visa application to the UAE's Federal Authority for Identity and Citizenship (ICA) online.' },
+  { step: '04', title: 'Apply to ICA (Federal Authority for Identity)', desc: "Submit the Golden Visa application to the UAE's Federal Authority for Identity and Citizenship (ICA) online." },
   { step: '05', title: 'Medical Fitness Test', desc: 'Complete a UAE medical fitness test at an approved health centre. Usually takes 1–2 days.' },
   { step: '06', title: 'Emirates ID Issuance', desc: 'Once approved, your Emirates ID is issued — the primary identity document in the UAE.' },
   { step: '07', title: 'Visa Stamp & Residency', desc: 'Your passport is stamped with the 10-year UAE Golden Residency Visa. The family sponsorship process begins.' },

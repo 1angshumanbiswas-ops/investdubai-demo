@@ -49,7 +49,7 @@ export default async function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-4 py-1.5 text-gold text-sm mb-6">
-              <span>🏅</span> RERA-Certified  •  BRN Verified  •  25+ Years UAE
+              <span>🏅</span> RERA Broker #77789  •  BRN Verified  •  25+ Years UAE
             </div>
             <h1 className="font-display text-white text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
               Invest in Dubai Properties with a{' '}
@@ -68,8 +68,20 @@ export default async function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="hidden lg:block">
-            <ROICalculator compact />
+        <div className="hidden lg:flex flex-col items-center gap-4">
+            <div className="relative">
+              <img
+                src="/shylesh.jpg"
+                alt="Shylesh Raj - RERA Certified Dubai Property Advisor"
+                className="w-80 h-96 object-cover object-top rounded-2xl border-4 border-gold/30 shadow-2xl"
+                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+              />
+              <div className="absolute bottom-4 left-4 right-4 bg-navy/90 backdrop-blur-sm rounded-xl p-3 border border-gold/20">
+                <p className="text-white font-semibold text-sm">Shylesh Raj</p>
+                <p className="text-gold text-xs">RERA Broker #77789</p>
+                <p className="text-white/60 text-xs">Nexus Elite Properties</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

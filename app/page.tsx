@@ -74,7 +74,7 @@ export default async function HomePage() {
                 src="/shylesh.jpg"
                 alt="Shylesh Raj - RERA Certified Dubai Property Advisor"
                 className="w-80 h-96 object-cover object-top rounded-2xl border-4 border-gold/30 shadow-2xl"
-                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                
               />
               <div className="absolute bottom-4 left-4 right-4 bg-navy/90 backdrop-blur-sm rounded-xl p-3 border border-gold/20">
                 <p className="text-white font-semibold text-sm">Shylesh Raj</p>

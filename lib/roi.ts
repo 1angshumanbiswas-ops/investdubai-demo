@@ -1,4 +1,4 @@
-import type { ROIInputs, ROIOutputs } from './types'
+type ROIInputs = { propertyPrice: number; annualRent: number; serviceCharge: number; maintenancePct: number; appreciationPct: number; holdingYears: number; currency: string }; type ROIOutputs = { grossYield: number; netYield: number; totalROI: number; capitalAppreciation: number; exitValue: number; totalRentIncome: number; goldenVisaEligible: boolean }
 
 export function calculateROI(inputs: ROIInputs): ROIOutputs {
   const {

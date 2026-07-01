@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import type { Message, LeadData } from '@/lib/types'
+type Message = { role: 'user' | 'assistant'; content: string }; type LeadData = { name: string; whatsapp: string; country: string; budget: string; email?: string }
 
 const LANGUAGES = ['English', 'हिंदी', 'മലയാളം', 'عربي', '中文', 'Deutsch', 'Français']
 

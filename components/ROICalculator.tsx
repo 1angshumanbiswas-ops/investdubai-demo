@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { calculateROI, CURRENCIES, formatCurrency } from '@/lib/roi'
-import type { ROIInputs } from '@/lib/types'
+type ROIInputs = { propertyPrice: number; annualRent: number; serviceCharge: number; maintenancePct: number; appreciationPct: number; holdingYears: number; currency: string }
 
 const DEFAULT_INPUTS: ROIInputs = {
   propertyPrice: 1500000,

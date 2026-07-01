@@ -4,7 +4,7 @@ import { sanityFetch } from '@/lib/sanity'
 import { PERSONA_PAGE_QUERY, ALL_PERSONA_SLUGS_QUERY } from '@/lib/queries'
 import LeadForm from '@/components/LeadForm'
 import ROICalculator from '@/components/ROICalculator'
-import type { InvestorPersona } from '@/lib/types'
+type InvestorPersona = { personaType: string; slug: { current: string }; headline: string; description: string; recommendedProperties: { title: string; slug: { current: string }; price: number; area: string; roiPercent: number; images: unknown[] }[]; faqs: { question: string; answer: string }[]; seoTitle: string; seoDescription: string }
 
 interface Props { params: Promise<{ slug: string }> }
 

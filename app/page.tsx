@@ -5,7 +5,7 @@ import { sanityFetch } from '@/lib/sanity'
 import { FEATURED_PROPERTIES_QUERY, TESTIMONIALS_QUERY } from '@/lib/queries'
 import ROICalculator from '@/components/ROICalculator'
 import LeadForm from '@/components/LeadForm'
-import type { Property, Testimonial } from '@/lib/types'
+type Property = { title: string; slug: { current: string }; price: number; currency: string; area: string; roiPercent: number; goldenVisaEligible: boolean; status: string; developer?: { name: string }; images: unknown[] }; type Testimonial = { name: string; country: string; quote: string; rating: number; photo?: string }
 
 export const metadata: Metadata = {
   title: 'Invest in Dubai Properties with Shylesh Raj | RERA-Certified Advisor & CEO, Nexus Elite Properties',

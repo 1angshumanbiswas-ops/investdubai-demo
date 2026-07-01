@@ -5,12 +5,30 @@ import { COUNTRY_PAGE_QUERY, ALL_COUNTRY_SLUGS_QUERY } from '@/lib/queries'
 import ROICalculator from '@/components/ROICalculator'
 import LeadForm from '@/components/LeadForm'
 import GoldenVisaChecker from '@/components/GoldenVisaChecker'
-import type { CountryPage } from '@/lib/types'
+// CountryPage defined inline
+type CountryPage = {
+  countryName: string
+  slug: { current: string }
+  heroHeadline: string
+  heroSubheadline: string
+  whyDubaiPoints: string[]
+  investmentProcess: string[]
+  currencyNote: string
+  taxNote: string
+  goldenVisaAngle: string
+  bestCommunities: { name: string; avgROI: number; avgYield: number; area: string }[]
+  faqs: { question: string; answer: string }[]
+  leadFormTitle: string
+  seoTitle: string
+  seoDescription: string
+  lastUpdated: string
+}
 
 interface Props { params: Promise<{ slug: string }> }
 
 export async function generateStaticParams() {
-  return []
+  const slugs = await sanityFetch<{ slug: string }[]>(ALL_COUNTRY_SLUGS_QUERY)
+  return slugs.map(s => ({ slug: s.slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

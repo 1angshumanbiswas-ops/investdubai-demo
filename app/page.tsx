@@ -8,15 +8,15 @@ import LeadForm from '@/components/LeadForm'
 import type { Property, Testimonial } from '@/lib/types'
 
 export const metadata: Metadata = {
-  title: 'Invest in Dubai Properties with a RERA-Certified Advisor | 25+ Years UAE Experience',
-  description: 'AI-powered Dubai property investment advisory for global investors. Off-plan, ready, and secondary market. Golden Visa guidance. Serving NRIs, HNIs, and investors from 15+ countries.',
+  title: 'Invest in Dubai Properties with Shylesh Raj | RERA-Certified Advisor & CEO, Nexus Elite Properties',
+  description: 'RERA-certified Dubai property advisor with 25+ years UAE experience. CEO of Nexus Elite Properties LLC. Golden Visa holder. Channel partner with 30+ developers including Emaar, Sobha, DAMAC. End-to-end advisory for NRIs, HNIs, and global investors.',
 }
 
 const TRUST_STATS = [
   { value: '25+', label: 'Years UAE Experience' },
-  { value: 'RERA', label: 'Certified Advisor' },
-  { value: '500+', label: 'Investors Served' },
-  { value: '15+', label: 'Countries Served' },
+  { value: '30+', label: 'Developer Partners' },
+  { value: 'RERA', label: 'Certified Broker #77789' },
+  { value: '4', label: 'Emirates Covered' },
 ]
 
 const WHO_WE_SERVE = [
@@ -26,6 +26,8 @@ const WHO_WE_SERVE = [
   { icon: '🏢', label: 'Business Owners', href: '/investors/business-owners' },
   { icon: '🌍', label: 'GCC Investors', href: '/countries/gcc' },
   { icon: '🇬🇧', label: 'UK Investors', href: '/countries/united-kingdom' },
+  { icon: '🇺🇸', label: 'US Investors', href: '/countries/united-states' },
+  { icon: '🇸🇬', label: 'Singapore Investors', href: '/countries/singapore' },
 ]
 
 const WHY_DUBAI = [
@@ -49,15 +51,19 @@ export default async function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-4 py-1.5 text-gold text-sm mb-6">
-              <span>🏅</span> RERA Broker #77789  •  BRN Verified  •  25+ Years UAE
+              <span>🏅</span> RERA Broker #77789  •  Golden Visa Holder  •  25+ Years UAE
             </div>
-            <h1 className="font-display text-white text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
+            <h1 className="font-display text-white text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4">
               Invest in Dubai Properties with a{' '}
               <span className="text-gold">RERA-Certified Advisor</span>
             </h1>
+            <p className="text-gold/80 text-base font-semibold mb-4">
+              Founder & CEO — Nexus Elite Properties LLC, Dubai
+            </p>
             <p className="text-white/70 text-lg mb-8 leading-relaxed">
               AI-powered property advisory for global investors seeking off-plan, ready,
-              secondary market, ROI-focused, and Golden Visa-linked Dubai property opportunities.
+              secondary market, ROI-focused, and Golden Visa-linked Dubai property opportunities
+              across Dubai, Abu Dhabi, Ras Al Khaimah and Sharjah.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact" className="bg-gold text-navy px-6 py-3 rounded-xl font-bold hover:bg-gold-light transition">
@@ -74,12 +80,11 @@ export default async function HomePage() {
                 src="/shylesh.jpg"
                 alt="Shylesh Raj - RERA Certified Dubai Property Advisor"
                 className="w-80 h-96 object-cover object-top rounded-2xl border-4 border-gold/30 shadow-2xl"
-                
-              />
+                            />
               <div className="absolute bottom-4 left-4 right-4 bg-navy/90 backdrop-blur-sm rounded-xl p-3 border border-gold/20">
                 <p className="text-white font-semibold text-sm">Shylesh Raj</p>
-                <p className="text-gold text-xs">RERA Broker #77789</p>
-                <p className="text-white/60 text-xs">Nexus Elite Properties</p>
+                <p className="text-gold text-xs">RERA Broker #77789 • Golden Visa Holder</p>
+                <p className="text-white/60 text-xs">CEO, Nexus Elite Properties LLC</p>
               </div>
             </div>
           </div>
@@ -103,15 +108,44 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl lg:text-4xl font-bold text-navy mb-4">Global Investors, One Trusted Advisor</h2>
-            <p className="text-gray-500 max-w-2xl mx-auto">Shylesh Raj has helped investors from 15+ countries navigate Dubai's property market with confidence.</p>
+            <p className="text-gray-500 max-w-2xl mx-auto">Shylesh Raj serves investors from India, GCC, Europe, UK, USA, Canada, Singapore and other global markets with end-to-end property advisory.</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
             {WHO_WE_SERVE.map(w => (
               <Link key={w.href} href={w.href}
                 className="flex flex-col items-center gap-2 p-4 rounded-xl border border-gray-100 hover:border-gold hover:shadow-md transition text-center group">
                 <span className="text-3xl">{w.icon}</span>
-                <span className="text-sm font-semibold text-navy group-hover:text-gold transition">{w.label}</span>
+                <span className="text-xs font-semibold text-navy group-hover:text-gold transition">{w.label}</span>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── USPs ─────────────────────────────────────────────────────────────── */}
+      <section className="py-20 bg-cream">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl lg:text-4xl font-bold text-navy mb-4">Why Investors Choose Shylesh Raj</h2>
+            <p className="text-gray-500 max-w-2xl mx-auto">A rare combination of deep UAE market knowledge, a RERA-approved brokerage, and AI-driven global investor engagement.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { icon: '🏛️', title: 'RERA-Certified Consultant', desc: 'Fully certified by the Dubai Real Estate Regulatory Agency — your investment is in verified, regulated hands.' },
+              { icon: '🏢', title: 'CEO of RERA-Approved Brokerage', desc: 'Founder & CEO of Nexus Elite Properties LLC — a fully licensed and RERA-approved Dubai brokerage firm.' },
+              { icon: '🏅', title: 'UAE Golden Visa Holder', desc: 'Shylesh himself holds a UAE Golden Visa — giving him first-hand knowledge of the Golden Visa pathway for investors.' },
+              { icon: '🤝', title: '30+ Developer Partnerships', desc: 'Channel partner with Emaar, Sobha, DAMAC, Danube, Binghatti, Ellington, Omniyat and 24+ more leading developers.' },
+              { icon: '🌆', title: '4 Emirates Coverage', desc: 'Access to premium off-plan, ready, luxury and commercial properties across Dubai, Abu Dhabi, Ras Al Khaimah and Sharjah.' },
+              { icon: '⚖️', title: 'Independent Investor-First Advisory', desc: 'Not tied to any single developer — recommendations are always in the investor\'s best interest, not the developer\'s.' },
+              { icon: '📋', title: 'End-to-End Support', desc: 'Property selection, DLD documentation, Golden Visa processing, financing guidance and after-sales assistance — all under one roof.' },
+              { icon: '🤖', title: 'AI-Driven Global Engagement', desc: 'AI property advisor, multilingual support, and digital-first outreach to serve global clients across time zones efficiently.' },
+              { icon: '🌍', title: 'Trusted by Global Investors', desc: 'Serving NRIs, HNIs and investors from India, GCC, UK, USA, Canada, Europe, Singapore and other global markets.' },
+            ].map(u => (
+              <div key={u.title} className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition">
+                <span className="text-3xl mb-3 block">{u.icon}</span>
+                <h3 className="font-semibold text-navy mb-2 text-sm">{u.title}</h3>
+                <p className="text-gray-500 text-xs leading-relaxed">{u.desc}</p>
+              </div>
             ))}
           </div>
         </div>

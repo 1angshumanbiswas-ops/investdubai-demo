@@ -5,7 +5,7 @@ import { sanityFetch } from '@/lib/sanity'
 import { FEATURED_PROPERTIES_QUERY, TESTIMONIALS_QUERY } from '@/lib/queries'
 import ROICalculator from '@/components/ROICalculator'
 import LeadForm from '@/components/LeadForm'
-type Property = { title: string; slug: { current: string }; price: number; currency: string; area: string; roiPercent: number; goldenVisaEligible: boolean; status: string; developer?: { name: string }; images: unknown[] }; type Testimonial = { name: string; country: string; quote: string; rating: number; photo?: string }
+import type { Property, Testimonial } from '@/lib/types'
 
 export const metadata: Metadata = {
   title: 'Invest in Dubai Properties with Shylesh Raj | RERA-Certified Advisor & CEO, Nexus Elite Properties',
@@ -80,7 +80,8 @@ export default async function HomePage() {
                 src="/shylesh.jpg"
                 alt="Shylesh Raj - RERA Certified Dubai Property Advisor"
                 className="w-80 h-96 object-cover object-top rounded-2xl border-4 border-gold/30 shadow-2xl"
-                            />
+                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+              />
               <div className="absolute bottom-4 left-4 right-4 bg-navy/90 backdrop-blur-sm rounded-xl p-3 border border-gold/20">
                 <p className="text-white font-semibold text-sm">Shylesh Raj</p>
                 <p className="text-gold text-xs">RERA Broker #77789 • Golden Visa Holder</p>
@@ -151,7 +152,61 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── WHY DUBAI ────────────────────────────────────────────────────────── */}
+      {/* ── MEET SHYLESH VIDEO ───────────────────────────────────────────────── */}
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl lg:text-4xl font-bold text-navy mb-4">Meet Shylesh Raj</h2>
+            <p className="text-gray-500 max-w-2xl mx-auto">RERA-Certified advisor, UAE Golden Visa holder, and Founder & CEO of Nexus Elite Properties — hear it directly from Shylesh.</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 items-start max-w-3xl mx-auto">
+            {/* Video 1 — Intro */}
+            <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-xl transition">
+              <div className="relative w-full" style={{ paddingBottom: '177.78%' }}>
+                <iframe
+                  className="absolute inset-0 w-full h-full rounded-t-2xl"
+                  src="https://www.youtube.com/embed/q3PsLZWV5sk?rel=0&modestbranding=1"
+                  title="Invest in Dubai with Shylesh Raj — RERA Certified Advisor"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <div className="p-4">
+                <p className="font-semibold text-navy text-sm mb-1">About Shylesh Raj</p>
+                <p className="text-gray-500 text-xs leading-relaxed">RERA Broker #77789 • Golden Visa Holder • CEO, Nexus Elite Properties LLC • 25+ Years UAE</p>
+              </div>
+            </div>
+            {/* CTA alongside video */}
+            <div className="flex flex-col justify-center gap-6">
+              <div className="bg-cream rounded-2xl p-6 border border-gray-100">
+                <span className="text-3xl block mb-3">🏅</span>
+                <h3 className="font-display font-bold text-navy text-lg mb-2">Why Trust Shylesh?</h3>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  {[
+                    'RERA Certified — Broker #77789',
+                    'UAE Golden Visa Holder',
+                    'CEO of RERA-Approved Brokerage',
+                    '25+ Years UAE Experience',
+                    '30+ Developer Partnerships',
+                    'Independent — Not tied to any developer',
+                  ].map(item => (
+                    <li key={item} className="flex items-center gap-2">
+                      <span className="text-gold font-bold">▸</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <a href="/contact" className="block w-full text-center bg-gold text-navy px-6 py-3 rounded-xl font-bold hover:bg-gold-light transition">
+                Book a Free Consultation →
+              </a>
+              <a href="/about" className="block w-full text-center bg-navy text-white px-6 py-3 rounded-xl font-semibold hover:bg-navy-dark transition">
+                Learn More About Shylesh
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="py-20 bg-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">

@@ -97,15 +97,35 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Bio */}
+      {/* Bio + Video */}
       <section className="py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="font-display text-2xl lg:text-3xl font-bold text-navy mb-8">The Advisor Behind the Platform</h2>
-          <div className="space-y-5 text-gray-600 leading-relaxed">
-            <p>Shylesh Raj NK has spent over 25 years building his career, his network, and his deep understanding of the UAE property market. What began as a passion for real estate evolved into Nexus Elite Properties LLC — a fully RERA-approved brokerage firm that today serves investors from India, GCC, UK, USA, Canada, Singapore, Europe, and other global markets.</p>
-            <p>Unlike many brokers who represent only a single developer, Shylesh operates as an independent investor-first advisor. His channel partnerships with 30+ leading Dubai developers — including Emaar, Sobha, DAMAC, Danube, Binghatti, Ellington, and Omniyat — give his clients access to the widest range of investment opportunities across all price points and communities.</p>
-            <p>As a UAE Golden Visa holder himself, Shylesh understands the Golden Visa process from the inside. He guides investors through every step — from identifying eligible properties to DLD registration, visa application, and Emirates ID issuance — with clarity and confidence that only lived experience can provide.</p>
-            <p>Shylesh's advisory philosophy is simple: every investor deserves personalised guidance, transparent data, and an advisor who puts their financial interest first. His platform combines this philosophy with AI-powered tools, ROI calculators, and multilingual support — making world-class Dubai property advisory accessible to serious investors wherever they are in the world.</p>
+        <div className="max-w-5xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-start">
+          <div>
+            <h2 className="font-display text-2xl lg:text-3xl font-bold text-navy mb-6">The Advisor Behind the Platform</h2>
+            <div className="space-y-5 text-gray-600 leading-relaxed">
+              <p>Shylesh Raj NK has spent over 25 years building his career, his network, and his deep understanding of the UAE property market. What began as a passion for real estate evolved into Nexus Elite Properties LLC — a fully RERA-approved brokerage firm that today serves investors from India, GCC, UK, USA, Canada, Singapore, Europe, and other global markets.</p>
+              <p>Unlike many brokers who represent only a single developer, Shylesh operates as an independent investor-first advisor. His channel partnerships with 30+ leading Dubai developers — including Emaar, Sobha, DAMAC, Danube, Binghatti, Ellington, and Omniyat — give his clients access to the widest range of investment opportunities across all price points and communities.</p>
+              <p>As a UAE Golden Visa holder himself, Shylesh understands the Golden Visa process from the inside. He guides investors through every step — from identifying eligible properties to DLD registration, visa application, and Emirates ID issuance — with clarity and confidence that only lived experience can provide.</p>
+              <p>Shylesh's advisory philosophy is simple: every investor deserves personalised guidance, transparent data, and an advisor who puts their financial interest first.</p>
+            </div>
+          </div>
+          {/* Video 2 — Properties */}
+          <div>
+            <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-lg">
+              <div className="relative w-full" style={{ paddingBottom: '177.78%' }}>
+                <iframe
+                  className="absolute inset-0 w-full h-full rounded-t-2xl"
+                  src="https://www.youtube.com/embed/NeQNPHG-Wyk?rel=0&modestbranding=1"
+                  title="Dubai Investment Properties — Shylesh Raj"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <div className="p-4">
+                <p className="font-semibold text-navy text-sm mb-1">Dubai Investment Properties</p>
+                <p className="text-gray-500 text-xs leading-relaxed">A walkthrough of Dubai property investment opportunities — presented by Shylesh Raj, RERA Broker #77789</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

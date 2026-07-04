@@ -162,7 +162,7 @@ export default async function HomePage() {
           <div className="grid md:grid-cols-2 gap-8 items-start max-w-3xl mx-auto">
             {/* Video 1 — Intro */}
             <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-xl transition">
-              <div className="relative w-full" className="aspect-video">
+              <div className="relative w-full aspect-video">
                 <iframe
                   className="absolute inset-0 w-full h-full rounded-t-2xl"
                   src="https://www.youtube.com/embed/q3PsLZWV5sk?rel=0&modestbranding=1"

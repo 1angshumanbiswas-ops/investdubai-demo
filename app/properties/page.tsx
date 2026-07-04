@@ -2,8 +2,6 @@
 
 import { useState } from 'react'
 
-export const metadata = undefined // client component — SEO handled in layout
-
 type Status = 'Off-Plan' | 'Ready' | 'Secondary Market'
 type UnitType = 'Studio' | '1BR' | '2BR' | '3BR' | '4BR' | 'Villa' | 'Penthouse' | 'Townhouse'
 

@@ -112,7 +112,7 @@ export default function AboutPage() {
           {/* Video 2 — Properties */}
           <div>
             <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-lg">
-              <div className="relative w-full" style={{ paddingBottom: '177.78%' }}>
+              <div className="relative w-full" className="aspect-video">
                 <iframe
                   className="absolute inset-0 w-full h-full rounded-t-2xl"
                   src="https://www.youtube.com/embed/NeQNPHG-Wyk?rel=0&modestbranding=1"

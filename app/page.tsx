@@ -5,6 +5,7 @@ import { sanityFetch } from '@/lib/sanity'
 import { FEATURED_PROPERTIES_QUERY, TESTIMONIALS_QUERY } from '@/lib/queries'
 import ROICalculator from '@/components/ROICalculator'
 import LeadForm from '@/components/LeadForm'
+import ReportLeadMagnet from '@/components/ReportLeadMagnet'
 import type { Property, Testimonial } from '@/lib/types'
 
 export const metadata: Metadata = {
@@ -319,6 +320,9 @@ export default async function HomePage() {
           </div>
         </section>
       )}
+
+      {/* ── INVESTOR REPORT LEAD MAGNET ──────────────────────────────────────── */}
+      <ReportLeadMagnet variant="full" sourceTag="homepage" />
 
       {/* ── CONSULTATION FORM ────────────────────────────────────────────────── */}
       <section className="py-20 bg-navy">

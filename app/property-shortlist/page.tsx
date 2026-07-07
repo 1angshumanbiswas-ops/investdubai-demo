@@ -48,7 +48,7 @@ export default function PropertyShortlistPage() {
       </div>
 
       {/* Form section */}
-      <section className="py-14 px-4 bg-white">
+      <section id="shortlist-form" className="py-14 px-4 bg-white">
         <div className="max-w-2xl mx-auto">
           <div className="bg-white rounded-2xl border border-gray-100 shadow-lg p-8">
             <h2 className="font-display text-xl font-bold text-navy mb-1">Request Your Shortlist</h2>
@@ -114,8 +114,7 @@ export default function PropertyShortlistPage() {
         </h2>
         <p className="text-white/50 mb-6 text-sm">Scroll up to fill in your requirements above.</p>
         <a
-          href="#top"
-          onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
+          href="#shortlist-form"
           className="inline-block bg-gold text-navy px-8 py-3 rounded-xl font-bold hover:bg-gold/90 transition text-sm"
         >
           Get My Free Shortlist →

@@ -138,12 +138,32 @@ export default function ROICalculator({ compact = false }: { compact?: boolean }
             </div>
           )}
 
-          <a
-            href="/contact"
-            className="block w-full text-center bg-navy text-white rounded-xl py-3 font-semibold hover:bg-navy-dark transition text-sm"
-          >
-            Get a Personalised ROI Analysis from Shylesh →
-          </a>
+          {/* ── Post-result capture ─────────────────────────────────────── */}
+          <div className="bg-navy rounded-xl p-4 text-center">
+            <p className="text-white font-semibold text-sm mb-1">
+              Want Shylesh to verify this ROI for your exact property?
+            </p>
+            <p className="text-white/50 text-xs mb-3">
+              Free analysis — RERA-certified advisor, 25+ years UAE experience
+            </p>
+            <div className="flex flex-col sm:flex-row gap-2">
+              <a
+                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '971505818509'}?text=${encodeURIComponent(
+                  `Hi Shylesh, I used your ROI calculator.\n\nProperty Price: AED ${inputs.propertyPrice.toLocaleString()}\nExpected Gross Yield: ${results.grossYield}%\nHolding Period: ${inputs.holdingYears} years\n\nCan you verify this and give me a personalised analysis?`
+                )}`}
+                target="_blank" rel="noopener noreferrer"
+                className="flex-1 bg-[#25D366] text-white rounded-lg py-2.5 text-sm font-bold hover:bg-green-600 transition text-center"
+              >
+                💬 WhatsApp My Results
+              </a>
+              <a
+                href="/contact"
+                className="flex-1 bg-white/10 border border-white/20 text-white rounded-lg py-2.5 text-sm font-semibold hover:bg-white/20 transition text-center"
+              >
+                Book Free Consultation
+              </a>
+            </div>
+          </div>
         </div>
       )}
     </div>

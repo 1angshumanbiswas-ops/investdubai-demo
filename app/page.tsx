@@ -6,6 +6,7 @@ import { FEATURED_PROPERTIES_QUERY, TESTIMONIALS_QUERY } from '@/lib/queries'
 import ROICalculator from '@/components/ROICalculator'
 import LeadForm from '@/components/LeadForm'
 import ReportLeadMagnet from '@/components/ReportLeadMagnet'
+import PropertyShortlistForm from '@/components/PropertyShortlistForm'
 import type { Property, Testimonial } from '@/lib/types'
 
 export const metadata: Metadata = {
@@ -322,6 +323,30 @@ export default async function HomePage() {
       )}
 
       {/* ── INVESTOR REPORT LEAD MAGNET ──────────────────────────────────────── */}
+      {/* ── FREE PROPERTY SHORTLIST ──────────────────────────────────────── */}
+      <section className="py-16 px-4 bg-cream">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-gold/20 border border-gold/30 rounded-full px-4 py-1.5 text-gold text-sm mb-4">
+              <span>🏠</span> Free · No Obligation · 24-Hour Delivery
+            </div>
+            <h2 className="font-display text-3xl font-bold text-navy mb-3">
+              Get Your Free Property Shortlist
+            </h2>
+            <p className="text-gray-500 max-w-xl mx-auto">
+              Tell Shylesh your budget and investment goals. He'll personally handpick
+              3 Dubai properties that match — and send them to you via WhatsApp within 24 hours.
+            </p>
+          </div>
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
+            <PropertyShortlistForm />
+          </div>
+          <p className="text-center text-gray-400 text-xs mt-4">
+            Shylesh personally reviews every request · RERA Certified #77789 · 30+ developer partnerships
+          </p>
+        </div>
+      </section>
+
       <ReportLeadMagnet variant="full" sourceTag="homepage" />
 
       {/* ── CONSULTATION FORM ────────────────────────────────────────────────── */}

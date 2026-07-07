@@ -4,6 +4,8 @@ import '@/styles/globals.css'
 import Navbar from '@/components/Navbar'
 import AIAdvisor from '@/components/AIAdvisor'
 import Footer from '@/components/Footer'
+import StickyLeadBar from '@/components/StickyLeadBar'
+import ExitIntentPopup from '@/components/ExitIntentPopup'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' })
@@ -68,11 +70,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script async src={`https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX`} />
         <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');` }} />
       </head>
-      <body>
+      <body className="pt-10">
+        <StickyLeadBar />
         <Navbar />
         <main>{children}</main>
         <Footer />
         <AIAdvisor />
+        <ExitIntentPopup />
         {/* Sticky WhatsApp */}
         <a
           href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=Hi Shylesh, I'm interested in Dubai property investment.`}

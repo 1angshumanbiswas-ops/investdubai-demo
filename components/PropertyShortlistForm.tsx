@@ -68,14 +68,20 @@ export default function PropertyShortlistForm({ variant = 'section' }: Props) {
     setDone(true)
     setLoading(false)
 
-    // Open WhatsApp with pre-filled message after short delay
+    // Luxury investors (AED 10M+) go to luxury page, others open WhatsApp
+    const isLuxury = budget === 'AED 10M+'
     setTimeout(() => {
-      const msg = `Hi Shylesh, I'd like a free property shortlist.\n\nBudget: ${budget}\nPurpose: ${purpose}${type ? `\nProperty type: ${type}` : ''}\n\nPlease send me your top 3 recommendations.`
-      window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`, '_blank')
+      if (isLuxury) {
+        window.location.href = '/luxury-properties#enquire'
+      } else {
+        const msg = `Hi Shylesh, I'd like a free property shortlist.\n\nBudget: ${budget}\nPurpose: ${purpose}${type ? `\nProperty type: ${type}` : ''}\n\nPlease send me your top 3 recommendations.`
+        window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`, '_blank')
+      }
     }, 800)
   }
 
   if (done) {
+    const isLuxury = budget === 'AED 10M+'
     return (
       <div className="text-center py-10">
         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -83,11 +89,23 @@ export default function PropertyShortlistForm({ variant = 'section' }: Props) {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="font-display text-2xl font-bold text-navy mb-2">Shortlist Request Received!</h3>
-        <p className="text-gray-500 mb-2 max-w-sm mx-auto">
-          Shylesh will personally review your requirements and send you 3 handpicked properties via WhatsApp within 24 hours.
-        </p>
-        <p className="text-sm text-gold font-semibold">WhatsApp opening now…</p>
+        {isLuxury ? (
+          <>
+            <h3 className="font-display text-2xl font-bold text-navy mb-2">Taking You to Our Luxury Advisory</h3>
+            <p className="text-gray-500 mb-4 max-w-sm mx-auto">
+              For your investment level, Shylesh provides private, discreet advisory — not public listings.
+              Redirecting you now…
+            </p>
+          </>
+        ) : (
+          <>
+            <h3 className="font-display text-2xl font-bold text-navy mb-2">Shortlist Request Received!</h3>
+            <p className="text-gray-500 mb-2 max-w-sm mx-auto">
+              Shylesh will personally review your requirements and send you 3 handpicked properties via WhatsApp within 24 hours.
+            </p>
+            <p className="text-sm text-gold font-semibold">WhatsApp opening now…</p>
+          </>
+        )}
       </div>
     )
   }

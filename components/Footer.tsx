@@ -11,7 +11,26 @@ export default function Footer() {
               <div className="w-8 h-8 bg-gold rounded-full flex items-center justify-center font-bold text-navy text-sm">SR</div>
               <span className="text-white font-bold text-sm leading-tight">Invest in Dubai<br /><span className="text-gold text-xs font-normal">with Shylesh Raj</span></span>
             </div>
-            <p className="text-white/50 text-xs leading-relaxed mb-3">RERA Broker #77789 • Golden Visa Holder • CEO, Nexus Elite Properties LLC</p>
+            <p className="text-white/50 text-xs leading-relaxed mb-3">RERA Broker #77789 · Golden Visa Holder · CEO, Nexus Elite Properties LLC</p>
+
+            {/* Contact details */}
+            <div className="space-y-2 mb-4">
+              <a href="mailto:shylesh@nexuseliteproperties.com"
+                className="flex items-start gap-2 text-white/50 text-xs hover:text-gold transition">
+                <span className="shrink-0 mt-0.5">✉</span>
+                <span>shylesh@nexuseliteproperties.com</span>
+              </a>
+              <a href="https://www.profile.investindubaiwithshylesh.com" target="_blank" rel="noopener noreferrer"
+                className="flex items-start gap-2 text-white/50 text-xs hover:text-gold transition">
+                <span className="shrink-0 mt-0.5">🌐</span>
+                <span>investindubaiwithshylesh.com</span>
+              </a>
+              <div className="flex items-start gap-2 text-white/50 text-xs">
+                <span className="shrink-0 mt-0.5">📍</span>
+                <span>Nexus Elite Properties LLC<br />1st Floor, Madina Mall<br />Muhaisnah 4, Dubai, UAE</span>
+              </div>
+            </div>
+
             <a href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 bg-[#25D366] text-white px-3 py-1.5 rounded-lg text-xs font-semibold hover:opacity-90 transition">
               💬 WhatsApp Shylesh

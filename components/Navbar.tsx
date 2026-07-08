@@ -5,9 +5,10 @@ import Link from 'next/link'
 
 const NAV_LINKS = [
   { href: '/properties', label: 'Properties' },
+  { href: '/luxury-properties', label: 'Luxury Properties' },
   { href: '/golden-visa', label: 'Golden Visa' },
   { href: '/roi-calculator', label: 'ROI Calculator' },
-  { href: '/countries/india', label: 'For Indians' },
+  { href: '/global-investors', label: 'Global Investors' },
   { href: '/blog', label: 'Knowledge Hub' },
   { href: '/about', label: 'About' },
 ]

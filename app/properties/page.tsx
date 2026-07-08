@@ -3,7 +3,7 @@
 import { useState } from 'react'
 
 type Status = 'Off-Plan' | 'Ready' | 'Secondary Market'
-type UnitType = 'Studio' | '1BR' | '2BR' | '3BR' | '4BR' | 'Villa' | 'Penthouse' | 'Townhouse'
+type UnitType = 'Studio' | '1BR' | '2BR' | '3BR' | '4BR' | '5BR' | '6BR' | 'Villa' | 'Penthouse' | 'Townhouse'
 
 interface Property {
   id: string
@@ -172,20 +172,20 @@ const PROPERTIES: Property[] = [
     featured: false,
   },
   {
-    id: '10',
-    developerName: 'Imtiaz Developments',
-    projectName: 'Cove Grand',
-    location: 'Dubai Islands',
-    startingPrice: 1_100_000,
-    paymentPlan: '60/40 — 60% during construction, 40% on handover',
-    handoverDate: 'Q3 2027',
-    unitTypes: ['1BR', '2BR', '3BR'],
-    goldenVisaEligible: false,
+    id: '11',
+    developerName: 'Sobha Realty',
+    projectName: 'Sobha Elwood',
+    location: 'Dubailand, Dubai-Al Ain Road',
+    startingPrice: 7_930_000,
+    paymentPlan: '60/40 — 60% during construction, 40% on completion',
+    handoverDate: 'Q4 2027',
+    unitTypes: ['4BR', '5BR', '6BR', 'Villa'],
+    goldenVisaEligible: true,
     brochureUrl: null,
-    roiEstimate: 8.1,
+    roiEstimate: 6.2,
     status: 'Off-Plan',
-    image: '/images/properties/cove-grand.jpg',
-    featured: false,
+    image: '/images/properties/sobha-elwood-street.jpg',
+    featured: true,
   },
 ]
 

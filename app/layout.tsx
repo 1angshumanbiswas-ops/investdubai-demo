@@ -11,6 +11,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shylesh-dubai-demo.netlify.app'),
   title: {
     default: 'Invest in Dubai with Shylesh Raj | RERA-Certified Advisor',
     template: '%s | Invest in Dubai with Shylesh Raj',
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     locale: 'en_AE',
     url: process.env.NEXT_PUBLIC_SITE_URL,
     siteName: 'Invest in Dubai with Shylesh Raj',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Invest in Dubai with Shylesh Raj' }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Invest in Dubai with Shylesh Raj — RERA-Certified Property Advisor' }],
   },
   twitter: { card: 'summary_large_image', creator: '@shyleshraj' },
   robots: {

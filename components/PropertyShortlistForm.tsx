@@ -3,12 +3,11 @@
 import { useState } from 'react'
 
 const BUDGETS = [
-  'Under AED 500K',
-  'AED 500K – 1M',
-  'AED 1M – 2M',
-  'AED 2M – 5M',
-  'AED 5M – 10M',
-  'AED 10M+',
+  'AED 1M – 2M ($272K – $545K)',
+  'AED 2M – 5M ($545K – $1.36M)',
+  'AED 5M – 10M ($1.36M – $2.72M)',
+  'AED 10M – 30M ($2.72M – $8.17M)',
+  'AED 30M+ ($8.17M+)',
 ]
 
 const PURPOSES = [
@@ -69,7 +68,7 @@ export default function PropertyShortlistForm({ variant = 'section' }: Props) {
     setLoading(false)
 
     // Luxury investors (AED 10M+) go to luxury page, others open WhatsApp
-    const isLuxury = budget === 'AED 10M+'
+    const isLuxury = budget === 'AED 30M+ ($8.17M+)'
     setTimeout(() => {
       if (isLuxury) {
         window.location.href = '/luxury-properties#enquire'
@@ -81,7 +80,7 @@ export default function PropertyShortlistForm({ variant = 'section' }: Props) {
   }
 
   if (done) {
-    const isLuxury = budget === 'AED 10M+'
+    const isLuxury = budget === 'AED 30M+ ($8.17M+)'
     return (
       <div className="text-center py-10">
         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">

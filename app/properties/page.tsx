@@ -305,19 +305,31 @@ function PropertyCard({ property, currency }: { property: Property; currency: st
   return (
     <>
       {showROI && <ROIModal property={property} onClose={() => setShowROI(false)} />}
-      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-shadow group">
         {/* Image / Banner */}
-        <div className="h-44 bg-gradient-to-br from-navy to-navy/70 relative flex items-center justify-center">
-          <div className="text-center">
-            <p className="text-gold font-display text-2xl font-bold">{property.projectName}</p>
-            <p className="text-white/70 text-sm">{property.developerName}</p>
-          </div>
+        <div className="h-52 relative overflow-hidden bg-navy">
+          {property.image ? (
+            <img
+              src={property.image}
+              alt={property.projectName}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          ) : (
+            <div className="w-full h-full bg-gradient-to-br from-navy to-navy/70 flex items-center justify-center">
+              <div className="text-center">
+                <p className="text-gold font-display text-2xl font-bold">{property.projectName}</p>
+                <p className="text-white/70 text-sm">{property.developerName}</p>
+              </div>
+            </div>
+          )}
+          {/* Overlay for non-image cards */}
+          {!property.image && null}
           {property.featured && (
-            <span className="absolute top-3 left-3 bg-gold text-navy text-xs font-bold px-2 py-1 rounded-full">
+            <span className="absolute top-3 left-3 bg-gold text-navy text-xs font-bold px-2 py-1 rounded-full z-10">
               Featured
             </span>
           )}
-          <span className={`absolute top-3 right-3 text-xs font-semibold px-2 py-1 rounded-full ${STATUS_COLORS[property.status]}`}>
+          <span className={`absolute top-3 right-3 text-xs font-semibold px-2 py-1 rounded-full z-10 ${STATUS_COLORS[property.status]}`}>
             {property.status}
           </span>
         </div>

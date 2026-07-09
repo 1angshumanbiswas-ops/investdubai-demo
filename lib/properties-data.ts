@@ -206,6 +206,8 @@ export const PROPERTIES: Property[] = [
       '/images/properties/sobha-elwood-street.jpg',
       '/images/properties/sobha-elwood-pool.jpg',
       '/images/properties/sobha-elwood-front.jpg',
+      '/images/properties/sobha-elwood-pool2.jpg',
+      '/images/properties/sobha-elwood-front2.jpg',
     ],
     featured: true,
     beds: '4, 5 & 6',

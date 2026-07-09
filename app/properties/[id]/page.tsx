@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, use } from 'react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { PROPERTIES, AED_RATE, STATUS_COLORS } from '@/lib/properties-data'
@@ -20,8 +20,9 @@ function formatPrice(aed: number, currency: string) {
   return `${sym[currency]}${val.toLocaleString(undefined, { maximumFractionDigits: 0 })}`
 }
 
-export default function PropertyDetailPage({ params }: { params: { id: string } }) {
-  const property = PROPERTIES.find(p => p.id === params.id)
+export default function PropertyDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params)
+  const property = PROPERTIES.find(p => p.id === id)
   if (!property) notFound()
 
   const [activeImg, setActiveImg] = useState(0)

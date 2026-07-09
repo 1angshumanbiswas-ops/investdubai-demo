@@ -22,6 +22,7 @@ export interface Property {
   beds?: string
   baths?: string
   sqft?: string
+  videoUrl?: string
 }
 
 export const PROPERTIES: Property[] = [
@@ -251,12 +252,15 @@ export const PROPERTIES: Property[] = [
     brochureUrl: null,
     roiEstimate: 8.0,
     status: 'Off-Plan',
-    image: '/images/properties/sobha-skyparks-hero.jpg',
+    image: '/images/properties/sobha-skyparks-lounge.jpg',
     gallery: [
-      '/images/properties/sobha-skyparks-hero.jpg',
+      '/images/properties/sobha-skyparks-lounge.jpg',
       '/images/properties/sobha-skyparks-pool.jpg',
-      '/images/properties/sobha-skyparks-zones.jpg',
+      '/images/properties/sobha-skyparks-terrace.jpg',
+      '/images/properties/sobha-skyparks-hero.jpg',
+      '/images/properties/sobha-skyparks-garden.jpg',
     ],
+    videoUrl: 'https://www.youtube.com/embed/qA7pUTb6NqY',
     featured: true,
     beds: '1–4 + Duplex',
     sqft: '684 – 4,956 sq.ft.',

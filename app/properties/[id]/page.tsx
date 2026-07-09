@@ -159,6 +159,24 @@ export default function PropertyDetailPage({ params }: { params: Promise<{ id: s
                 </div>
               </div>
             )}
+
+            {/* Video Tour */}
+            {property.videoUrl && (
+              <div className="bg-white rounded-2xl p-6 border border-gray-100">
+                <h2 className="font-semibold text-navy mb-4 flex items-center gap-2">
+                  <span>🎬</span> Video Tour
+                </h2>
+                <div className="relative w-full rounded-xl overflow-hidden" style={{ paddingBottom: '56.25%' }}>
+                  <iframe
+                    src={property.videoUrl}
+                    title={`${property.projectName} Video Tour`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
+              </div>
+            )}
           </div>
 
           {/* RIGHT — Price + CTA */}

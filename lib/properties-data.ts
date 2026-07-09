@@ -16,6 +16,7 @@ export interface Property {
   status: Status
   image: string
   gallery?: string[]
+  videoUrl?: string
   featured: boolean
   description?: string
   amenities?: string[]
@@ -279,6 +280,49 @@ export const PROPERTIES: Property[] = [
       'All units above AED 2M eligible for UAE 10-Year Golden Visa',
       'Projected 8–9% rental yield',
       '4–6% annual price appreciation forecast',
+    ],
+  },  {
+    id: '13',
+    developerName: 'Sobha Realty',
+    projectName: 'Sobha Sanctuary',
+    location: 'Dubailand, Al Ain Road, Dubai',
+    startingPrice: 3_990_000,
+    paymentPlan: '10/50/40 — 10% booking, 50% during construction, 40% on handover',
+    handoverDate: 'Q3 2029',
+    unitTypes: ['4BR', '5BR', '6BR', 'Villa', 'Townhouse'],
+    goldenVisaEligible: true,
+    brochureUrl: null,
+    roiEstimate: 6.5,
+    status: 'Off-Plan' as const,
+    image: '/images/properties/sobha-sanctuary-hero.jpg',
+    gallery: [
+      '/images/properties/sobha-sanctuary-hero.jpg',
+      '/images/properties/sobha-sanctuary-lagoon.jpg',
+      '/images/properties/sobha-sanctuary-waterfall.jpg',
+      '/images/properties/sobha-sanctuary-bedroom.jpg',
+      '/images/properties/sobha-sanctuary-mall.jpg',
+    ],
+    videoUrl: 'https://www.youtube.com/embed/qalr65QxbI0',
+    featured: true,
+    beds: '4, 5 & 6',
+    sqft: '2,459 – 7,191 sq.ft.',
+    description: "Sobha Sanctuary is Sobha Realty's most ambitious masterplan — a AED 50 billion, 37.4 million sq.ft. wellness community in Dubailand designed for 20,000 families. Built around 6km of crystal lagoons, 50,000+ trees, and a 1 million sq.ft. central park, it features its own mall, two international schools, a hospital, and 22km of cycling tracks.",
+    amenities: [
+      '6km Crystal Lagoon with beach access',
+      'Sobha Sanctuary Mall — retail & dining',
+      'Two international schools on-site',
+      'Community hospital',
+      '1 million sq.ft. Central Park',
+      '22km cycling tracks',
+      '9km jogging & wellness loop',
+      '50,000+ trees across the masterplan',
+      'Padel courts & football grounds',
+      'Skate park',
+      'Yoga pavilions & meditation gardens',
+      'State-of-the-art wellness centre',
+      'Private boat rides & water plaza',
+      'Resort-style swimming pools',
+      'Pet-friendly walking routes',
     ],
   },
 ]

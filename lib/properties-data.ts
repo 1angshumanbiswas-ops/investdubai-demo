@@ -363,7 +363,7 @@ export const PROPERTIES: Property[] = [
       'Pet-friendly walking routes',
     ],
   },
-  ,{
+  {
     id: '14',
     developerName: 'Danube Properties',
     projectName: 'Greenz by Danube',

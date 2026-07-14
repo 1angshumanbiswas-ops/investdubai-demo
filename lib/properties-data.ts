@@ -689,7 +689,6 @@ export const PROPERTIES: Property[] = [
     unitTypes: ['1BR', '2BR', '3BR'],
     goldenVisaEligible: 'check',
     brochureUrl: null,
-    videoUrl: 'https://youtu.be/A_7dN3I1g3Y',
     roiEstimate: 8.2,
     status: 'Off-Plan',
     image: '/images/properties/sunset-bay-4-hero.jpg',

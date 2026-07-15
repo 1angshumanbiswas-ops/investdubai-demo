@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import LeadForm from '@/components/LeadForm'
+import GlobalInvestorExplorer from '@/components/GlobalInvestorExplorer'
 
 export const metadata: Metadata = {
   title: 'Global Investors — UAE Property Investment | Shylesh Dubai',
@@ -52,8 +53,8 @@ const EMIRATES = [
       '10-year Golden Visa available on AED 2M+ property purchase',
       'Average property prices still 30–40% below comparable Dubai areas',
     ],
-    // Swap this URL if it doesn't load — Abu Dhabi Sheikh Zayed Mosque / Corniche
-    img: 'https://images.unsplash.com/photo-1578895949071-f1f6e4a88c26?auto=format&fit=crop&w=1200&q=80',
+    // Sheikh Zayed Grand Mosque twilight reflection — Pexels #33687823 (free, no attribution required)
+    img: 'https://images.pexels.com/photos/33687823/pexels-photo-33687823.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     imgAlt: 'Abu Dhabi skyline and Sheikh Zayed Grand Mosque',
     linkHref: '/contact',
     linkLabel: 'Enquire About Abu Dhabi →',
@@ -71,8 +72,8 @@ const EMIRATES = [
       'Growing expat population from Dubai professionals seeking affordability',
       'Direct access to East Coast beaches and Hajar Mountains',
     ],
-    // Swap this URL if it doesn't load — RAK waterfront/Al Marjan Island
-    img: 'https://images.unsplash.com/photo-1621775324959-33df66703dc7?auto=format&fit=crop&w=1200&q=80',
+    // Al Marjan Island aerial luxury resort, RAK — Pexels #10484110 (free, no attribution required)
+    img: 'https://images.pexels.com/photos/10484110/pexels-photo-10484110.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     imgAlt: 'Ras Al Khaimah waterfront and mountains',
     linkHref: '/contact',
     linkLabel: 'Get RAK Investment Brief →',
@@ -209,6 +210,9 @@ export default function GlobalInvestorsPage() {
           </div>
         </div>
       </section>
+
+      {/* ── FLAG + BUDGET EXPLORER ── */}
+      <GlobalInvestorExplorer />
 
       {/* ── STATS STRIP ── */}
       <section className="bg-gold py-6 px-4">

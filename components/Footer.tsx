@@ -20,7 +20,8 @@ export default function Footer() {
                 <span className="shrink-0 mt-0.5">✉</span>
                 <span>shylesh@nexuseliteproperties.com</span>
               </a>
-              <a href="https://www.profile.investindubaiwithshylesh.com" target="_blank" rel="noopener noreferrer"
+              {/* #10b — text now matches href */}
+              <a href="https://www.investindubaiwithshylesh.com" target="_blank" rel="noopener noreferrer"
                 className="flex items-start gap-2 text-white/50 text-xs hover:text-gold transition">
                 <span className="shrink-0 mt-0.5">🌐</span>
                 <span>investindubaiwithshylesh.com</span>
@@ -53,19 +54,19 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Investors */}
+          {/* Investors — #1: replaced broken 404 links with working pages */}
           <div>
             <p className="text-white font-semibold text-sm mb-4">Investors</p>
             <div className="space-y-2">
               {[
-                ['/countries/india', 'India Investors'],
-                ['/countries/gcc', 'GCC Investors'],
-                ['/countries/united-kingdom', 'UK Investors'],
-                ['/countries/united-states', 'US Investors'],
-                ['/investors/nri', 'NRI Guide'],
-                ['/investors/hni', 'HNI Advisory'],
+                ['/blog/dubai-property-indian-investors-2026', 'India Investors'],
+                ['/global-investors', 'GCC Investors'],
+                ['/global-investors', 'UK Investors'],
+                ['/global-investors', 'US Investors'],
+                ['/blog/dubai-property-indian-investors-2026', 'NRI Guide'],
+                ['/luxury-properties', 'HNI Advisory'],
               ].map(([href, label]) => (
-                <Link key={href} href={href} className="block text-white/50 text-xs hover:text-gold transition">{label}</Link>
+                <Link key={`${href}-${label}`} href={href} className="block text-white/50 text-xs hover:text-gold transition">{label}</Link>
               ))}
             </div>
           </div>

@@ -57,10 +57,10 @@ interface BudgetRange {
 }
 
 const BUDGET_RANGES: BudgetRange[] = [
-  { label: 'AED 1M – 2M',   min: 1_000_000,  max:  2_000_000 },
-  { label: 'AED 2M – 5M',   min: 2_000_000,  max:  5_000_000 },
-  { label: 'AED 5M – 10M',  min: 5_000_000,  max: 10_000_000 },
+  { label: 'AED 2M – 5M',   min:  2_000_000, max:  5_000_000 },
+  { label: 'AED 5M – 10M',  min:  5_000_000, max: 10_000_000 },
   { label: 'AED 10M – 30M', min: 10_000_000, max: 30_000_000 },
+  { label: 'AED 30M+',      min: 30_000_000, max: 200_000_000 },
 ]
 
 /* ─────────────────────────────────────────────

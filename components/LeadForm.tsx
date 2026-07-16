@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useState } from 'react'
 
 const COUNTRIES = [
@@ -24,7 +25,7 @@ export default function LeadForm({ title, source, preselectedCountry, className 
   const [form, setForm] = useState({
     name: '', whatsapp: '', email: '',
     country: preselectedCountry ?? '',
-    budget: '', purpose: '', goldenVisa: false,
+    budget: '', purpose: '', goldenVisa: false, gdprConsent: false,
   })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -126,11 +127,22 @@ export default function LeadForm({ title, source, preselectedCountry, className 
           <span className="text-sm text-charcoal">I am interested in the UAE Golden Visa</span>
         </label>
 
-        <p className="text-xs text-gray-400">
-          By submitting, you agree to receive property information via WhatsApp and email. You can opt out at any time.
-        </p>
+        {/* #10c GDPR consent checkbox — required for UK/EU visitors */}
+        <label className="flex items-start gap-3 cursor-pointer">
+          <input
+            type="checkbox"
+            required
+            checked={form.gdprConsent}
+            onChange={e => setForm(p => ({ ...p, gdprConsent: e.target.checked }))}
+            className="w-4 h-4 mt-0.5 accent-gold shrink-0"
+          />
+          <span className="text-xs text-gray-500 leading-relaxed">
+            I agree to Nexus Elite Properties LLC storing my details to contact me about Dubai property investment.{' '}
+            <Link href="/privacy" className="text-gold hover:underline">Read our Privacy Policy.</Link>
+          </span>
+        </label>
 
-        <button type="submit" disabled={loading}
+        <button type="submit" disabled={loading || !form.gdprConsent}
           className="w-full bg-gold text-white rounded-xl py-3.5 font-semibold hover:bg-gold-light transition disabled:opacity-60">
           {loading ? 'Sending...' : 'Request Free Consultation →'}
         </button>

@@ -22,14 +22,14 @@ const TRUST_STATS = [
 ]
 
 const WHO_WE_SERVE = [
-  { icon: '🇮🇳', label: 'NRI Investors', href: '/countries/india' },
-  { icon: '💎', label: 'HNI Clients', href: '/investors/hni' },
+  { icon: '🇮🇳', label: 'NRI Investors', href: '/blog/dubai-property-indian-investors-2026' },
+  { icon: '💎', label: 'HNI Clients', href: '/luxury-properties' },
   { icon: '🏅', label: 'Golden Visa Seekers', href: '/golden-visa' },
-  { icon: '🏢', label: 'Business Owners', href: '/investors/business-owners' },
-  { icon: '🌍', label: 'GCC Investors', href: '/countries/gcc' },
-  { icon: '🇬🇧', label: 'UK Investors', href: '/countries/united-kingdom' },
-  { icon: '🇺🇸', label: 'US Investors', href: '/countries/united-states' },
-  { icon: '🇸🇬', label: 'Singapore Investors', href: '/countries/singapore' },
+  { icon: '🏢', label: 'Business Owners', href: '/global-investors' },
+  { icon: '🌍', label: 'GCC Investors', href: '/global-investors' },
+  { icon: '🇬🇧', label: 'UK Investors', href: '/global-investors' },
+  { icon: '🇺🇸', label: 'US Investors', href: '/global-investors' },
+  { icon: '🇸🇬', label: 'Singapore Investors', href: '/global-investors' },
 ]
 
 const WHY_DUBAI = [

@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     index: true, follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
   },
-  verification: { google: 'your-google-verification-code' },
+  verification: { google: '9WY4i32gHGUJT7khGyuXIhsurjgIoApbEf27slYIKLc' },
 }
 
 const LOCAL_BUSINESS_SCHEMA = {

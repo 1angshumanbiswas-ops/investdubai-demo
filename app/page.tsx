@@ -7,6 +7,9 @@ import ROICalculator from '@/components/ROICalculator'
 import LeadForm from '@/components/LeadForm'
 import ReportLeadMagnet from '@/components/ReportLeadMagnet'
 import PropertyShortlistForm from '@/components/PropertyShortlistForm'
+import NewsAndTrends from '@/components/NewsAndTrends'
+import FAQSection from '@/components/FAQSection'
+import { FAQ_ITEMS } from '@/lib/faq-data'
 import type { Property, Testimonial } from '@/lib/types'
 
 export const metadata: Metadata = {
@@ -208,6 +211,10 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── LATEST NEWS, TRENDS & MARKET PULSE ───────────────────────────────── */}
+      <NewsAndTrends />
+
       <section className="py-20 bg-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -348,6 +355,9 @@ export default async function HomePage() {
       </section>
 
       <ReportLeadMagnet variant="full" sourceTag="homepage" />
+
+      {/* ── FAQ TEASER ────────────────────────────────────────────────────────── */}
+      <FAQSection items={FAQ_ITEMS.slice(0, 5)} showViewAllLink />
 
       {/* ── CONSULTATION FORM ────────────────────────────────────────────────── */}
       <section className="py-20 bg-navy">

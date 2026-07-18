@@ -79,6 +79,7 @@ export default function Footer() {
                 ['/about', 'About Shylesh'],
                 ['/blog', 'Knowledge Hub'],
                 ['/case-studies', 'Investor Stories'],
+                ['/partner-program', 'Partner With Us'],
                 ['/contact', 'Contact Us'],
                 ['/privacy', 'Privacy Policy'],
                 ['/terms', 'Terms of Use'],

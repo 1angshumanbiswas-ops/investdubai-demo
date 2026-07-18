@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { name, whatsapp, country, budget, email, source, conversationSummary } = body
+    const { name, whatsapp, country, budget, email, source, conversationSummary, profession } = body
 
     if (!name || !whatsapp) {
       return NextResponse.json({ error: 'Name and WhatsApp are required' }, { status: 400 })
@@ -24,13 +24,14 @@ export async function POST(req: NextRequest) {
       budget,
       source: source ?? 'AI Advisor',
       conversationSummary: conversationSummary ?? '',
-      tags: ['AI Advisor Lead', country, budget].filter(Boolean),
+      tags: ['AI Advisor Lead', country, budget, profession].filter(Boolean),
       customFields: {
         country,
         budget_range: budget,
         investment_source: source ?? 'AI Advisor',
         whatsapp_number: whatsapp,
         conversation_summary: conversationSummary ?? '',
+        profession: profession ?? '',
       },
     }
 

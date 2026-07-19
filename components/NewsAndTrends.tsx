@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { NEWS_ITEMS, NEWS_LAST_CURATED } from '@/lib/news-data'
 
 // Dubai Market Pulse — sourced from Dubai Land Department (DLD) official Q1 2026 release.
 // Format deliberately different from competitor sites (no ranked numbered list) —
@@ -36,7 +37,7 @@ export default function NewsAndTrends() {
     <section className="py-20 bg-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <p className="text-gold text-sm font-semibold mb-2 uppercase tracking-widest">Latest News &amp; Trends</p>
+          <p className="text-gold text-sm font-semibold mb-2 uppercase tracking-widest">Latest News, Trends</p>
           <h2 className="font-display text-3xl lg:text-4xl font-bold text-navy mb-4">Dubai Market Pulse</h2>
           <p className="text-gray-500 max-w-2xl mx-auto">Live market data and investor insights — updated as the Dubai Land Department releases new figures.</p>
         </div>
@@ -65,6 +66,38 @@ export default function NewsAndTrends() {
               <p className="text-gray-500 text-sm leading-relaxed">{s.excerpt}</p>
             </Link>
           ))}
+        </div>
+
+        {/* Global Investor Signals — curated external news, Dubai + Abu Dhabi + RAK */}
+        <div className="mt-16">
+          <div className="text-center mb-8">
+            <h3 className="font-display text-2xl lg:text-3xl font-bold text-navy mb-2">This Week Across the UAE</h3>
+            <p className="text-gray-500 max-w-2xl mx-auto text-sm">
+              Curated from official regulators and established outlets — the stories that matter to investors weighing Dubai, Abu Dhabi, and Ras Al Khaimah.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {NEWS_ITEMS.map(item => (
+              <a
+                key={item.id}
+                href={item.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-white rounded-2xl border border-gray-100 p-5 hover:border-gold hover:shadow-md transition flex flex-col"
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-[11px] font-semibold text-navy bg-gold/10 px-2 py-1 rounded-full">{item.region}</span>
+                  <span className="text-[11px] text-gray-400">{item.date}</span>
+                </div>
+                <span className="text-xs font-semibold text-gold uppercase tracking-wide mb-2">{item.category}</span>
+                <h4 className="font-semibold text-navy mb-2 leading-snug group-hover:text-gold transition text-sm">{item.title}</h4>
+                <p className="text-gray-500 text-xs leading-relaxed flex-1">{item.excerpt}</p>
+                <p className="text-xs text-gray-400 mt-3">via {item.source} →</p>
+              </a>
+            ))}
+          </div>
+          <p className="text-xs text-gray-400 text-center mt-6">Last verified: {NEWS_LAST_CURATED}</p>
         </div>
 
         <div className="text-center mt-10">

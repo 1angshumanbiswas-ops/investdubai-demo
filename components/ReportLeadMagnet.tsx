@@ -83,7 +83,7 @@ export default function ReportLeadMagnet({ variant = 'full', sourceTag = 'site' 
           </div>
           <div>
             <p className="text-white font-semibold text-sm">Free Investor Report</p>
-            <p className="text-white/50 text-xs">Dubai Real Estate 2026 · 27 pages</p>
+            <p className="text-white/50 text-xs">Dubai Real Estate 2026</p>
           </div>
         </div>
         <div className="space-y-2.5">
@@ -158,7 +158,7 @@ export default function ReportLeadMagnet({ variant = 'full', sourceTag = 'site' 
         <div>
           <div className="inline-flex items-center gap-2 bg-gold/20 border border-gold/30 rounded-full px-3 py-1 mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-gold" />
-            <span className="text-gold text-xs font-semibold uppercase tracking-widest">Free · 27 Pages · June 2026</span>
+            <span className="text-gold text-xs font-semibold uppercase tracking-widest">Free · June 2026</span>
           </div>
           <h2 className="font-display text-white text-3xl lg:text-4xl font-bold mb-3">
             Dubai Real Estate<br />

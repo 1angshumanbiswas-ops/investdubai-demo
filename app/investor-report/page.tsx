@@ -102,7 +102,7 @@ export default function InvestorReportPage() {
               2026
             </h1>
             <p className="text-white/70 text-lg mb-6 leading-relaxed">
-              27 pages of investor-grade analysis covering market trends, community-by-community yield data, Golden Visa strategy, risk assessment, and a 2026–2030 forecast. Prepared exclusively for HNIs, NRIs, and global property investors.
+              Investor-grade analysis covering market trends, community-by-community yield data, Golden Visa strategy, risk assessment, and a 2026–2030 forecast. Prepared exclusively for HNIs, NRIs, and global property investors.
             </p>
 
             {/* Stats row */}
@@ -160,7 +160,7 @@ export default function InvestorReportPage() {
             ) : (
               <div className="bg-white rounded-2xl p-8 shadow-2xl">
                 <h2 className="font-display text-navy text-xl font-bold mb-1">Get the Free Report</h2>
-                <p className="text-gray-400 text-sm mb-6">Enter your details to unlock the full 27-page analysis</p>
+                <p className="text-gray-400 text-sm mb-6">Enter your details to unlock the full analysis</p>
 
                 <div className="space-y-4">
                   <div>

@@ -84,7 +84,7 @@ export default function ExitIntentPopup() {
             Wait — don't leave empty-handed
           </h2>
           <p className="text-white/60 text-sm mt-1">
-            Get the free 27-page Dubai Real Estate Investor Report 2026 — used by HNIs and NRIs
+            Get the free Dubai Real Estate Investor Report 2026 — used by HNIs and NRIs
             to make smarter property decisions.
           </p>
         </div>

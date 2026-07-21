@@ -77,10 +77,8 @@ export default async function BlogPage() {
             </div>
           )}
 
-          {/* Coming soon articles */}
+          {/* Additional published guides */}
           <div>
-            <h2 className="font-display text-2xl font-bold text-navy mb-2">Coming Soon</h2>
-            <p className="text-gray-500 mb-6 text-sm">In-depth guides being published shortly</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {PLACEHOLDER_ARTICLES.map(a => a.href ? (
                 <Link key={a.title} href={a.href}

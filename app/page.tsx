@@ -9,6 +9,7 @@ import ReportLeadMagnet from '@/components/ReportLeadMagnet'
 import PropertyShortlistForm from '@/components/PropertyShortlistForm'
 import NewsAndTrends from '@/components/NewsAndTrends'
 import FAQSection from '@/components/FAQSection'
+import SuccessStories from '@/components/SuccessStories'
 import { FAQ_ITEMS } from '@/lib/faq-data'
 import type { Property, Testimonial } from '@/lib/types'
 
@@ -301,11 +302,14 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ── FEATURED SUCCESS STORIES ─────────────────────────────────────────── */}
+      <SuccessStories />
+
       {/* ── TESTIMONIALS ─────────────────────────────────────────────────────── */}
       {testimonials.length > 0 && (
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-display text-3xl lg:text-4xl font-bold text-navy text-center mb-12">What Investors Say</h2>
+            <h2 className="font-display text-3xl lg:text-4xl font-bold text-navy text-center mb-12">More From Our Investors</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {testimonials.slice(0, 6).map((t, i) => (
                 <div key={i} className="bg-cream rounded-2xl p-6 border border-gray-100">

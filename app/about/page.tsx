@@ -137,9 +137,10 @@ export default function AboutPage() {
           <p className="text-white/60 text-center mb-10">Channel partner with 30+ of Dubai's leading property developers</p>
           <div className="grid grid-cols-3 md:grid-cols-5 gap-3">
             {DEVELOPERS.map(d => (
-              <div key={d} className="bg-white/5 border border-white/10 rounded-xl p-3 text-center">
+              <Link key={d} href={`/properties?developer=${encodeURIComponent(d)}`}
+                className="bg-white/5 border border-white/10 rounded-xl p-3 text-center hover:bg-white/10 hover:border-gold/50 transition">
                 <p className="text-white text-sm font-semibold">{d}</p>
-              </div>
+              </Link>
             ))}
             <div className="bg-gold/10 border border-gold/30 rounded-xl p-3 text-center">
               <p className="text-gold text-sm font-semibold">+15 More</p>

@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { PROPERTIES, STATUS_COLORS, AED_RATE, type Property, type Status, type UnitType } from '@/lib/properties-data'
 
@@ -239,14 +240,25 @@ function PropertyCard({ property, currency }: { property: Property; currency: st
 }
 
 export default function PropertiesPage() {
+  return (
+    <Suspense fallback={null}>
+      <PropertiesPageInner />
+    </Suspense>
+  )
+}
+
+function PropertiesPageInner() {
+  const searchParams = useSearchParams()
   const [statusFilter, setStatusFilter] = useState<Status | 'All'>('All')
   const [gvFilter, setGvFilter] = useState(false)
   const [currency, setCurrency] = useState('AED')
   const [sortBy, setSortBy] = useState<'price-asc' | 'price-desc' | 'roi-desc'>('roi-desc')
+  const [developerFilter, setDeveloperFilter] = useState(searchParams.get('developer') ?? '')
 
   const filtered = PROPERTIES
     .filter(p => statusFilter === 'All' || p.status === statusFilter)
     .filter(p => !gvFilter || p.goldenVisaEligible === true)
+    .filter(p => !developerFilter || p.developerName.toLowerCase().includes(developerFilter.toLowerCase()))
     .sort((a, b) => {
       if (sortBy === 'price-asc') return a.startingPrice - b.startingPrice
       if (sortBy === 'price-desc') return b.startingPrice - a.startingPrice
@@ -311,12 +323,20 @@ export default function PropertiesPage() {
       </section>
 
       {/* Results count */}
-      <div className="max-w-6xl mx-auto px-4 pt-6 pb-2">
+      <div className="max-w-6xl mx-auto px-4 pt-6 pb-2 flex flex-wrap items-center gap-3">
         <p className="text-sm text-gray-500">
           Showing <span className="font-semibold text-navy">{filtered.length}</span> properties
           {gvFilter && ' · Golden Visa eligible'}
           {statusFilter !== 'All' && ` · ${statusFilter}`}
         </p>
+        {developerFilter && (
+          <button
+            onClick={() => setDeveloperFilter('')}
+            className="flex items-center gap-1.5 bg-navy/10 text-navy text-xs font-semibold px-3 py-1 rounded-full hover:bg-navy/20 transition"
+          >
+            Developer: {developerFilter} <span className="text-navy/60">✕</span>
+          </button>
+        )}
       </div>
 
       {/* Grid */}
@@ -324,8 +344,15 @@ export default function PropertiesPage() {
         {filtered.length === 0 ? (
           <div className="text-center py-20 text-gray-400">
             <p className="text-5xl mb-4">🏗️</p>
-            <p className="text-lg font-semibold text-gray-500 mb-2">No properties match your filters</p>
-            <button onClick={() => { setStatusFilter('All'); setGvFilter(false) }} className="text-sm text-navy underline">Clear filters</button>
+            {developerFilter ? (
+              <>
+                <p className="text-lg font-semibold text-gray-500 mb-2">No {developerFilter} properties currently listed</p>
+                <p className="text-sm text-gray-400 mb-4 max-w-md mx-auto">Shylesh works with {developerFilter} directly — WhatsApp him for current inventory and off-market opportunities.</p>
+              </>
+            ) : (
+              <p className="text-lg font-semibold text-gray-500 mb-2">No properties match your filters</p>
+            )}
+            <button onClick={() => { setStatusFilter('All'); setGvFilter(false); setDeveloperFilter('') }} className="text-sm text-navy underline">Clear filters</button>
           </div>
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

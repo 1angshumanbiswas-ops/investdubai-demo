@@ -994,6 +994,50 @@ export const PROPERTIES: Property[] = [
       "UAE's First Licensed Gaming Facility",
     ],
   },
+  {
+    id: '22',
+    developerName: 'BNW Developments (Casabella)',
+    projectName: 'Aqua Maya',
+    location: 'Al Marjan Island, Ras Al Khaimah',
+    // Starting price is the real developer-quoted 1BR entry price from the factsheet (AED 1.78M,
+    // from 678.23 sq.ft). Real, confirmed figures — NOT a placeholder, unlike price fields on
+    // other RAK/Abu Dhabi entries. Full price table by bedroom count lives in `description`/`amenities`
+    // context and the hosted brochure/factsheet.
+    startingPrice: 1_780_000,
+    paymentPlan: '10% on booking, 5% at each of months 1/2/5/8/11/14/17/20 from booking (8 installments, 40% total), 50% on completion.',
+    handoverDate: 'Q4 2027',
+    unitTypes: ['1BR', '2BR', '3BR', '4BR'],
+    goldenVisaEligible: 'check',
+    brochureUrl: '/brochures/aqua-maya-brochure.pdf',
+    // ROI UNCONFIRMED — no rental yield/ROI figure appears anywhere in the brochure, tri-fold,
+    // factsheet, or payment plan documents supplied for this listing. Placeholder pending real
+    // data from Shylesh/BNW — do NOT treat as a real estimate. Follow the same flagging pattern
+    // used for ID 21 (Wynn) until a confirmed figure is provided.
+    roiEstimate: 6.0,
+    status: 'Off-Plan',
+    image: '/images/properties/aqua-maya-hero-corner.jpg',
+    gallery: [
+      '/images/properties/aqua-maya-hero-corner.jpg',
+      '/images/properties/aqua-maya-street-exterior.jpg',
+      '/images/properties/aqua-maya-aerial.jpg',
+      '/images/properties/aqua-maya-reception.jpg',
+      '/images/properties/aqua-maya-infinity-pool.jpg',
+    ],
+    featured: true,
+    description: 'Aqua Maya is a boutique BNW Developments (Casabella) residential tower rising on Al Marjan Island, Ras Al Khaimah, 2B+G+9+R floors with a wave-inspired, balcony-led façade. 101 total units (76 x 1BR, 20 x 2BR, 2 x 3BR, 1 x 4BR, 2 retail) across 1 to 4-bedroom layouts, each with soundproofed walls, humidity-controlled cooling, and individual bedroom thermostats. Just 8 minutes from Wynn Al Marjan Island Resort and within 5-15 minutes of Al Hamra Mall, Al Hamra Golf Club, Royal Yacht Club, Waldorf Astoria, and the DoubleTree by Hilton. Handover Q4 2027. 35 minutes to RAK Airport, 55 minutes to Dubai International Airport.',
+    amenities: [
+      'Expansive Pool',
+      'Modern Gym',
+      "Kids' Play Pavilion",
+      'Family Seating Decks',
+      'Outdoor BBQ Area',
+      'Poolside Lounge',
+      'Multipurpose Pool Deck',
+      'Landscaped Seating Area',
+      'Penthouse Private Balcony Pools',
+      'Retail Promenade',
+    ],
+  },
 ]
 
 export const STATUS_COLORS: Record<Status, string> = {

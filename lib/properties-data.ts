@@ -949,6 +949,51 @@ export const PROPERTIES: Property[] = [
       'Landscaped Promenades',
     ],
   },
+  {
+    id: '21',
+    developerName: 'Wynn Resorts · Marjan · RAK Hospitality Holding',
+    projectName: 'Wynn Al Marjan Island — Marina Estates',
+    location: 'Al Marjan Island, Ras Al Khaimah',
+    // PRICE UNCONFIRMED — no per-unit sale price published anywhere; only 10 Marina Estates
+    // exist in the entire resort (extremely limited). Placeholder below is a rough order-of-magnitude
+    // estimate based on RAK's 2025 prime average of AED 2,428/sq ft (Gulf News, Feb 2026) applied to an
+    // estimated large-villa footprint — NOT a real quoted price. MUST be replaced with Shylesh's actual
+    // sales data before this goes live to clients. Treat as "Price on Application" until confirmed.
+    startingPrice: 15_000_000,
+    paymentPlan: 'Price on Application — only 10 Marina Estates exist across the entire resort. Contact Shylesh for the confirmed price list and payment plan.',
+    handoverDate: 'Spring 2027',
+    unitTypes: ['Villa'],
+    goldenVisaEligible: true,
+    brochureUrl: null,
+    // ROI UNCONFIRMED — no rental comps exist for one-of-10 branded resort estates. Placeholder pending
+    // real data from Shylesh.
+    roiEstimate: 6.0,
+    status: 'Off-Plan',
+    image: '/images/properties/wynn-marjan-grand-entrance.jpg',
+    gallery: [
+      '/images/properties/wynn-marjan-grand-entrance.jpg',
+      '/images/properties/wynn-marjan-tower-sunset.jpg',
+      '/images/properties/wynn-marjan-island-aerial.jpg',
+      '/images/properties/wynn-marjan-beach-cove.jpg',
+      '/images/properties/wynn-marjan-construction-progress.jpg',
+    ],
+    featured: true,
+    description: 'Wynn Al Marjan Island is a $5.1 billion integrated resort on Al Marjan Island, Ras Al Khaimah — the UAE\'s first federally licensed gaming resort, developed by Wynn Resorts, Marjan, and RAK Hospitality Holding. The Marina Estates are among the most exclusive residences in the resort: only 10 exist in total, alongside 4 Garden Townhomes, 2 Royal Apartments, 297 Enclave suites, and 1,217 resort guestrooms. Set on a 60-hectare site roughly 45 minutes from Dubai International Airport, the resort is targeting a spring 2027 opening, with the access bridge to the mainland (E311/E611) expected to open late 2026. PRICE ON APPLICATION — extremely limited inventory; contact Shylesh directly for current availability.',
+    amenities: [
+      '22 Restaurants, Lounges & Bars',
+      '12 Swimming Pools',
+      '900-Seat Theatre',
+      'Luxury Spa',
+      'Private Beach Club',
+      '420m Private White-Sand Beach',
+      'Deep-Water Marina for Superyachts',
+      '15,000 sqm Retail Promenade',
+      '145,000 sqft Convention & Meetings Centre',
+      'Coral Court Event Venue',
+      'Enclave — Private Hotel-Within-a-Hotel',
+      "UAE's First Licensed Gaming Facility",
+    ],
+  },
 ]
 
 export const STATUS_COLORS: Record<Status, string> = {

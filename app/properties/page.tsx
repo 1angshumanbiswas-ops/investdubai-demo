@@ -5,6 +5,17 @@ import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { PROPERTIES, STATUS_COLORS, AED_RATE, type Property, type Status, type UnitType } from '@/lib/properties-data'
 
+const EMIRATES = ['Dubai', 'Abu Dhabi', 'Ras Al Khaimah', 'Sharjah'] as const
+type Emirate = typeof EMIRATES[number]
+
+function getEmirate(location: string): Emirate {
+  const l = location.toLowerCase()
+  if (l.includes('abu dhabi')) return 'Abu Dhabi'
+  if (l.includes('ras al khaimah') || l.includes('rak')) return 'Ras Al Khaimah'
+  if (l.includes('sharjah')) return 'Sharjah'
+  return 'Dubai'
+}
+
 function formatPrice(aed: number, currency: string) {
   const rate = AED_RATE[currency] ?? 1
   const val = aed * rate
@@ -254,11 +265,13 @@ function PropertiesPageInner() {
   const [currency, setCurrency] = useState('AED')
   const [sortBy, setSortBy] = useState<'price-asc' | 'price-desc' | 'roi-desc'>('roi-desc')
   const [developerFilter, setDeveloperFilter] = useState(searchParams.get('developer') ?? '')
+  const [emirateFilter, setEmirateFilter] = useState<Emirate | 'All'>((searchParams.get('emirate') as Emirate) ?? 'All')
 
   const filtered = PROPERTIES
     .filter(p => statusFilter === 'All' || p.status === statusFilter)
     .filter(p => !gvFilter || p.goldenVisaEligible === true)
     .filter(p => !developerFilter || p.developerName.toLowerCase().includes(developerFilter.toLowerCase()))
+    .filter(p => emirateFilter === 'All' || getEmirate(p.location) === emirateFilter)
     .sort((a, b) => {
       if (sortBy === 'price-asc') return a.startingPrice - b.startingPrice
       if (sortBy === 'price-desc') return b.startingPrice - a.startingPrice
@@ -282,6 +295,27 @@ function PropertiesPageInner() {
 
       {/* Filters */}
       <section className="bg-white border-b border-gray-100 sticky top-0 z-20 shadow-sm">
+        <div className="max-w-6xl mx-auto px-4 pt-3 flex flex-wrap gap-2">
+          {EMIRATES.map(em => {
+            const count = PROPERTIES.filter(p => getEmirate(p.location) === em).length
+            return (
+              <button
+                key={em}
+                onClick={() => setEmirateFilter(emirateFilter === em ? 'All' : em)}
+                disabled={count === 0}
+                className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition ${
+                  emirateFilter === em
+                    ? 'bg-gold text-navy border-gold'
+                    : count === 0
+                    ? 'bg-white text-gray-300 border-gray-100 cursor-not-allowed'
+                    : 'bg-white text-navy border-gray-200 hover:border-gold'
+                }`}
+              >
+                {em} {count > 0 && `(${count})`}
+              </button>
+            )
+          })}
+        </div>
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-wrap gap-3 items-center">
           {/* Status filter */}
           <div className="flex gap-2 flex-wrap">
@@ -326,6 +360,7 @@ function PropertiesPageInner() {
       <div className="max-w-6xl mx-auto px-4 pt-6 pb-2 flex flex-wrap items-center gap-3">
         <p className="text-sm text-gray-500">
           Showing <span className="font-semibold text-navy">{filtered.length}</span> properties
+          {emirateFilter !== 'All' && ` in ${emirateFilter}`}
           {gvFilter && ' · Golden Visa eligible'}
           {statusFilter !== 'All' && ` · ${statusFilter}`}
         </p>
@@ -352,7 +387,7 @@ function PropertiesPageInner() {
             ) : (
               <p className="text-lg font-semibold text-gray-500 mb-2">No properties match your filters</p>
             )}
-            <button onClick={() => { setStatusFilter('All'); setGvFilter(false); setDeveloperFilter('') }} className="text-sm text-navy underline">Clear filters</button>
+            <button onClick={() => { setStatusFilter('All'); setGvFilter(false); setDeveloperFilter(''); setEmirateFilter('All') }} className="text-sm text-navy underline">Clear filters</button>
           </div>
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

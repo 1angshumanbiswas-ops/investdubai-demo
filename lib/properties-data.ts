@@ -1038,6 +1038,57 @@ export const PROPERTIES: Property[] = [
       'Retail Promenade',
     ],
   },
+  {
+    id: '24',
+    developerName: 'Ellington Properties',
+    projectName: 'Soto Grande',
+    location: 'Al Hamra Village, Ras Al Khaimah',
+    // PRICE UNCONFIRMED — no per-unit sale price appears anywhere in the official Project Brief or
+    // Amenities Plan PDFs supplied for this listing. Placeholder below is a rough order-of-magnitude
+    // estimate scaled off the smallest unit type (Studio, 421-452 sq ft) and comparable RAK beachfront
+    // launches — NOT a real quoted price. MUST be replaced with Shylesh/Ellington's actual price list
+    // before this goes live to clients. Treat as "Price on Application" until confirmed.
+    startingPrice: 1_600_000,
+    // Real payment plan — taken directly from the official Project Brief PDF.
+    paymentPlan: "20% at booking + AED 3,000 RERA fee, 10% at 90 days, 10% at 180 days, then 5% x 6 on completion of 20/30/40/50/60/70% construction, 30% on completion. Plus 4% upon completion earmarked for title deed registration.",
+    // Real — "Anticipated Completion Date" stated directly in the official Project Brief PDF.
+    handoverDate: 'Q4 2029',
+    unitTypes: ['Studio', '1BR', '2BR', '3BR', 'Penthouse'],
+    goldenVisaEligible: 'check',
+    brochureUrl: '/brochures/soto-grande-brochure.pdf',
+    // ROI UNCONFIRMED — no rental yield/ROI figure appears anywhere in the supplied source docs.
+    // Placeholder pending real data from Shylesh/Ellington, same flagging pattern as IDs 21/22/23.
+    roiEstimate: 6.0,
+    status: 'Off-Plan',
+    image: '/images/properties/soto-grande-hero-towers-twilight.jpg',
+    gallery: [
+      '/images/properties/soto-grande-hero-towers-twilight.jpg',
+      '/images/properties/soto-grande-infinity-pool-golden-hour.jpg',
+      '/images/properties/soto-grande-sky-bridge.jpg',
+      '/images/properties/soto-grande-balcony-sunset-view.jpg',
+      '/images/properties/soto-grande-beach-daytime-aerial.jpg',
+    ],
+    featured: true,
+    description: "Soto Grande is Ellington Properties latest addition to Al Hamra Village, Ras Al Khaimah, offering sweeping views of the lagoon, the Arabian Gulf, and the Al Hamra golf course. Two towers connected by a sky bridge — Tower I with 22 residential floors and Tower II with 23 — span Studio through 4-Bedroom Penthouse layouts, freehold, with an anticipated completion of Q4 2029 and anticipated service charge of AED 16 per sq ft. Set within Al Hamra Village, the largest holistically developed community in Ras Al Khaimah at over 77 million sq ft, residents are minutes from the Royal Yacht Club, Al Hamra Golf Club and Mall, and around 10 minutes from Wynn Al Marjan Island Resort. PRICE ON APPLICATION — contact Shylesh directly for current availability and confirmed pricing.",
+    amenities: [
+      'Lobby Reception & Lounge',
+      'Direct Beach Access',
+      'Lap Pool (8.5m x 60m)',
+      'Kids Pool & Outdoor Play Area',
+      'Fitness Studio',
+      'Yoga & Pilates Studio',
+      'Wall Climbing Zone',
+      'Badminton Court',
+      'Padel Court',
+      'Table Tennis',
+      'Kids Club',
+      'Club Lounge',
+      'Family Leisure Pool & Plunge Pool',
+      'Barbecue Deck & Outdoor Dining',
+      'Games Room',
+      'Landscaped Gardens & Terraces',
+    ],
+  },
 ]
 
 export const STATUS_COLORS: Record<Status, string> = {

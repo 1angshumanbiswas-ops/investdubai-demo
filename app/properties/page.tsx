@@ -263,7 +263,7 @@ function PropertiesPageInner() {
   const [statusFilter, setStatusFilter] = useState<Status | 'All'>('All')
   const [gvFilter, setGvFilter] = useState(false)
   const [currency, setCurrency] = useState('AED')
-  const [sortBy, setSortBy] = useState<'price-asc' | 'price-desc' | 'roi-desc'>('roi-desc')
+  const [sortBy, setSortBy] = useState<'price-asc' | 'price-desc' | 'roi-desc'>('price-desc')
   const [developerFilter, setDeveloperFilter] = useState(searchParams.get('developer') ?? '')
   const [emirateFilter, setEmirateFilter] = useState<Emirate | 'All'>((searchParams.get('emirate') as Emirate) ?? 'All')
 
@@ -348,9 +348,9 @@ function PropertiesPageInner() {
 
             {/* Sort */}
             <select value={sortBy} onChange={e => setSortBy(e.target.value as typeof sortBy)} className="border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy focus:outline-none">
-              <option value="roi-desc">Sort: Highest ROI</option>
-              <option value="price-asc">Sort: Price Low–High</option>
               <option value="price-desc">Sort: Price High–Low</option>
+              <option value="price-asc">Sort: Price Low–High</option>
+              <option value="roi-desc">Sort: Highest ROI</option>
             </select>
           </div>
         </div>

@@ -91,9 +91,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
-          <p className="text-white/30 text-xs">© 2026 Nexus Elite Properties LLC. All rights reserved. RERA Broker #77789.</p>
-          <p className="text-white/30 text-xs">Content is for informational purposes only. Not financial advice.</p>
+        <div className="border-t border-white/10 pt-6">
+          <p className="text-white/40 text-xs text-center sm:text-left mb-4">
+            NEXUS ELITE PROPERTIES L.L.C · License No. <strong className="text-white/60">1255125</strong> · Membership No. <strong className="text-white/60">497689</strong> · Registration No. <strong className="text-white/60">2118514</strong> · RERA Broker BRN <strong className="text-white/60">77789</strong>
+          </p>
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
+            <p className="text-white/30 text-xs">© 2026 Nexus Elite Properties LLC. All rights reserved. RERA Broker #77789.</p>
+            <p className="text-white/30 text-xs">Content is for informational purposes only. Not financial advice.</p>
+          </div>
         </div>
       </div>
     </footer>

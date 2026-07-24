@@ -1092,53 +1092,53 @@ export const PROPERTIES: Property[] = [
   {
     id: '25',
     developerName: 'Ellington Properties',
-    projectName: 'Playa Del Sol',
-    location: 'Al Marjan Island, Ras Al Khaimah',
-    // PRICE UNCONFIRMED — neither the official Project Brief nor the Slim Brochure states a
-    // per-unit or starting price anywhere (unlike Aqua Maya's factsheet). Third-party listing
-    // portals show wildly inconsistent figures (AED 1.1M–3.3M depending on source/date), none of
-    // which are developer-confirmed, so none were used as ground truth. Placeholder below is a
-    // conservative studio-tier figure pending Shylesh's actual price list — MUST be replaced
-    // before this goes live to clients. Treat as "Price on Application" until confirmed.
-    startingPrice: 1_700_000,
-    paymentPlan: '20% on booking + AED 3,000 RERA registration fee · 10% at 90 days · 10% at 180 days · 5% on completion of 20% construction · 5% on completion of 30% construction · 5% on completion of 40% construction · 5% on completion of 50% construction · 40% on completion (plus 4% on completion earmarked for title deed registration).',
-    // Handover date does not appear in either official document supplied. Q4 2027 is corroborated
-    // consistently across multiple independent third-party listing portals, but should still be
-    // confirmed with Shylesh/Ellington directly before publishing as final.
-    handoverDate: 'Q4 2027',
-    unitTypes: ['Studio', '1BR', '2BR', '3BR', 'Penthouse', 'Villa'],
+    projectName: 'Portside Square',
+    location: 'Mina Rashid, Dubai',
+    // REAL pricing — taken from a live "Available Units" inventory sheet (14 units, Towers 1-3)
+    // supplied directly by Shylesh, not a brochure estimate. startingPrice is the lowest confirmed
+    // unit on that sheet (III-709, 1BR). Full range across the 14 available units: AED 2,439,828
+    // (1BR) to AED 5,403,828 (3BR). See description for the per-bedroom breakdown.
+    startingPrice: 2_439_828,
+    // Real payment plan — taken directly from the official Project Brief PDF.
+    // NOTE: the milestones as printed sum to 95%, not 100% (20+10+10+5+5+5+5+5+5+30).
+    // Flagging for Angshuman/Shylesh to confirm the real final milestone (likely 35% on completion)
+    // before this goes live — not corrected here since it's unverified which figure is wrong.
+    paymentPlan: '20% at booking, 10% at 60 days, 10% at 120 days, 5% at 240 days, 5% at 360 days, then 5% x 4 on completion of 20/30/40/50% construction, 30% on completion (per brief — milestones total 95%, pending confirmation).',
+    // Real — "Completion Date" stated directly in the official Project Brief PDF.
+    handoverDate: 'Q4 2029',
+    unitTypes: ['Studio', '1BR', '2BR', '3BR', 'Penthouse'],
     goldenVisaEligible: 'check',
-    brochureUrl: '/brochures/playa-del-sol-brochure.pdf',
-    // ROI UNCONFIRMED — no rental yield/ROI figure appears in either official document. 6.0 is
-    // used for consistency with the placeholder pattern on IDs 21/22/24, loosely in line with
-    // third-party reports of ~6% average Al Marjan Island rental yields — NOT a project-specific
-    // confirmed figure. Placeholder pending real data from Shylesh/Ellington.
+    brochureUrl: '/brochures/portside-square-brief.pdf',
+    // ROI UNCONFIRMED — no rental yield/ROI figure appears anywhere in the Project Brief PDF.
+    // Placeholder pending real data from Shylesh/Ellington, same flagging pattern as IDs 21/23/24.
     roiEstimate: 6.0,
     status: 'Off-Plan',
-    image: '/images/properties/playa-del-sol-sunset-balcony.jpg',
+    image: '/images/properties/portside-square-hero-towers-twilight.jpg',
     gallery: [
-      '/images/properties/playa-del-sol-sunset-balcony.jpg',
-      '/images/properties/playa-del-sol-pool-deck.jpg',
-      '/images/properties/playa-del-sol-aerial-wynn-view.jpg',
-      '/images/properties/playa-del-sol-jetty-boardwalk.jpg',
-      '/images/properties/playa-del-sol-signature-villa.jpg',
+      '/images/properties/portside-square-hero-towers-twilight.jpg',
+      '/images/properties/portside-square-waterfront-landmark-dusk.jpg',
+      '/images/properties/portside-square-mina-rashid-heritage.jpg',
+      '/images/properties/portside-square-architecture-close-up.jpg',
+      '/images/properties/portside-square-pool-deck-dusk.jpg',
     ],
     featured: true,
-    description: 'Playa Del Sol is Ellington Properties\' second development on Al Marjan Island, Ras Al Khaimah — a 2-basement, ground floor, plus 14-residential-floor beachfront complex of 516 units, from studios up to a signature 5-bedroom villa with a private pool. Residences range from 400.85 sq.ft studios to an 8,674 sq.ft villa, all freehold, with an anticipated service charge of AED 16 per sq.ft. The development sits just 4 minutes from Wynn Al Marjan Island Resort and includes a private residents\' jetty with first-class yacht service and direct access to the Al Marjan Island Boardwalk. PRICE ON APPLICATION — contact Shylesh directly for current availability and the confirmed price list.',
+    description: "Portside Square is Ellington Properties' newest waterfront landmark in Dubai's historic Mina Rashid — three sculptural residential towers (Portside Residences I, II, III) totalling 408 units from Studio to 4-Bedroom Penthouse, freehold, with an anticipated completion of Q4 2029 and anticipated service charge of AED 17 per sq ft. 14 units currently available across Towers 1-3: 1-Bedroom from AED 2.44M–2.64M, 2-Bedroom from AED 3.60M–4.46M, and 3-Bedroom at AED 5.40M. Residents get direct access to a three-floor amenities pavilion with a wellness spa, fitness studio, and rooftop clubhouse, plus panoramic views of the Arabian Gulf, Downtown Dubai, and the marina promenade.",
     amenities: [
-      'Private Yacht Jetty & First-Class Yacht Service',
-      'Al Marjan Island Boardwalk Access',
-      'Adult Pool Oasis',
-      'Water Lounge & Pool Spa',
-      "Kids' Pool & Indoor/Outdoor Play Areas",
-      'Teens Clubhouse',
-      'Sunken Garden with Lounge Areas',
-      'Salon & Spa Treatment Rooms',
-      'Squash Court',
-      'Indoor & Outdoor Fitness Studios',
-      'Indoor & Outdoor Yoga Areas',
-      'Barbeque Deck with Dining Area',
-      'Clubhouse with Pantry & Dining',
+      'Outdoor Yoga & Garden Area',
+      'Pool Deck',
+      'Co-Working Pods & Lounge Seating',
+      'Male & Female Spa (Sauna, Steam, Aromatherapy)',
+      'Hot & Cold Plunge Pools',
+      'Aqua Cycling',
+      'Pilates & Yoga Studio',
+      'Kids Play Area & Nursing Room',
+      'Free Weights & Strength Training Zone',
+      'Cable Station & TRX Suspension Training',
+      'Cardio & Circuit Stations',
+      'Juice Bar',
+      'Clubhouse Lounge & Dining',
+      'Shuffleboard & Games Table',
+      'Clubhouse Show Bar',
     ],
   },
 ]

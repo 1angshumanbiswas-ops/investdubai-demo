@@ -1141,6 +1141,54 @@ export const PROPERTIES: Property[] = [
       'Clubhouse Show Bar',
     ],
   },
+  {
+    id: '26',
+    developerName: 'BNW Developments',
+    projectName: 'Tonino Lamborghini Residences',
+    location: 'Al Marjan Island, Ras Al Khaimah',
+    // REAL pricing — from a live BNW inventory report (3 units, all currently-available stock is
+    // 3-Bedroom only). startingPrice is the lowest confirmed unit (Unit 1_118). Full range across
+    // the 3 available units: AED 8,157,207 - 9,840,108. No Studio/1BR/2BR/Penthouse/Villa/Mansion
+    // pricing has been supplied yet — those unit types exist in the brochure's unit-plan section but
+    // are NOT on this inventory sheet, so no price is claimed for them.
+    startingPrice: 8_157_207,
+    // No payment plan appears anywhere in the brochure (a pure lookbook/lifestyle brochure, no
+    // commercial terms). Placeholder pending Shylesh/BNW confirmation — do not publish without it.
+    paymentPlan: 'Price on application — contact Shylesh for the confirmed payment plan.',
+    // No handover/completion date appears anywhere in the brochure. Placeholder pending confirmation.
+    handoverDate: null,
+    unitTypes: ['Studio', '1BR', '2BR', '3BR', 'Penthouse', 'Villa', '5BR'],
+    goldenVisaEligible: 'check',
+    brochureUrl: '/brochures/tonino-lamborghini-residences-brochure.pdf',
+    // ROI UNCONFIRMED — no rental yield/ROI figure appears anywhere in the brochure.
+    // Placeholder pending real data from Shylesh/BNW, same flagging pattern as IDs 21/23/24/25.
+    roiEstimate: 6.0,
+    status: 'Off-Plan',
+    image: '/images/properties/tonino-lamborghini-coastal-majesty-exterior.jpg',
+    gallery: [
+      '/images/properties/tonino-lamborghini-coastal-majesty-exterior.jpg',
+      '/images/properties/tonino-lamborghini-street-vista.jpg',
+      '/images/properties/tonino-lamborghini-aerial-view.jpg',
+      '/images/properties/tonino-lamborghini-pool.jpg',
+      '/images/properties/tonino-lamborghini-waterfront-view.jpg',
+    ],
+    featured: true,
+    description: "Tonino Lamborghini Residences by BNW Developments brings Italian design heritage to Al Marjan Island, Ras Al Khaimah — 378 units across Studio through 5-Bedroom Mansion and 3-Bedroom Villa layouts, spanning a 394,852.5 sq.ft gross floor area on a 157,941 sq.ft plot. Designed with Tonino Lamborghini's signature bold forms and natural textures, residences are 5 minutes from Al Marjan Island Boulevard and the Rixos Bab Al Bahr Resort, and 8 minutes from Wynn Resort. 3 units currently available (3-Bedroom only): AED 8.16M-9.84M, 1,965-2,561 sq.ft total area, panoramic sea and pool views. PRICE ON APPLICATION for all other unit types — contact Shylesh directly for current availability.",
+    amenities: [
+      'Swimming Pool & Pool Bar',
+      'Kids Pool & Kids Play Area',
+      "Children's Recreational Area",
+      "Parents' Lounge",
+      'Gymnasium',
+      'Sauna',
+      'Yoga Area',
+      'Outdoor Cinema',
+      'BBQ Area',
+      'Zen Garden',
+      'Indoor Spa',
+      'Grand Entrance & Entrance Lobby',
+    ],
+  },
 ]
 
 export const STATUS_COLORS: Record<Status, string> = {

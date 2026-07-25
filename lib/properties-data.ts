@@ -1354,6 +1354,209 @@ export const PROPERTIES: Property[] = [
       'Kids Play Area & Family Park',
     ],
   },
+  {
+    id: '31',
+    developerName: 'ARADA',
+    projectName: 'Masaar 3 - Sedra',
+    location: 'Masaar, Sharjah',
+    // REAL — from a live ARADA "Availability Report" (Cluster: SEDRA, 31 units) supplied directly
+    // by Shylesh. startingPrice is the lowest confirmed unit on that sheet (multiple 4BR townhouse
+    // middle units at AED 2,880,000). Full range across the 31 available units: AED 2,880,000 to
+    // AED 8,035,000 (5BR villa V5 T2-B). Not a placeholder.
+    startingPrice: 2_880_000,
+    // Real — from the official "Masaar 3 - Payment Plan - July 2026" document, applies to
+    // Sedra/Dana/Lareen/Laura clusters: 20% (5% x4 in first 570 days) + 5% at 750 days + 70% on
+    // completion. Post-dated cheques to be issued.
+    paymentPlan: '5% down payment, 5% at 30 days, 5% at 210 days, 5% at 390 days, 5% at 570 days, 5% at 750 days, 70% on completion (post-dated cheques required).',
+    // Real — "Anticipated Completion Dates" column, uniformly 31-Dec-2028 across all Sedra units.
+    handoverDate: '31 December 2028',
+    unitTypes: ['4BR', '5BR', 'Townhouse', 'Villa'],
+    goldenVisaEligible: 'check',
+    brochureUrl: '/brochures/masaar-3-brief.pdf',
+    // ROI UNCONFIRMED — no rental yield/ROI figure appears anywhere in the source documents.
+    roiEstimate: 6.0,
+    status: 'Off-Plan',
+    image: '/images/properties/masaar-3-lagoon-waterfall-pool.jpg',
+    // NOTE: these 5 images are shared/generic Masaar 3 masterplan renders (cover collage), not
+    // Sedra-specific photography — no cluster-specific images have been supplied for Sedra yet.
+    gallery: [
+      '/images/properties/masaar-3-lagoon-waterfall-pool.jpg',
+      '/images/properties/masaar-3-aerial-forest-community.jpg',
+      '/images/properties/masaar-3-aerial-pool-garden.jpg',
+      '/images/properties/masaar-3-reforestation-clubhouse.jpg',
+      '/images/properties/masaar-3-interior-window-view.jpg',
+    ],
+    featured: true,
+    description: "Masaar 3 - Sedra is a cluster of 4 and 5-Bedroom townhouses and villas within ARADA's Masaar forested masterplan community in Sharjah — the emirate's first \"reforestation\" residential concept, built around a beach-style lagoon with a rock waterfall, landscaped gardens, and a dedicated clubhouse. 31 units currently available, from 4BR townhouses (1,705-2,662 sq.ft plot, 2,559-3,139 sq.ft saleable) to 5BR villas (up to 7,398 sq.ft plot, 6,736 sq.ft saleable). Anticipated completion 31 December 2028. PRICE CONFIRMED — AED 2.88M to AED 8.04M across current inventory, contact Shylesh for the specific unit list.",
+    amenities: [
+      'Lagoon-Style Waterfall Pool',
+      'Landscaped Pool Garden',
+      '"The Reforestation" Clubhouse',
+      'Forest Walking Trails',
+    ],
+  },
+  {
+    id: '32',
+    developerName: 'ARADA',
+    projectName: 'Masaar 3 - Lareen',
+    location: 'Masaar, Sharjah',
+    // REAL — from a live ARADA "Availability Report" (Cluster: LAREEN, 13 units — split out from
+    // Dana, which is now its own listing at ID 35, once distinct Dana-specific photography became
+    // available). startingPrice is the lowest confirmed unit (LAR-TH102/107, 4BR townhouse middle,
+    // AED 2,885,000). Full range across the 13 Lareen units: AED 2,885,000 to AED 6,260,000
+    // (LAR-V065, 5BR villa). Not a placeholder.
+    startingPrice: 2_885_000,
+    paymentPlan: '5% down payment, 5% at 30 days, 5% at 210 days, 5% at 390 days, 5% at 570 days, 5% at 750 days, 70% on completion (post-dated cheques required).',
+    // Real — "Anticipated Completion Dates" column, uniformly 31-Dec-2028 across all Lareen units.
+    handoverDate: '31 December 2028',
+    unitTypes: ['3BR', '4BR', '5BR', 'Townhouse', 'Villa'],
+    goldenVisaEligible: 'check',
+    brochureUrl: '/brochures/masaar-3-brief.pdf',
+    // ROI UNCONFIRMED — no rental yield/ROI figure appears anywhere in the source documents.
+    roiEstimate: 6.0,
+    status: 'Off-Plan',
+    image: '/images/properties/masaar-3-lareen-lagoon-pool.jpg',
+    // REAL cluster-specific photography, supplied directly for Lareen — townhouse exterior renders
+    // and an aerial shot revealing on-site tennis and football/soccer courts (not previously
+    // documented — genuine amenity discovery from these images, not from a written list).
+    gallery: [
+      '/images/properties/masaar-3-lareen-lagoon-pool.jpg',
+      '/images/properties/masaar-3-lareen-townhouse-exterior-dusk.jpg',
+      '/images/properties/masaar-3-lareen-townhouse-street-view.jpg',
+      '/images/properties/masaar-3-lareen-aerial-sports-courts.jpg',
+      '/images/properties/masaar-3-lareen-courtyard-family.jpg',
+    ],
+    featured: true,
+    description: "Masaar 3 - Lareen is a cluster of 3, 4 and 5-Bedroom townhouses and villas within ARADA's Masaar forested masterplan in Sharjah, with private carport parking set among tree-lined streets. Aerial photography of the cluster shows dedicated on-site tennis and football/soccer courts alongside the shared lagoon-style waterfall pool and landscaped gardens common to all Masaar 3 clusters. 13 units currently available, from a 3BR townhouse (2,321 sq.ft plot, 2,342 sq.ft saleable) up to a 5BR villa (7,086 sq.ft plot, 5,142 sq.ft saleable). Anticipated completion 31 December 2028. PRICE CONFIRMED — AED 2.89M to AED 6.26M across current inventory, contact Shylesh for the specific unit list.",
+    amenities: [
+      'Lagoon-Style Waterfall Pool',
+      'Tennis Court',
+      'Football / Soccer Pitch',
+      'Landscaped Pool Garden',
+      '"The Reforestation" Clubhouse',
+      'Private Carport Parking',
+    ],
+  },
+  {
+    id: '35',
+    developerName: 'ARADA',
+    projectName: 'Masaar 3 - Dana',
+    location: 'Masaar, Sharjah',
+    // REAL — from a live ARADA "Availability Report" (Cluster: DANA, 4 units — all villas, no
+    // townhouses in current inventory). startingPrice is the lowest confirmed unit (DAN-V001, 4BR
+    // villa corner, AED 4,622,000). Full range across the 4 available units: AED 4,622,000 to
+    // AED 6,458,000 (DAN-V074, 5BR villa). Not a placeholder.
+    startingPrice: 4_622_000,
+    paymentPlan: '5% down payment, 5% at 30 days, 5% at 210 days, 5% at 390 days, 5% at 570 days, 5% at 750 days, 70% on completion (post-dated cheques required).',
+    // Real — "Anticipated Completion Dates" column, uniformly 31-Dec-2028 across all Dana units.
+    handoverDate: '31 December 2028',
+    unitTypes: ['4BR', '5BR', 'Villa'],
+    goldenVisaEligible: 'check',
+    brochureUrl: '/brochures/masaar-3-brief.pdf',
+    // ROI UNCONFIRMED — no rental yield/ROI figure appears anywhere in the source documents.
+    roiEstimate: 6.0,
+    status: 'Off-Plan',
+    image: '/images/properties/masaar-3-dana-townhouse-daytime.jpg',
+    // REAL cluster-specific photography supplied directly for Dana. Two of the six originally
+    // supplied images were byte-identical duplicates of Lareen's photos (same marketing asset
+    // reused across cluster decks) and were dropped rather than presented as Dana-exclusive; the
+    // shared lagoon pool shot is kept since that amenity is genuinely common to both clusters.
+    gallery: [
+      '/images/properties/masaar-3-dana-townhouse-daytime.jpg',
+      '/images/properties/masaar-3-dana-aerial-curved-pool.jpg',
+      '/images/properties/masaar-3-dana-street-view-pedestrians.jpg',
+      '/images/properties/masaar-3-dana-villa-garage-view.jpg',
+      '/images/properties/masaar-3-lagoon-waterfall-pool.jpg',
+    ],
+    featured: true,
+    description: "Masaar 3 - Dana is a cluster of 4 and 5-Bedroom villas within ARADA's Masaar forested masterplan in Sharjah — villa-only, no townhouses in current inventory, positioning it as a step up from the mixed Lareen cluster next door. Homes feature double-height glazing, private garage parking for multiple vehicles, and access to a curved landscaped swimming pool with a shaded pavilion, alongside the shared lagoon-style waterfall pool common to all Masaar 3 clusters. 4 units currently available, from a 4BR villa (3,838 sq.ft plot, 3,765 sq.ft saleable) up to a 5BR villa (7,272 sq.ft plot, 5,142 sq.ft saleable). Anticipated completion 31 December 2028. PRICE CONFIRMED — AED 4.62M to AED 6.46M across current inventory, contact Shylesh for the specific unit list.",
+    amenities: [
+      'Curved Landscaped Swimming Pool',
+      'Shaded Pool Pavilion',
+      'Lagoon-Style Waterfall Pool (shared)',
+      '"The Reforestation" Clubhouse',
+      'Private Multi-Car Garage Parking',
+    ],
+  },
+  {
+    id: '33',
+    developerName: 'ARADA',
+    projectName: 'Masaar 3 - Laura',
+    location: 'Masaar, Sharjah',
+    // REAL — from a live ARADA "Availability Report" (Cluster: LAURA, 26 units) supplied directly
+    // by Shylesh. startingPrice is the lowest confirmed unit on that sheet (LAU-TH311/312/322, 4BR
+    // townhouse middle, AED 2,875,000). Full range across the 26 available units: AED 2,875,000 to
+    // AED 6,715,000 (LAU-V085, 5BR villa corner). Not a placeholder.
+    startingPrice: 2_875_000,
+    paymentPlan: '5% down payment, 5% at 30 days, 5% at 210 days, 5% at 390 days, 5% at 570 days, 5% at 750 days, 70% on completion (post-dated cheques required).',
+    // Real — "Anticipated Completion Dates" column, uniformly 31-Dec-2028 across all Laura units.
+    handoverDate: '31 December 2028',
+    unitTypes: ['4BR', '5BR', 'Townhouse', 'Villa'],
+    goldenVisaEligible: 'check',
+    brochureUrl: '/brochures/masaar-3-brief.pdf',
+    // ROI UNCONFIRMED — no rental yield/ROI figure appears anywhere in the source documents.
+    roiEstimate: 6.0,
+    status: 'Off-Plan',
+    image: '/images/properties/masaar-3-aerial-forest-community.jpg',
+    // NOTE: these 5 images are shared/generic Masaar 3 masterplan renders (cover collage), not
+    // Laura-specific photography — no cluster-specific images have been supplied for Laura yet.
+    gallery: [
+      '/images/properties/masaar-3-aerial-forest-community.jpg',
+      '/images/properties/masaar-3-lagoon-waterfall-pool.jpg',
+      '/images/properties/masaar-3-aerial-pool-garden.jpg',
+      '/images/properties/masaar-3-reforestation-clubhouse.jpg',
+      '/images/properties/masaar-3-interior-window-view.jpg',
+    ],
+    featured: true,
+    description: "Masaar 3 - Laura is a cluster of 4 and 5-Bedroom townhouses and villas within ARADA's Masaar forested masterplan community in Sharjah, sharing the same lagoon-style waterfall pool, landscaped gardens, and clubhouse as the rest of Masaar 3. 26 units currently available, from 4BR townhouses (1,705-2,971 sq.ft plot, 2,559-3,139 sq.ft saleable) to 5BR villas (up to 8,538 sq.ft plot, 5,142 sq.ft saleable). Anticipated completion 31 December 2028. PRICE CONFIRMED — AED 2.88M to AED 6.72M across current inventory, contact Shylesh for the specific unit list.",
+    amenities: [
+      'Lagoon-Style Waterfall Pool',
+      'Landscaped Pool Garden',
+      '"The Reforestation" Clubhouse',
+      'Forest Walking Trails',
+    ],
+  },
+  {
+    id: '34',
+    developerName: 'ARADA',
+    projectName: 'Masaar 3 - Layan',
+    location: 'Masaar, Sharjah',
+    // REAL — from a live ARADA "Availability Report" (Cluster: LAYAN, 12 units, 3BR townhouses
+    // only) supplied directly by Shylesh. startingPrice is the lowest confirmed unit on that sheet
+    // (LAY-TH171, AED 2,900,000). Full range across the 12 available units: AED 2,900,000 to
+    // AED 2,980,000. Not a placeholder.
+    startingPrice: 2_900_000,
+    // Real — Layan has its own payment plan, distinct from the other 4 clusters: 6 installments of
+    // 5% (vs. 5 elsewhere) and 65% on completion (vs. 70% elsewhere).
+    paymentPlan: '5% down payment, 5% at 30 days, 5% at 210 days, 5% at 390 days, 5% at 570 days, 5% at 750 days, 5% at 930 days, 65% on completion (post-dated cheques required).',
+    // Real — "Anticipated Completion Dates" column, uniformly 30-Sept-2029 across all Layan units
+    // (later than the other 4 clusters, which complete 31-Dec-2028).
+    handoverDate: '30 September 2029',
+    unitTypes: ['3BR', 'Townhouse'],
+    goldenVisaEligible: 'check',
+    brochureUrl: '/brochures/masaar-3-brief.pdf',
+    // ROI UNCONFIRMED — no rental yield/ROI figure appears anywhere in the source documents.
+    roiEstimate: 6.0,
+    status: 'Off-Plan',
+    image: '/images/properties/masaar-3-aerial-pool-garden.jpg',
+    // NOTE: these 5 images are shared/generic Masaar 3 masterplan renders (cover collage), not
+    // Layan-specific photography — no cluster-specific images have been supplied for Layan yet.
+    gallery: [
+      '/images/properties/masaar-3-aerial-pool-garden.jpg',
+      '/images/properties/masaar-3-lagoon-waterfall-pool.jpg',
+      '/images/properties/masaar-3-aerial-forest-community.jpg',
+      '/images/properties/masaar-3-reforestation-clubhouse.jpg',
+      '/images/properties/masaar-3-interior-window-view.jpg',
+    ],
+    featured: true,
+    description: "Masaar 3 - Layan is a cluster of 3-Bedroom townhouses within ARADA's Masaar forested masterplan community in Sharjah — the smallest and most uniform cluster in Masaar 3, all units sharing near-identical 2,321 sq.ft plots and 2,342 sq.ft saleable area. Layan has a later handover than the rest of Masaar 3 (30 September 2029 vs. 31 December 2028) and its own payment plan structure. 12 units currently available. PRICE CONFIRMED — AED 2.90M to AED 2.98M, a tight range reflecting the cluster's uniform unit sizes. Contact Shylesh for the specific unit list.",
+    amenities: [
+      'Lagoon-Style Waterfall Pool',
+      'Landscaped Pool Garden',
+      '"The Reforestation" Clubhouse',
+      'Forest Walking Trails',
+    ],
+  },
 ]
 
 export const STATUS_COLORS: Record<Status, string> = {

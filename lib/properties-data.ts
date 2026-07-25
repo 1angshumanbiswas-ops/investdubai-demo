@@ -1189,6 +1189,47 @@ export const PROPERTIES: Property[] = [
       'Grand Entrance & Entrance Lobby',
     ],
   },
+  {
+    id: '27',
+    developerName: 'Reportage Properties',
+    projectName: 'SILA Masdar City',
+    location: 'Masdar City, Abu Dhabi',
+    // REAL pricing — from a live 15-unit "Availability List" inventory sheet supplied directly by
+    // Shylesh, not a brochure estimate. startingPrice is the lowest confirmed unit on that sheet
+    // (Unit 306, 3BR apartment). Full range across the 15 available units: AED 2,794,640 (3BR
+    // apartment) to AED 4,997,996 (4BR townhouse). See description for the per-type breakdown.
+    startingPrice: 2_794_640,
+    // No payment plan appears anywhere in either source document. Placeholder pending confirmation.
+    paymentPlan: 'Price on application — contact Shylesh for the confirmed payment plan.',
+    // No handover/completion date appears anywhere in either source document. Placeholder pending confirmation.
+    handoverDate: null,
+    unitTypes: ['2BR', '3BR', '4BR', 'Townhouse'],
+    goldenVisaEligible: 'check',
+    brochureUrl: '/brochures/sila-masdar-city-brochure.pdf',
+    // ROI UNCONFIRMED — no rental yield/ROI figure appears anywhere in the source documents.
+    // Placeholder pending real data from Shylesh/Reportage, same flagging pattern as IDs 21/23/24/25/26.
+    roiEstimate: 6.0,
+    status: 'Off-Plan',
+    image: '/images/properties/sila-masdar-city-street-pedestrian-hero.jpg',
+    gallery: [
+      '/images/properties/sila-masdar-city-street-pedestrian-hero.jpg',
+      '/images/properties/sila-masdar-city-tree-lined-street.jpg',
+      '/images/properties/sila-masdar-city-aerial-complex.jpg',
+      '/images/properties/sila-masdar-city-pool-deck.jpg',
+      '/images/properties/sila-masdar-city-exterior-dusk.jpg',
+    ],
+    videoUrl: 'https://www.youtube.com/embed/Yy2ufItjx10',
+    featured: true,
+    description: "SILA Masdar City is Reportage Properties' new residential concept rooted in Masdar City's sustainable, low-carbon vision — Abu Dhabi's flagship community for clean energy and smart urban planning. A single mid-rise building of 2 basements + ground + 6 floors on a 3,977.5 sq.m plot, SILA holds 101 units across 2, 3 and 4-Bedroom apartments plus 3 and 4-Bedroom townhouses. Location is a genuine strength: 2 minutes to Masdar City Central Park, 3 minutes to Zayed University of Artificial Intelligence, 10 minutes to Abu Dhabi International Airport, 12 minutes to Al Raha Mall & Beach, and 18 minutes to both Ferrari World and Yas Island. 15 units currently available: 3BR apartments from AED 2.79M-3.29M, the single 4BR apartment at AED 2.94M, 3BR townhouses at AED 3.64M, and 4BR townhouses from AED 4.83M-5.00M.",
+    amenities: [
+      'Private Parking',
+      "Kids' & Adults' Swimming Pools",
+      'Fully-Equipped Gym',
+      "Kids' Play Area",
+      'Barbecue Area',
+      'Landscaped Gardens',
+    ],
+  },
 ]
 
 export const STATUS_COLORS: Record<Status, string> = {

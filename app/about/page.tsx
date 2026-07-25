@@ -65,7 +65,7 @@ export default function AboutPage() {
               </a>
             </div>
           </div>
-          <div className="flex justify-center">
+          <div className="flex flex-col items-center gap-4">
             <div className="relative">
               <img src="/shylesh.jpg" alt="Shylesh Raj NK — RERA Certified Dubai Property Advisor"
                 className="w-72 h-88 object-cover object-top rounded-2xl border-4 border-gold/30 shadow-2xl" />
@@ -75,6 +75,14 @@ export default function AboutPage() {
                 <p className="text-white/60 text-xs">CEO, Nexus Elite Properties LLC</p>
               </div>
             </div>
+            <a
+              href="/brochures/shylesh-raj-investor-guide-2026.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-72 flex items-center justify-center gap-2 bg-gold text-navy px-4 py-2.5 rounded-xl font-semibold text-sm hover:bg-gold-light transition"
+            >
+              📄 Investor Guide By Shylesh
+            </a>
           </div>
         </div>
       </section>

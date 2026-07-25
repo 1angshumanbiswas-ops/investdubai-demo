@@ -1230,6 +1230,130 @@ export const PROPERTIES: Property[] = [
       'Landscaped Gardens',
     ],
   },
+  {
+    id: '28',
+    developerName: 'Sobha Realty',
+    projectName: 'The Orchard at Sobha City',
+    location: 'Sobha City, Abu Dhabi',
+    // REAL — confirmed via sobharealty.com's own "Starting Prices" block on The Orchard's official
+    // property page (AED 9.05M / INR 22.6CR / USD 2.48M / EUR 2.18M / GBP 1.89M — currency
+    // conversions cross-check against the site's AED 9.05M figure). Also independently corroborated
+    // by a third-party portal citing the same AED 9.05M for Estate Villas. Not a placeholder.
+    startingPrice: 9_050_000,
+    // No payment plan appears anywhere in the source document. Placeholder pending confirmation.
+    paymentPlan: 'Price on application — contact Shylesh for the confirmed payment plan.',
+    // Real — "ACD : DECEMBER 2029" stated directly on the Estate Villas page of the Factbook.
+    handoverDate: 'December 2029',
+    unitTypes: ['4BR', '5BR', '6BR', 'Villa'],
+    goldenVisaEligible: 'check',
+    brochureUrl: '/brochures/sobha-city-abu-dhabi-factbook.pdf',
+    // ROI UNCONFIRMED — no rental yield/ROI figure appears anywhere in the source document.
+    roiEstimate: 6.0,
+    status: 'Off-Plan',
+    image: '/images/properties/the-orchard-sobha-city-villa-exterior.jpg',
+    gallery: [
+      '/images/properties/the-orchard-sobha-city-villa-exterior.jpg',
+      '/images/properties/sobha-city-golf-course.jpg',
+      '/images/properties/sobha-city-masterplan-aerial.jpg',
+      '/images/properties/sobha-city-lifestyle-pool.jpg',
+      '/images/properties/sobha-city-villa-interior-living.jpg',
+    ],
+    videoUrl: 'https://www.youtube.com/embed/rf4vpbPvA3k',
+    featured: true,
+    description: "The Orchard is Sobha City's Estate Villas collection — standalone 4, 5 and 6-Bedroom villas with private pools, set within Sobha Realty's debut Abu Dhabi masterplan on a Live-Connect-Restore philosophy: 50,000+ trees, a ~20km wellness loop, ~60% open and green space, a 2km waterfront promenade and a Par-3 executive golf course designed by Greg Norman Golf Course Design. Villa sizes range from 4,378.97-5,606.06 sq.ft plot (V4) up to 6,490.75 sq.ft plot (V6), each with 2-3 covered car parks, a passenger lift and premium fully-fitted wardrobes in every en-suite bedroom. 13 minutes to Yas Mall, 14 minutes to Zayed International Airport, 15 minutes to Ferrari World and the upcoming Disney Land Abu Dhabi. Anticipated completion December 2029. Service charge AED 5/sq.ft/annum on saleable area (subject to authority approval). PRICE ON APPLICATION — contact Shylesh directly for current availability and confirmed pricing.",
+    amenities: [
+      'Community Mall & Marina',
+      'Clubhouse & Amphitheatre',
+      'Par-3 Golf Course (Greg Norman Design)',
+      'Lagoon Pools',
+      'Wellness & Cycling Loops',
+      'Forest Trails & Botanical Garden',
+      'Kids Play Area, Schools & Family Park',
+      'Pet Park',
+      'Private Pool (per villa)',
+    ],
+  },
+  {
+    id: '29',
+    developerName: 'Sobha Realty',
+    projectName: 'The Terraces at Sobha City',
+    location: 'Sobha City, Abu Dhabi',
+    // REAL — confirmed via sobharealty.com's own "Starting Prices" block on The Terraces' official
+    // property page: AED 6.67M / INR 17.6CR / USD 1.83M / EUR 1.60M / GBP 1.38M. Not a placeholder.
+    startingPrice: 6_670_000,
+    // No payment plan appears anywhere in the source document. Placeholder pending confirmation.
+    paymentPlan: 'Price on application — contact Shylesh for the confirmed payment plan.',
+    // Real — "ACD : DECEMBER 2029" stated directly on the Garden Villas page of the Factbook.
+    handoverDate: 'December 2029',
+    unitTypes: ['3BR', '4BR', 'Townhouse', 'Villa'],
+    goldenVisaEligible: 'check',
+    brochureUrl: '/brochures/sobha-city-abu-dhabi-factbook.pdf',
+    // ROI UNCONFIRMED — no rental yield/ROI figure appears anywhere in the source document.
+    roiEstimate: 6.0,
+    status: 'Off-Plan',
+    image: '/images/properties/the-terraces-sobha-city-villa-exterior.jpg',
+    gallery: [
+      '/images/properties/the-terraces-sobha-city-villa-exterior.jpg',
+      '/images/properties/sobha-city-golf-course.jpg',
+      '/images/properties/sobha-city-masterplan-aerial.jpg',
+      '/images/properties/sobha-city-wellness-meditation.jpg',
+      '/images/properties/sobha-city-villa-interior-bedroom.jpg',
+    ],
+    featured: true,
+    description: "The Terraces is Sobha City's Garden Villas collection — 3 and 4-Bedroom + Majlis townhouses, available semi-detached and standalone, within the same Abu Dhabi masterplan as The Orchard: 50,000+ trees, a ~20km wellness loop, a 2km waterfront promenade and a Par-3 Greg Norman-designed golf course. Plot sizes range from 1,987.01 sq.ft (3-Bedroom + Majlis) up to 3,883.38 sq.ft (4-Bedroom + Majlis standalone), with select units offering a family living room and maid's room. Every home includes 2 car parks, a walk-in wardrobe master suite and a Majlis/study room. 13 minutes to Yas Mall, 14 minutes to Zayed International Airport, 25 minutes to Louvre Abu Dhabi. Anticipated completion December 2029. Service charge AED 5/sq.ft/annum on saleable area (subject to authority approval). PRICE ON APPLICATION — contact Shylesh directly for current availability and confirmed pricing.",
+    amenities: [
+      'Community Mall & Marina',
+      'Clubhouse & Amphitheatre',
+      'Par-3 Golf Course (Greg Norman Design)',
+      'Lagoon Pools',
+      'Sensory Garden & Reflexology Path',
+      'Forest Yoga Decks & Meditation Zone',
+      'Kids Play Area, Schools & Family Park',
+      'Pet Park',
+    ],
+  },
+  {
+    id: '30',
+    developerName: 'Sobha Realty',
+    projectName: 'River Cove Residences at Sobha City',
+    location: 'Sobha City, Abu Dhabi',
+    // REAL — confirmed via sobharealty.com's own "Starting Prices" block on River Cove Residences'
+    // official property page: AED 2.43M / INR 6.4CR / USD 666K / EUR 602K / GBP 519K — this is the
+    // base 1BR apartment starting price across Towers A & B. Separately, a Sobha Realty teaser
+    // confirms the ground-floor "Villaments" (villa-apartment hybrid units) start at AED 4.89M — a
+    // higher-tier sub-product, not the base apartment price. Both figures are real; see description.
+    startingPrice: 2_430_000,
+    // No payment plan appears anywhere in the source documents. Placeholder pending confirmation.
+    paymentPlan: 'Price on application — contact Shylesh for the confirmed payment plan.',
+    // Real — "ACD : December 2029" stated directly on the Residential Apartments page of the Factbook.
+    handoverDate: 'December 2029',
+    unitTypes: ['1BR', '2BR', 'Villa'],
+    goldenVisaEligible: 'check',
+    brochureUrl: '/brochures/river-cove-residences-brochure.pdf',
+    // ROI UNCONFIRMED — no rental yield/ROI figure appears anywhere in the source documents.
+    roiEstimate: 6.0,
+    status: 'Off-Plan',
+    image: '/images/properties/river-cove-residences-title-hero.jpg',
+    gallery: [
+      '/images/properties/river-cove-residences-title-hero.jpg',
+      '/images/properties/river-cove-residences-villaments-street-view.jpg',
+      '/images/properties/river-cove-residences-waterfront-promenade.jpg',
+      '/images/properties/river-cove-residences-shaped-by-water.jpg',
+      '/images/properties/river-cove-residences-movement-flows.jpg',
+    ],
+    featured: true,
+    description: "River Cove Residences is Sobha City's waterfront apartment collection — 2 towers (A & B), 1-Bedroom (566-609 sq.ft total) and 2-Bedroom (1,012-1,212 sq.ft total) residences from the ground floor's retail and amenities up through floors 4-11, plus a limited collection of ground-floor \"Villaments\" — villa-apartment hybrid homes starting at AED 4.89M. 1-Bedroom apartments start at AED 2.43M. Every residence has a private balcony, double-height entrance lobbies in both towers, high-performance double-glazed façades, and fully-fitted kitchens with premium appliances. Part of the same Abu Dhabi masterplan as The Orchard and The Terraces: 50,000+ trees, a 2km waterfront promenade, marina, and Par-3 Greg Norman golf course. 13 minutes to Yas Mall, 14 minutes to Zayed International Airport, 18 minutes to Yas Bay Waterfront. Anticipated completion December 2029. Service charge AED 16/sq.ft/annum on saleable area (subject to authority approval) plus chiller charges as per actuals.",
+    amenities: [
+      'Community Mall & Marina',
+      'Clubhouse & Amphitheatre',
+      'Par-3 Golf Course (Greg Norman Design)',
+      'Lagoon Pools',
+      'Waterfront Promenade',
+      'Retail at Ground Floor',
+      'Wellness & Cycling Loops',
+      'Kids Play Area & Family Park',
+    ],
+  },
 ]
 
 export const STATUS_COLORS: Record<Status, string> = {

@@ -93,6 +93,14 @@ export default async function HomePage() {
                 <p className="text-white/60 text-xs">CEO, Nexus Elite Properties LLC</p>
               </div>
             </div>
+            <a
+              href="/brochures/shylesh-raj-investor-guide-2026.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-80 flex items-center justify-center gap-2 bg-gold text-navy px-4 py-2.5 rounded-xl font-semibold text-sm hover:bg-gold-light transition"
+            >
+              📄 Investor Guide By Shylesh
+            </a>
           </div>
         </div>
       </section>

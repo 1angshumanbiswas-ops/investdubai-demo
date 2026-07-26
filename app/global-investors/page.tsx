@@ -90,6 +90,23 @@ const EMIRATES = [
     linkLabel: 'Get RAK Investment Brief →',
     reverse: false,
   },
+  {
+    name: 'Sharjah',
+    tag: 'Cultural Capital · High Yield · Dubai-Adjacent',
+    headline: "Sharjah — the UAE's Value & Yield Play",
+    body: "Sharjah real estate transactions hit a record AED 44.3 billion in the first nine months of 2025 alone — a 58.3% jump year-on-year — with investors from 121 nationalities now buying in (Sharjah Real Estate Registration Department, Oct 2025). Since Law No. 2 of 2022 opened freehold ownership to foreign nationals with no local partner required, master-planned communities like Aljada and Masaar have turned the emirate into one of the UAE's strongest yield stories.",
+    bullets: [
+      'Record transaction volumes — AED 44.3 billion in the first 9 months of 2025, up 58.3% year-on-year (SRERD)',
+      'Gross rental yields of 6–10% in growth communities like Aljada and Masaar — among the highest in the UAE',
+      'Freehold ownership for foreign nationals under Law No. 2 of 2022, no local partner required',
+      '10-year Golden Visa available on AED 2M+ freehold investment, same threshold as Dubai and Abu Dhabi',
+    ],
+    img: '/images/properties/masaar-3-lagoon-waterfall-pool.jpg',
+    imgAlt: 'Masaar 3 — forested waterfall lagoon community, Sharjah',
+    linkHref: '/properties?emirate=Sharjah',
+    linkLabel: 'Explore Sharjah Properties →',
+    reverse: true,
+  },
 ]
 
 const DEVELOPER_GALLERY = [

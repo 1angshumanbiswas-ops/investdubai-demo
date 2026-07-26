@@ -60,16 +60,16 @@ export default async function HomePage() {
               <span>🏅</span> RERA Broker #77789  •  Golden Visa Holder  •  25+ Years UAE
             </div>
             <h1 className="font-display text-white text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4">
-              Invest in Dubai Properties with a{' '}
-              <span className="text-gold">RERA-Certified Advisor</span>
+              The Independent Advisor for{' '}
+              <span className="text-gold">AED 2M+ UAE Investors</span>
             </h1>
             <p className="text-gold/80 text-base font-semibold mb-4">
               Founder & CEO — Nexus Elite Properties LLC, Dubai
             </p>
             <p className="text-white/70 text-lg mb-8 leading-relaxed">
-              AI-powered property advisory for global investors seeking off-plan, ready,
-              secondary market, ROI-focused, and Golden Visa-linked Dubai property opportunities
-              across Dubai, Abu Dhabi, Ras Al Khaimah and Sharjah.
+              AI-powered property advisory comparing every recommendation across 30+ developers —
+              not a single developer&apos;s sales desk. Off-plan, ready, secondary market, and
+              Golden Visa-linked opportunities across Dubai, Abu Dhabi, Ras Al Khaimah and Sharjah.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact" className="bg-gold text-navy px-6 py-3 rounded-xl font-bold hover:bg-gold-light transition">

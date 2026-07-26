@@ -410,7 +410,7 @@ export default function GlobalInvestorExplorer() {
         {/* ── BOTTOM NOTE ── */}
         <p className="text-center text-gray-400 text-xs">
           All 18 properties are DLD-registered off-plan or ready projects.
-          Prices start from <span className="text-navy font-semibold">AED 620,000</span>.
+          Curated for investors deploying <span className="text-navy font-semibold">AED 2M+</span> — the UAE Golden Visa threshold.
           No purchase tax · No capital gains tax · No income tax on rental yield.
         </p>
 

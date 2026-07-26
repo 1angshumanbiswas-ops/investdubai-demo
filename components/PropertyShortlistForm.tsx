@@ -3,7 +3,6 @@
 import { useState } from 'react'
 
 const BUDGETS = [
-  'AED 1M – 2M ($272K – $545K)',
   'AED 2M – 5M ($545K – $1.36M)',
   'AED 5M – 10M ($1.36M – $2.72M)',
   'AED 10M – 30M ($2.72M – $8.17M)',

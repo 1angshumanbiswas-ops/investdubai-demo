@@ -45,7 +45,6 @@ export const CONTACT = {
   reraNumber: '77789',
   websites: [
     'www.investindubaiwithshylesh.com',
-    'www.profile.investindubaiwithshylesh.com',
     'www.emaarpropertyadvisors.com',
     'www.nexuseliteproperties.com',
   ],

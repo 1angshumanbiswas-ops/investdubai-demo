@@ -283,12 +283,12 @@ function PropertiesPageInner() {
       {/* Hero */}
       <section className="bg-navy py-14 px-4">
         <div className="max-w-5xl mx-auto text-center">
-          <p className="text-gold text-sm font-semibold uppercase tracking-widest mb-3">Dubai Property Investment</p>
+          <p className="text-gold text-sm font-semibold uppercase tracking-widest mb-3">The UAE&apos;s Most Exclusive Addresses</p>
           <h1 className="font-display text-white text-4xl lg:text-5xl font-bold mb-4">
             Curated Investment Properties
           </h1>
           <p className="text-white/70 text-lg max-w-2xl mx-auto">
-            Hand-picked off-plan and ready properties from Dubai&apos;s top developers. Every listing includes ROI estimates, payment plans, and direct access to Shylesh for inventory and brochures.
+            Hand-picked off-plan and ready properties from the UAE&apos;s top developers. Every listing includes ROI estimates, payment plans, and direct access to Shylesh for inventory and brochures.
           </p>
         </div>
       </section>

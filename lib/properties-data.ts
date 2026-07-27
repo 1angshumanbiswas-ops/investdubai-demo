@@ -1557,6 +1557,62 @@ export const PROPERTIES: Property[] = [
       'Forest Walking Trails',
     ],
   },
+  {
+    id: '36',
+    developerName: 'Ellington Properties',
+    projectName: 'Costa Mare',
+    location: 'Al Marjan Island, Ras Al Khaimah',
+    // REAL — from a live Ellington "Available Units" sheet (20 units across Towers I-IV) supplied
+    // directly by Shylesh. startingPrice is the lowest confirmed unit (I-1112, 1BR, AED 2,844,828).
+    // Full range on the current sheet: AED 2,844,828 (1BR) to AED 5,540,828 (2BR, Tower I ground
+    // floor with 403 sq.ft external terrace). Not a placeholder.
+    startingPrice: 2_844_828,
+    // Real — percentages from the official Ellington Costa Mare Payment Plan PDF; the flat/percentage
+    // fee amounts below are cross-checked against a unit-level payment breakdown for unit I-1112
+    // (AED 2,844,828 unit price), which itemizes "Admin Charges: AED 3,150" (flat, not the generic
+    // brochure's "AED 3,000 RERA fee") and "OQOOD: 4.00% = AED 113,834" at completion — OQOOD is
+    // Ellington's own line-item name for the title-deed-registration fee even on this RAK project,
+    // not a Dubai/RAK mix-up. Admin Charges appears flat per the breakdown; treat as approximate if
+    // applied to other unit prices until confirmed against more than one unit's breakdown.
+    paymentPlan: '20% at booking (+ AED 3,150 admin charges) · 10% at 90 days · 10% at 180 days · 5% on each of 20/30/40/50/60/70% construction · 30% on completion (+ 4% OQOOD fee for title deed registration).',
+    // Real — "Anticipated Completion Date" stated directly on the official Ellington fact sheet.
+    handoverDate: 'Q3 2028',
+    // Current price sheet only lists 1BR/2BR units (20 available). The building's parking table
+    // also references Studio, 3BR, 4BR Penthouse, 5BR Villa and 6BR Sky Villa unit types, so the
+    // full program is broader than current inventory — only list what's actually purchasable now.
+    unitTypes: ['1BR', '2BR'],
+    goldenVisaEligible: 'check',
+    brochureUrl: '/brochures/costa-mare-brochure.pdf',
+    // ROI UNCONFIRMED — no rental yield/ROI figure appears anywhere in the source documents.
+    roiEstimate: 6.0,
+    status: 'Off-Plan',
+    image: '/images/properties/costa-mare-aerial-beach-towers.jpg',
+    gallery: [
+      '/images/properties/costa-mare-aerial-beach-towers.jpg',
+      '/images/properties/costa-mare-twin-towers-dusk.jpg',
+      '/images/properties/costa-mare-master-bedroom.jpg',
+      '/images/properties/costa-mare-cantilevered-sky-pool.jpg',
+      '/images/properties/costa-mare-waterside-leisure-pool.jpg',
+    ],
+    videoUrl: 'https://www.youtube.com/embed/lKfXvM2ER14',
+    featured: true,
+    beds: '1–2',
+    sqft: '745–1,531 sq.ft. (total, incl. external)',
+    description: "Costa Mare is Ellington Properties' beachfront development on Al Marjan Island, Ras Al Khaimah — four connected towers linked by bridges around a split-level amenity floor, framing the interplay between the Arabian Gulf and the Hajar Mountains. Residents get direct private beach access, four open-air pools plus an indoor climate-controlled pool, an ocean-facing gym and yoga studio, a wellness spa with hydrothermal circuit, kids club and nursery, sky lounge private dining, and an AI-assisted concierge lobby. Freehold ownership. 20 units currently available across Towers I-IV (1BR and 2BR), anticipated completion Q3 2028. Anticipated service charge AED 19 per sq.ft.",
+    amenities: [
+      'Private Beach Access',
+      '4 Open-Air Pools + Indoor Climate-Controlled Pool',
+      'Ocean-Facing Gym',
+      'Yoga Studio',
+      'Wellness Spa (Jacuzzi, Sauna, Dry Ice Therapy, Rain Showers)',
+      "Kids Club & Nursery",
+      'Sky Lounge Private Dining',
+      'AI Concierge',
+      'Padel Court',
+      'Beach Club',
+      'Pets Area',
+    ],
+  },
 ]
 
 export const STATUS_COLORS: Record<Status, string> = {

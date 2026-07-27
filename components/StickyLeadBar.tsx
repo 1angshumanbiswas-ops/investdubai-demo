@@ -24,9 +24,9 @@ export default function StickyLeadBar() {
       <div className="flex items-center gap-2 flex-1 min-w-0">
         <span className="text-lg shrink-0">🏠</span>
         <p className="text-sm font-semibold truncate">
-          <span className="hidden sm:inline">Get a free shortlist of 3 Dubai properties matched to your budget — </span>
-          <span className="sm:hidden">Free property shortlist — </span>
-          delivered within 24 hours
+          <span className="hidden sm:inline">Your Confidential Shortlist — 3 Dubai Properties Curated to Your Budget — </span>
+          <span className="sm:hidden">Confidential Shortlist — </span>
+          Delivered in 24 Hours
         </p>
       </div>
       <div className="flex items-center gap-2 shrink-0">

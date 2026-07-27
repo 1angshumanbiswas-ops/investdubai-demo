@@ -1613,6 +1613,54 @@ export const PROPERTIES: Property[] = [
       'Pets Area',
     ],
   },
+  {
+    id: '37',
+    developerName: 'BNW Developments',
+    projectName: 'Pelagia',
+    location: 'Al Marjan Island, Ras Al Khaimah',
+    // REAL — "Price Starting" figure from BNW's official Pelagia fact sheet infographic (2.3 Mn. AED).
+    startingPrice: 2_300_000,
+    // Real — from the official Pelagia "Exclusive Payment Plan" PDF (BNW Developments).
+    paymentPlan: '10% immediate on booking · 5% at each of 1/2/5/8/11/14/17/20 months from booking (8 installments) · 50% on completion.',
+    // Real — "Handover" figure from BNW's official Pelagia fact sheet infographic (Q4 2027).
+    handoverDate: 'Q4 2027',
+    // UNCONFIRMED bedroom breakdown — the only building-composition data supplied is "158
+    // Residential Apartments + 2 Retail" (total counts, no per-type split). Placeholder below is a
+    // rough guess at likely unit types for a BNW Al Marjan Island tower (cf. Aqua Maya, ID 22) —
+    // NOT confirmed. MUST be replaced with the real bedroom-type breakdown once Shylesh/BNW supply
+    // a unit list, same flagging pattern as Soto Grande (ID 24).
+    unitTypes: ['Studio', '1BR', '2BR'],
+    goldenVisaEligible: 'check',
+    // Only a Payment Plan PDF has been supplied for this listing — not a full Project Brief/brochure.
+    brochureUrl: '/brochures/pelagia-payment-plan.pdf',
+    // ROI UNCONFIRMED — no rental yield/ROI figure appears anywhere in the supplied source docs.
+    roiEstimate: 6.0,
+    status: 'Off-Plan',
+    // 5 clean (non-captioned) images available: 1 extracted from the raw embedded JPEG in the
+    // Payment Plan PDF (the "Pelagia" title/"AL MARJAN ISLAND" caption on the PDF cover page is
+    // vector text overlaid in the PDF layout, not baked into the photo) + 4 official render photos
+    // supplied directly (balcony/private plunge pool exterior at sunset; rooftop infinity pool at
+    // night; street-level entrance with porte-cochère, fountain wall and sculpture; living/dining
+    // interior — the "Pelagia" wordmark visible in the rooftop and entrance shots is real building
+    // signage, not a text overlay, so it was kept). This completes the 5-image HNI lead-magnet set.
+    image: '/images/properties/pelagia-hero-tower-dusk.jpg',
+    gallery: [
+      '/images/properties/pelagia-hero-tower-dusk.jpg',
+      '/images/properties/pelagia-balcony-pool-sunset.jpg',
+      '/images/properties/pelagia-rooftop-infinity-pool-night.jpg',
+      '/images/properties/pelagia-street-entrance-fountain.jpg',
+      '/images/properties/pelagia-living-dining-interior.jpg',
+    ],
+    featured: true,
+    description: "Pelagia is a BNW Developments residential tower on Al Marjan Island, Ras Al Khaimah — 158 residential apartments plus 2 retail units, anticipated handover Q4 2027. Renders show private plunge pools on select balconies and a rooftop infinity pool with bar/lounge deck. Full amenities list, unit-type breakdown, and further imagery are pending additional documentation from Shylesh/BNW; current listing reflects only the confirmed starting price, payment plan, handover date, and building composition.",
+    // INFERRED FROM RENDERS, not a developer-confirmed amenities list — same flagging pattern as
+    // Masaar 3 (no written amenities sheet supplied yet for Pelagia either).
+    amenities: [
+      'Rooftop Infinity Pool',
+      'Rooftop Bar & Lounge Deck',
+      'Private Balcony Plunge Pools (select units)',
+    ],
+  },
 ]
 
 export const STATUS_COLORS: Record<Status, string> = {

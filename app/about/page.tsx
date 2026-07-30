@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import InvestorGuideDropdown from '@/components/InvestorGuideDropdown'
 
 export const metadata: Metadata = {
   title: 'About Shylesh Raj | RERA-Certified Dubai Property Advisor | CEO Nexus Elite Properties',
@@ -75,14 +76,7 @@ export default function AboutPage() {
                 <p className="text-white/60 text-xs">CEO, Nexus Elite Properties LLC</p>
               </div>
             </div>
-            <a
-              href="/brochures/shylesh-raj-investor-guide-2026.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-72 flex items-center justify-center gap-2 bg-gold text-navy px-4 py-2.5 rounded-xl font-semibold text-sm hover:bg-gold-light transition"
-            >
-              📄 Investor Guide By Shylesh
-            </a>
+            <InvestorGuideDropdown className="w-72" />
           </div>
         </div>
       </section>
@@ -134,14 +128,7 @@ export default function AboutPage() {
                 <p className="text-gray-500 text-xs leading-relaxed">A walkthrough of Dubai property investment opportunities — presented by Shylesh Raj, RERA Broker #77789</p>
               </div>
             </div>
-            <a
-              href="/brochures/shylesh-raj-investor-guide-2026.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 w-full flex items-center justify-center gap-2 bg-gold text-navy px-4 py-2.5 rounded-xl font-semibold text-sm hover:bg-gold-light transition"
-            >
-              📄 Investor Guide By Shylesh
-            </a>
+            <InvestorGuideDropdown className="mt-4 w-full" />
           </div>
         </div>
       </section>

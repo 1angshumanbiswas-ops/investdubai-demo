@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { sanityFetch } from '@/lib/sanity'
 import { FEATURED_PROPERTIES_QUERY, TESTIMONIALS_QUERY } from '@/lib/queries'
 import ROICalculator from '@/components/ROICalculator'
+import InvestorGuideDropdown from '@/components/InvestorGuideDropdown'
 import LeadForm from '@/components/LeadForm'
 import ReportLeadMagnet from '@/components/ReportLeadMagnet'
 import PropertyShortlistForm from '@/components/PropertyShortlistForm'
@@ -93,14 +94,7 @@ export default async function HomePage() {
                 <p className="text-white/60 text-xs">CEO, Nexus Elite Properties LLC</p>
               </div>
             </div>
-            <a
-              href="/brochures/shylesh-raj-investor-guide-2026.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-80 flex items-center justify-center gap-2 bg-gold text-navy px-4 py-2.5 rounded-xl font-semibold text-sm hover:bg-gold-light transition"
-            >
-              📄 Investor Guide By Shylesh
-            </a>
+            <InvestorGuideDropdown className="w-80" />
           </div>
         </div>
       </section>

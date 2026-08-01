@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-gold rounded-full flex items-center justify-center font-bold text-navy text-sm">SR</div>
+              <Image src="/logo/nexus-elite-mark.png" alt="Nexus Elite Properties LLC" width={32} height={32} className="w-8 h-8 object-contain" />
               <span className="text-white font-bold text-sm leading-tight">Invest in Dubai<br /><span className="text-gold text-xs font-normal">with Shylesh Raj</span></span>
             </div>
             <p className="text-white/50 text-xs leading-relaxed mb-3">RERA Broker #77789 · Golden Visa Holder · CEO, Nexus Elite Properties LLC</p>

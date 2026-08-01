@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 const NAV_LINKS = [
@@ -22,7 +23,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gold rounded-full flex items-center justify-center font-bold text-navy text-sm">SR</div>
+            <Image src="/logo/nexus-elite-mark.png" alt="Nexus Elite Properties LLC" width={32} height={32} className="w-8 h-8 object-contain" />
             <span className="text-white font-display font-bold text-sm hidden sm:block leading-tight">
               Invest in Dubai<br /><span className="text-gold text-xs font-normal">with Shylesh Raj</span>
             </span>

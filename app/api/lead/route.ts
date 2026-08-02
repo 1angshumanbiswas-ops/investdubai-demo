@@ -45,6 +45,26 @@ export async function POST(req: NextRequest) {
       console.error('GHL webhook failed:', res.status, await res.text())
     }
 
+    // Also notify via the Apps Script webhook (Sheet + email), independent of
+    // GHL — so a lead through this route always reaches the same notification
+    // path as the rest of the site's forms, even if GHL automation isn't set up.
+    const leadsWebhookUrl = process.env.NEXT_PUBLIC_LEADS_WEBHOOK_URL
+    if (leadsWebhookUrl) {
+      fetch(leadsWebhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({
+          name,
+          whatsapp,
+          email: email ?? '',
+          country,
+          budget,
+          source: source ?? 'AI Advisor',
+          notes: conversationSummary ?? '',
+        }),
+      }).catch(() => { /* silent — never block the response on this */ })
+    }
+
     return NextResponse.json({ success: true })
 
   } catch (error) {

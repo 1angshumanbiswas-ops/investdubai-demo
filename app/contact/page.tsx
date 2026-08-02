@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { notifyLead } from '@/lib/notifyLead'
 
 // ─── Shylesh's confirmed contact details (from Nexus Elite brochures) ────────
 const CONTACT = {
@@ -66,6 +67,12 @@ export default function ContactPage() {
           body: JSON.stringify(payload),
         })
       }
+      notifyLead({
+        name: form.name, whatsapp: form.whatsapp, email: form.email,
+        country: form.country, budget: form.budget, purpose: form.purpose,
+        propertyType: form.propertyType, notes: form.message,
+        source: 'Contact Page',
+      })
     } catch (_) { /* webhook is optional until GHL is connected */ }
 
     // Always open WhatsApp as the primary CTA

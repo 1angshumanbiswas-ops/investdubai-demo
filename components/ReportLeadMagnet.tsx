@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { notifyLead } from '@/lib/notifyLead'
 
 const COUNTRIES = [
   'India', 'UAE', 'Saudi Arabia', 'UK', 'USA', 'Canada',
@@ -40,6 +41,10 @@ export default function ReportLeadMagnet({ variant = 'full', sourceTag = 'site' 
           }),
         })
       }
+      notifyLead({
+        name, whatsapp, country,
+        source: `Investor Report Widget — ${sourceTag}`,
+      })
     } catch (_) { /* silent */ }
 
     setSubmitted(true)

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import { notifyLead } from '@/lib/notifyLead'
 
 const COUNTRIES = ['India', 'UAE', 'Saudi Arabia', 'UK', 'USA', 'Canada', 'Singapore', 'Australia', 'Other']
 const WA = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '971505818509'
@@ -51,6 +52,10 @@ export default function ExitIntentPopup() {
           }),
         })
       }
+      notifyLead({
+        name, whatsapp, country,
+        source: 'Exit Intent Popup — Investor Report',
+      })
     } catch { /* silent */ }
     setDone(true)
     setLoading(false)

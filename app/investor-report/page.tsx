@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { notifyLead } from '@/lib/notifyLead'
 
 const REPORT_STATS = [
   { value: '270K+', label: '2025 Transactions' },
@@ -61,6 +62,10 @@ export default function InvestorReportPage() {
           }),
         })
       }
+      notifyLead({
+        name, whatsapp, country,
+        source: 'Investor Report Page Download',
+      })
     } catch (_) { /* continue even if webhook fails */ }
 
     setSubmitted(true)

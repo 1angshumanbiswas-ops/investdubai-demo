@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { notifyLead } from '@/lib/notifyLead'
 
 const BUDGETS = [
   'AED 2M – 5M ($545K – $1.36M)',
@@ -61,6 +62,10 @@ export default function PropertyShortlistForm({ variant = 'section' }: Props) {
           }),
         })
       }
+      notifyLead({
+        name, whatsapp, budget, purpose, propertyType: type,
+        source: `Property Shortlist — ${variant}`,
+      })
     } catch { /* silent */ }
 
     setDone(true)

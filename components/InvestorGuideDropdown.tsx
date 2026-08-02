@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import LeadGateModal from './LeadGateModal'
 
 // Naming convention: /public/brochures/investor-guide-<code>.pdf
 // To add a new language in future: save the PDF with that filename in public/brochures/
@@ -26,6 +27,7 @@ function hrefFor(code: string) {
 
 export default function InvestorGuideDropdown({ className = '' }: { className?: string }) {
   const [open, setOpen] = useState(false)
+  const [selectedLang, setSelectedLang] = useState<{ code: string; label: string } | null>(null)
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -59,17 +61,18 @@ export default function InvestorGuideDropdown({ className = '' }: { className?: 
           </p>
           {LANGUAGES.map((lang) =>
             lang.available ? (
-              <a
+              <button
                 key={lang.code}
-                href={hrefFor(lang.code)}
-                target="_blank"
-                rel="noopener noreferrer"
+                type="button"
                 role="menuitem"
-                onClick={() => setOpen(false)}
-                className="block px-4 py-2.5 text-sm text-navy hover:bg-cream transition"
+                onClick={() => {
+                  setSelectedLang({ code: lang.code, label: lang.label })
+                  setOpen(false)
+                }}
+                className="block w-full text-left px-4 py-2.5 text-sm text-navy hover:bg-cream transition"
               >
                 {lang.label}
-              </a>
+              </button>
             ) : (
               <span
                 key={lang.code}
@@ -83,6 +86,14 @@ export default function InvestorGuideDropdown({ className = '' }: { className?: 
             )
           )}
         </div>
+      )}
+
+      {selectedLang && (
+        <LeadGateModal
+          languageLabel={selectedLang.label}
+          pdfHref={hrefFor(selectedLang.code)}
+          onClose={() => setSelectedLang(null)}
+        />
       )}
     </div>
   )

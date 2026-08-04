@@ -70,7 +70,8 @@ export default function ContactPage() {
       notifyLead({
         name: form.name, whatsapp: form.whatsapp, email: form.email,
         country: form.country, budget: form.budget, purpose: form.purpose,
-        propertyType: form.propertyType, notes: form.message,
+        propertyType: form.propertyType,
+        notes: [form.timeline ? `Timeline: ${form.timeline}` : '', form.message].filter(Boolean).join(' — '),
         source: 'Contact Page',
       })
     } catch (_) { /* webhook is optional until GHL is connected */ }

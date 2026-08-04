@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { name, whatsapp, country, budget, email, source, conversationSummary, profession } = body
+    const { name, whatsapp, country, budget, email, source, conversationSummary, profession, purpose, goldenVisa } = body
 
     if (!name || !whatsapp) {
       return NextResponse.json({ error: 'Name and WhatsApp are required' }, { status: 400 })
@@ -59,8 +59,9 @@ export async function POST(req: NextRequest) {
           email: email ?? '',
           country,
           budget,
+          purpose: purpose ?? '',
           source: source ?? 'AI Advisor',
-          notes: conversationSummary ?? '',
+          notes: [goldenVisa ? 'Interested in Golden Visa' : '', conversationSummary ?? ''].filter(Boolean).join(' — '),
         }),
       }).catch(() => { /* silent — never block the response on this */ })
     }

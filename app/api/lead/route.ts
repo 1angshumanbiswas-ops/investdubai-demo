@@ -50,20 +50,22 @@ export async function POST(req: NextRequest) {
     // path as the rest of the site's forms, even if GHL automation isn't set up.
     const leadsWebhookUrl = process.env.NEXT_PUBLIC_LEADS_WEBHOOK_URL
     if (leadsWebhookUrl) {
-      fetch(leadsWebhookUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify({
-          name,
-          whatsapp,
-          email: email ?? '',
-          country,
-          budget,
-          purpose: purpose ?? '',
-          source: source ?? 'AI Advisor',
-          notes: [goldenVisa ? 'Interested in Golden Visa' : '', conversationSummary ?? ''].filter(Boolean).join(' — '),
-        }),
-      }).catch(() => { /* silent — never block the response on this */ })
+      try {
+        await fetch(leadsWebhookUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            name,
+            whatsapp,
+            email: email ?? '',
+            country,
+            budget,
+            purpose: purpose ?? '',
+            source: source ?? 'AI Advisor',
+            notes: [goldenVisa ? 'Interested in Golden Visa' : '', conversationSummary ?? ''].filter(Boolean).join(' — '),
+          }),
+        })
+      } catch (_) { /* never block the response on this */ }
     }
 
     return NextResponse.json({ success: true })

@@ -25,6 +25,7 @@ export function notifyLead(data: {
       method: 'POST',
       headers: { 'Content-Type': 'text/plain;charset=utf-8' },
       body: JSON.stringify(data),
+      keepalive: true,
     }).catch(() => {
       /* silent — never block the user's flow on a notification failure */
     })

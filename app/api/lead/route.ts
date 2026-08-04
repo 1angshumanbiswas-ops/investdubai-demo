@@ -9,6 +9,29 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Name and WhatsApp are required' }, { status: 400 })
     }
 
+    // Notify via the Apps Script webhook (Sheet + email) first, independent of
+    // GHL entirely — this must not depend on GHL_WEBHOOK_URL being configured,
+    // since that's a separate, optional integration.
+    const leadsWebhookUrl = process.env.NEXT_PUBLIC_LEADS_WEBHOOK_URL
+    if (leadsWebhookUrl) {
+      try {
+        await fetch(leadsWebhookUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            name,
+            whatsapp,
+            email: email ?? '',
+            country,
+            budget,
+            purpose: purpose ?? '',
+            source: source ?? 'AI Advisor',
+            notes: [goldenVisa ? 'Interested in Golden Visa' : '', conversationSummary ?? ''].filter(Boolean).join(' — '),
+          }),
+        })
+      } catch (_) { /* never block the response on this */ }
+    }
+
     const webhookUrl = process.env.GHL_WEBHOOK_URL
     if (!webhookUrl) {
       console.error('GHL_WEBHOOK_URL not set')
@@ -43,29 +66,6 @@ export async function POST(req: NextRequest) {
 
     if (!res.ok) {
       console.error('GHL webhook failed:', res.status, await res.text())
-    }
-
-    // Also notify via the Apps Script webhook (Sheet + email), independent of
-    // GHL — so a lead through this route always reaches the same notification
-    // path as the rest of the site's forms, even if GHL automation isn't set up.
-    const leadsWebhookUrl = process.env.NEXT_PUBLIC_LEADS_WEBHOOK_URL
-    if (leadsWebhookUrl) {
-      try {
-        await fetch(leadsWebhookUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify({
-            name,
-            whatsapp,
-            email: email ?? '',
-            country,
-            budget,
-            purpose: purpose ?? '',
-            source: source ?? 'AI Advisor',
-            notes: [goldenVisa ? 'Interested in Golden Visa' : '', conversationSummary ?? ''].filter(Boolean).join(' — '),
-          }),
-        })
-      } catch (_) { /* never block the response on this */ }
     }
 
     return NextResponse.json({ success: true })

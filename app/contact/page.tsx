@@ -16,7 +16,7 @@ const CONTACT = {
 }
 
 const BUDGETS = [
-  'Under AED 1M', 'AED 1M – 2M', 'AED 2M – 5M', 'AED 5M – 10M', 'AED 10M+',
+  'AED 2M – 5M', 'AED 5M – 10M', 'AED 10M+',
 ]
 const PURPOSES = [
   'Investment / Rental Yield', 'Golden Visa', 'Own Use / Relocation',

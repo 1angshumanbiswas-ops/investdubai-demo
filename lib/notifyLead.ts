@@ -14,6 +14,7 @@ export function notifyLead(data: {
   budget?: string
   purpose?: string
   propertyType?: string
+  timeline?: string
   source?: string
   notes?: string
 }) {

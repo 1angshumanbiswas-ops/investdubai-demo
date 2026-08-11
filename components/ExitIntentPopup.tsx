@@ -17,8 +17,8 @@ export default function ExitIntentPopup() {
   const handleMouseLeave = useCallback((e: MouseEvent) => {
     if (e.clientY <= 0) {
       try {
-        if (localStorage.getItem('exit_seen')) return
-        localStorage.setItem('exit_seen', '1')
+        if (sessionStorage.getItem('exit_seen')) return
+        sessionStorage.setItem('exit_seen', '1')
       } catch { /* */ }
       setShow(true)
     }

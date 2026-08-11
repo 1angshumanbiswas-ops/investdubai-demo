@@ -57,6 +57,18 @@ export default function ContactPage() {
   const step2Complete = form.budget && form.purpose && form.propertyType && form.timeline
 
   async function sendNotifications() {
+    // Our own notification path first, independent of GHL entirely — this must
+    // never be blocked by a GHL failure, since GHL is optional/unconfirmed.
+    try {
+      notifyLead({
+        name: form.name, whatsapp: form.whatsapp, email: form.email,
+        country: form.country, budget: form.budget, purpose: form.purpose,
+        propertyType: form.propertyType, timeline: form.timeline,
+        notes: form.message,
+        source: 'Contact Page',
+      })
+    } catch (_) { /* never let this block the rest of the flow */ }
+
     try {
       const payload = { ...form, source: 'contact-page', timestamp: new Date().toISOString() }
       const ghlUrl = process.env.NEXT_PUBLIC_GHL_WEBHOOK_URL
@@ -67,13 +79,6 @@ export default function ContactPage() {
           body: JSON.stringify(payload),
         })
       }
-      notifyLead({
-        name: form.name, whatsapp: form.whatsapp, email: form.email,
-        country: form.country, budget: form.budget, purpose: form.purpose,
-        propertyType: form.propertyType, timeline: form.timeline,
-        notes: form.message,
-        source: 'Contact Page',
-      })
     } catch (_) { /* webhook is optional until GHL is connected */ }
   }
 

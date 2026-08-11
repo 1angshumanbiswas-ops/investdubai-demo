@@ -28,6 +28,13 @@ export default function ReportLeadMagnet({ variant = 'full', sourceTag = 'site' 
     setLoading(true)
 
     try {
+      notifyLead({
+        name, whatsapp, country,
+        source: `Investor Report Widget — ${sourceTag}`,
+      })
+    } catch (_) { /* silent */ }
+
+    try {
       const ghlUrl = process.env.NEXT_PUBLIC_GHL_WEBHOOK_URL
       if (ghlUrl) {
         await fetch(ghlUrl, {
@@ -41,10 +48,6 @@ export default function ReportLeadMagnet({ variant = 'full', sourceTag = 'site' 
           }),
         })
       }
-      notifyLead({
-        name, whatsapp, country,
-        source: `Investor Report Widget — ${sourceTag}`,
-      })
     } catch (_) { /* silent */ }
 
     setSubmitted(true)

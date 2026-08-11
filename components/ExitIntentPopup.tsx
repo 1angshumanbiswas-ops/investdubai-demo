@@ -38,6 +38,14 @@ export default function ExitIntentPopup() {
   async function handleSubmit() {
     if (!name.trim() || !whatsapp.trim() || !country) return
     setLoading(true)
+
+    try {
+      notifyLead({
+        name, whatsapp, country,
+        source: 'Exit Intent Popup — Investor Report',
+      })
+    } catch { /* silent */ }
+
     try {
       const ghlUrl = process.env.NEXT_PUBLIC_GHL_WEBHOOK_URL
       if (ghlUrl) {
@@ -52,11 +60,8 @@ export default function ExitIntentPopup() {
           }),
         })
       }
-      notifyLead({
-        name, whatsapp, country,
-        source: 'Exit Intent Popup — Investor Report',
-      })
     } catch { /* silent */ }
+
     setDone(true)
     setLoading(false)
     setTimeout(() => {

@@ -46,7 +46,13 @@ export default function InvestorReportPage() {
     setError('')
 
     try {
-      // Fire GHL webhook
+      notifyLead({
+        name, whatsapp, country,
+        source: 'Investor Report Page Download',
+      })
+    } catch (_) { /* continue even if this fails */ }
+
+    try {
       const ghlUrl = process.env.NEXT_PUBLIC_GHL_WEBHOOK_URL
       if (ghlUrl) {
         await fetch(ghlUrl, {
@@ -62,10 +68,6 @@ export default function InvestorReportPage() {
           }),
         })
       }
-      notifyLead({
-        name, whatsapp, country,
-        source: 'Investor Report Page Download',
-      })
     } catch (_) { /* continue even if webhook fails */ }
 
     setSubmitted(true)

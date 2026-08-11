@@ -48,6 +48,14 @@ export default function PropertyShortlistForm({ variant = 'section' }: Props) {
   async function handleSubmit() {
     if (!valid) return
     setLoading(true)
+
+    try {
+      notifyLead({
+        name, whatsapp, budget, purpose, propertyType: type,
+        source: `Property Shortlist — ${variant}`,
+      })
+    } catch { /* silent */ }
+
     try {
       const ghlUrl = process.env.NEXT_PUBLIC_GHL_WEBHOOK_URL
       if (ghlUrl) {
@@ -62,10 +70,6 @@ export default function PropertyShortlistForm({ variant = 'section' }: Props) {
           }),
         })
       }
-      notifyLead({
-        name, whatsapp, budget, purpose, propertyType: type,
-        source: `Property Shortlist — ${variant}`,
-      })
     } catch { /* silent */ }
 
     setDone(true)

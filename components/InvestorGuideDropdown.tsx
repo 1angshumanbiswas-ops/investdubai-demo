@@ -11,6 +11,7 @@ const LANGUAGES: { code: string; label: string; available: boolean }[] = [
   { code: 'hi', label: 'Hindi', available: true },
   { code: 'ml', label: 'Malayalam', available: true },
   { code: 'te', label: 'Telugu', available: true },
+  { code: 'ta', label: 'Tamil', available: true },
   { code: 'gu', label: 'Gujarati', available: true },
   { code: 'de', label: 'German', available: true },
   { code: 'fr', label: 'French', available: true },

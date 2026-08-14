@@ -6,7 +6,7 @@ const STORIES = [
       { src: '/images/testimonials/bayz102-aerial-skyline.jpg', cap: 'Minutes to Burj Khalifa & Dubai Mall' },
     ],
     quote: "As a buyer from the USA, I needed someone I could trust for clear, end-to-end support. Shylesh shortlisted options that fit my budget, guided me to the right 2BR at Bayz 102, and handled every step with excellent communication. He also made the Golden Visa process easy to understand and start. I strongly recommend working with him.",
-    author: 'Mr. Chakradhar Ravikumar',
+    author: 'Buyer from USA',
     role: '2BR Buyer · New York, USA',
   },
   {
@@ -16,7 +16,7 @@ const STORIES = [
       { src: '/images/testimonials/belgravia-garden-aerial.jpg', cap: 'Ellington Properties, master-planned community' },
     ],
     quote: 'Working with Shylesh Raj was an exceptional experience. He made the entire process seamless with his clear communication, prompt responses, and expert guidance from the first viewing to final booking. Thanks to his professionalism and market expertise, we successfully purchased a beautiful 2-bedroom apartment at Belgravia Garden by Ellington Properties (AED 2.2 million) — perfectly within our budget and without compromising on layout, quality, or location. This investment also enabled our family to secure the 10-year Golden Visa, making the experience even more rewarding.',
-    author: 'Ms. Avena (Portugal) & Mr. Alston (India)',
+    author: 'Buyers from Portugal & India',
     role: '2BR Buyers · Belgravia Garden',
   },
   {
@@ -26,7 +26,7 @@ const STORIES = [
       { src: '/images/properties/oasiz-skylounge-night.jpg', cap: 'Rooftop sky lounge with Burj Khalifa views' },
     ],
     quote: "I purchased a beautiful 1-BHK apartment for my son at Oasiz 2 by Danube Properties in Dubai Silicon Oasis. From the very first interaction, we felt completely informed and supported. Every step was transparent, professional, and handled on time. I'm truly impressed with Mr. Shylesh Raj's expertise and the way Nexus Elite Properties made the entire buying process effortless. I would happily recommend them to anyone looking for a smooth and stress-free property purchase experience in Dubai.",
-    author: 'Dhiren Mahanta',
+    author: 'Buyer from India',
     role: 'Guwahati, Assam · Purchased 1-BHK for His Son',
   },
 ]

@@ -1741,6 +1741,43 @@ export const PROPERTIES: Property[] = [
       'Yoga Deck',
     ],
   },
+  {
+    id: '40',
+    developerName: 'Azizi',
+    projectName: 'Azizi Jaddaf Beach Oasis',
+    location: 'Al Jaddaf, Dubai',
+    startingPrice: 720_000,
+    paymentPlan: '10% booking · 10% at 30 days · 10% at 180 days · 10% at 330 days · 10% at 480 days · 50% on handover',
+    handoverDate: null, // UNCONFIRMED — not stated in factsheet or booklet, confirm with Azizi/Shylesh
+    unitTypes: ['Studio', '1BR', 'Penthouse'],
+    goldenVisaEligible: 'check',
+    brochureUrl: '/brochures/Azizi_Jaddaf_Beach_Oasis_Booklet.pdf',
+    roiEstimate: 7.0, // ESTIMATE — no rental yield data in factsheet, confirm before publishing as final
+    status: 'Off-Plan',
+    image: '/images/properties/azizi-jaddaf-hero.jpg',
+    gallery: [
+      '/images/properties/azizi-jaddaf-hero.jpg',
+      '/images/properties/azizi-jaddaf-pool-aerial.jpg',
+      '/images/properties/azizi-jaddaf-pool-dusk.jpg',
+      '/images/properties/azizi-jaddaf-interior.jpg',
+      '/images/properties/azizi-jaddaf-bedroom.jpg',
+    ],
+    videoUrl: 'https://www.youtube.com/embed/uHM6sDYLQjw',
+    featured: true,
+    beds: 'Studio, 1BR & Penthouse',
+    // sqft: UNCONFIRMED — not stated in factsheet or booklet, confirm with Azizi/Shylesh
+    description: "Azizi Jaddaf Beach Oasis brings the beach lifestyle to the city — combining waterfront serenity with urban connectivity. Set in Al Jaddaf, a coastal state of mind without compromising city convenience, the development is anchored by a crystal-clear central beach-style pool, creating a resort-inspired setting where everyday life feels like a getaway. Modern freehold studios, spacious one-bedroom apartments, and sophisticated penthouses, with top-tier finishes and curated amenities throughout. 5 minutes to Al Jaddaf Metro Station, 10 minutes to Al Jaddaf Waterfront/Palazzo Versace Hotel, 7 minutes to Wafi Mall, 10 minutes to Dubai World Trade Centre, 10 minutes to Downtown Dubai/Burj Khalifa/Dubai Mall, and 10 minutes to Dubai International Airport (DXB).",
+    amenities: [
+      'Swimming Pools for Adults and Kids',
+      'Ultra-Modern Gym',
+      'Sauna and Steam Room',
+      'Cinema Hall',
+      "Indoor Children's Play Area",
+      'Multipurpose Hall',
+      'Dedicated Parking',
+      '24/7 Security',
+    ],
+  },
 ]
 
 export const STATUS_COLORS: Record<Status, string> = {

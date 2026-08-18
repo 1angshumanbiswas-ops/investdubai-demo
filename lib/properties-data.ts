@@ -1881,6 +1881,46 @@ export const PROPERTIES: Property[] = [
       'Male & Female Changing Rooms',
     ],
   },
+  {
+    id: '43',
+    developerName: 'Azizi',
+    projectName: 'Azizi Venice',
+    location: 'Dubai South, Dubai',
+    startingPrice: 1_230_000,
+    paymentPlan: '10% booking · 10% at 30 days · 10% at 120 days · 70% on handover', // Phase 1 plan — Phase 2 (10/10/10/10/10/50) and select buildings (10/10/5/75) also available, confirm which phase before quoting a client
+    handoverDate: 'Q3 2025 – 2026', // phased: Venice 1 & 2 Q3 2025, Venice 3 Q2 2025, Venice 4 & 5 Q4 2025, Venice 6-9 2026 — confirm which phase/tower before quoting a client
+    unitTypes: ['Studio', '1BR', '2BR', '3BR', 'Villa'],
+    goldenVisaEligible: true,
+    brochureUrl: '/brochures/Venice_Brochure.pdf',
+    roiEstimate: 8.0, // per factsheet's quoted 7-9% rental yield range, midpoint used — confirm before publishing as final
+    status: 'Off-Plan',
+    image: '/images/properties/azizi-venice-lagoon-aerial.jpg',
+    gallery: [
+      '/images/properties/azizi-venice-lagoon-aerial.jpg',
+      '/images/properties/azizi-venice-opera-aerial.jpg',
+      '/images/properties/azizi-venice-mansion-day.jpg',
+      '/images/properties/azizi-venice-mansion-night.jpg',
+      '/images/properties/azizi-venice-living-room.jpg',
+    ],
+    videoUrl: 'https://www.youtube.com/embed/RPyTvvKgcf8',
+    featured: true,
+    beds: 'Studio–3BR + Villas',
+    sqft: '959–2,742 sq.ft. (apartments)',
+    description: "Azizi Venice is a 336-acre waterfront mega-community in Dubai South, anchored by an 18km swimmable crystal lagoon and boardwalk. The centrepiece is the Opera House — a 2,000-seat floating performing arts venue set within the lagoon, hosting musicals, concerts, opera and ballet. The community also features a kilometre-long climate-controlled retail boulevard (1.5M sq.ft of retail and dining), a Crystal Mosque, Technogym fitness centres, private hospital, schools, and 40 acres of parks. Beyond Studio to 3BR apartments, Azizi Venice offers standalone waterfront mansions with private pools, home cinemas, games rooms, Turkish hammams, and even a private snow room. Capital appreciation of 15-20% and rental yields of 7-9% projected per Azizi's own materials. 5 minutes to Emirates Road (E611), 7 minutes to Al Maktoum International Airport, 15 minutes to Expo City, 25 minutes to Dubai Marina.",
+    amenities: [
+      '18km Swimmable Crystal Lagoon & Boardwalk',
+      'Opera House (2,000-seat Performing Arts Venue)',
+      'Kilometre-Long Retail & Dining Boulevard',
+      'Crystal Mosque',
+      'Technogym Fitness Centres',
+      'School, Nursery & Kindergarten',
+      'Private Hospital',
+      '40 Acres of Parks',
+      'Arts & Cultural District',
+      'Miracle Garden-Style Vertical Garden',
+      'Family & Lifestyle Hotels',
+    ],
+  },
 ]
 
 export const STATUS_COLORS: Record<Status, string> = {

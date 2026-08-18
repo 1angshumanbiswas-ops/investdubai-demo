@@ -29,20 +29,20 @@ export interface NewsItem {
   date: string // human-readable, e.g. 'Jul 18, 2026'
 }
 
-export const NEWS_LAST_CURATED = 'July 19, 2026'
+export const NEWS_LAST_CURATED = 'August 18, 2026'
 
 export const NEWS_ITEMS: NewsItem[] = [
   {
-    id: 'dubai-h1-2026-record',
-    title: 'Dubai Property Market Closes H1 2026 at AED 286.4B — Second-Highest Half-Year on Record',
+    id: 'dubai-h1-2026-deliveries-surge',
+    title: 'Dubai Delivers Record 24,800 New Homes in H1 2026 as Market Shifts to Completions',
     region: 'Dubai',
     category: 'Market Data',
     excerpt:
-      "Dubai Land Department figures confirm 86,005 transactions across the first half of 2026 — trailing only 2024's record pace even as deal volume cools.",
-    source: 'Dubai Media Office / DLD',
+      'Cavendish Maxwell data shows deliveries up 37.6% YoY as developers pull back on new launches (124 projects vs. 410 in 2025) — a maturing market moving from launch-led to delivery-driven.',
+    source: 'Khaleej Times / Cavendish Maxwell',
     sourceUrl:
-      'https://www.arabianbusiness.com/real-estate/dubai-property-boom-shows-no-sign-of-slowing-as-sector-hits-7-1bn-in-q1',
-    date: 'Jul 8, 2026',
+      'https://www.khaleejtimes.com/business/dubai-delivers-record-24800-new-homes-in-h1-2026-as-market-matures',
+    date: 'Jul 30, 2026',
   },
   {
     id: 'abu-dhabi-h1-2026-fdi',

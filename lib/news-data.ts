@@ -29,32 +29,32 @@ export interface NewsItem {
   date: string // human-readable, e.g. 'Jul 18, 2026'
 }
 
-export const NEWS_LAST_CURATED = 'August 18, 2026'
+export const NEWS_LAST_CURATED = 'August 19, 2026'
 
 export const NEWS_ITEMS: NewsItem[] = [
   {
-    id: 'dubai-h1-2026-deliveries-surge',
-    title: 'Dubai Delivers Record 24,800 New Homes in H1 2026 as Market Shifts to Completions',
+    id: 'dubai-186-new-developers-2026',
+    title: 'Dubai Attracts 186 New Property Developers in First Seven Months of 2026',
     region: 'Dubai',
     category: 'Market Data',
     excerpt:
-      'Cavendish Maxwell data shows deliveries up 37.6% YoY as developers pull back on new launches (124 projects vs. 410 in 2025) — a maturing market moving from launch-led to delivery-driven.',
-    source: 'Khaleej Times / Cavendish Maxwell',
+      "New developer licences are landing at roughly 25 a month — 180 via Dubai's Department of Economy and Tourism alone — underlining sustained investor confidence in the emirate's real estate hub status.",
+    source: 'Gulf News',
     sourceUrl:
-      'https://www.khaleejtimes.com/business/dubai-delivers-record-24800-new-homes-in-h1-2026-as-market-matures',
-    date: 'Jul 30, 2026',
+      'https://gulfnews.com/amp/story/business/property/dubai-attracts-186-new-property-developers-in-first-seven-months-of-2026-1.500641994',
+    date: 'Aug 15, 2026',
   },
   {
-    id: 'abu-dhabi-h1-2026-fdi',
-    title: 'Abu Dhabi Real Estate Transactions Surge 112% to AED 117B, Foreign Investment Up 309%',
+    id: 'abu-dhabi-2026-sales-exceed-2025',
+    title: 'Abu Dhabi Residential Sales Already Exceed Full-Year 2025 Total by Mid-August',
     region: 'Abu Dhabi',
     category: 'Foreign Investment',
     excerpt:
-      'ADREC data shows non-resident investors from 116 nationalities — up from 82 a year earlier — drove record foreign direct investment into the capital\u2019s property market.',
-    source: 'The National',
+      'Adrec data shows residential sales hit AED 86.3B by mid-August 2026, already ahead of 2025\u2019s full-year AED 83.2B — foreign investment from 116 nationalities drove the record first-half pace.',
+    source: 'AGBI / Adrec',
     sourceUrl:
-      'https://www.thenationalnews.com/business/property/2026/07/18/abu-dhabi-property-transactions-surge-112-despite-war-to-hit-dh117-billion-in-first-half-of-2026/',
-    date: 'Jul 18, 2026',
+      'https://www.agbi.com/analysis/real-estate/2026/08/abu-dhabi-property-sales-exceed-2025-by-mid-august/',
+    date: 'Aug 12, 2026',
   },
   {
     id: 'rak-wynn-al-marjan',

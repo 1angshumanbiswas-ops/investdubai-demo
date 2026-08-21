@@ -1886,9 +1886,9 @@ export const PROPERTIES: Property[] = [
     developerName: 'Azizi',
     projectName: 'Azizi Venice',
     location: 'Dubai South, Dubai',
-    startingPrice: 1_230_000,
+    startingPrice: 758_000, // per Azizi's own site (Studio) — 1BR/2BR/3BR run 1.23M-3.38M, see sqft/price breakdown below
     paymentPlan: '10% booking · 10% at 30 days · 10% at 120 days · 70% on handover', // Phase 1 plan — Phase 2 (10/10/10/10/10/50) and select buildings (10/10/5/75) also available, confirm which phase before quoting a client
-    handoverDate: 'Q3 2025 – 2026', // phased: Venice 1 & 2 Q3 2025, Venice 3 Q2 2025, Venice 4 & 5 Q4 2025, Venice 6-9 2026 — confirm which phase/tower before quoting a client
+    handoverDate: null, // UNCONFIRMED — Azizi's site shows only ~38-39% construction progress as of Aug 2026, which doesn't line up with the phased 2025 handover dates found via web search. Confirm actual handover with Shylesh/Azizi before quoting a client.
     unitTypes: ['Studio', '1BR', '2BR', '3BR', 'Villa'],
     goldenVisaEligible: true,
     brochureUrl: '/brochures/Venice_Brochure.pdf',
@@ -1919,6 +1919,44 @@ export const PROPERTIES: Property[] = [
       'Arts & Cultural District',
       'Miracle Garden-Style Vertical Garden',
       'Family & Lifestyle Hotels',
+    ],
+  },
+  {
+    id: '44',
+    developerName: 'Beyond',
+    projectName: 'Kanyon',
+    location: 'Dubai Maritime City, Dubai',
+    startingPrice: 2_400_000, // BROKER-SOURCED, UNCONFIRMED — Beyond's own site (beyonddevelopments.ae) is down. 5 third-party listing sites disagree: 1BR starting price ranges AED 2.4M-2.8M (3 sources) vs AED 3.745M (1 outlier, likely a 2BR price). Used the ~2.4M consensus. Confirm with Beyond/Shylesh before quoting a client.
+    paymentPlan: '10% booking · 40% during construction · 50% on handover', // BROKER-SOURCED, UNCONFIRMED — most-cited structure across listing sites; some describe it loosely as "50/50 with 10% EOI." Confirm exact milestones with Beyond before quoting a client.
+    handoverDate: null, // UNCONFIRMED — listing sites disagree: Q3 2028, Q1 2029, and Q2 2029 all appear across sources. Confirm with Beyond/Shylesh before quoting a client.
+    unitTypes: ['1BR', '2BR', '3BR'],
+    goldenVisaEligible: 'check', // only 1 of 5 third-party sources confirms Golden Visa eligibility explicitly — confirm before quoting a client
+    brochureUrl: '/brochures/Kanyon_Project_Brochure.pdf',
+    roiEstimate: 7.0, // ESTIMATE — only one third-party source cites a 6-8% rental yield range for 1-2BR units (midpoint used); not present in Beyond's own fact sheet. Confirm before publishing as final.
+    status: 'Off-Plan',
+    image: '/images/properties/kanyon-tower-exterior-day.jpg',
+    gallery: [
+      '/images/properties/kanyon-tower-exterior-day.jpg',
+      '/images/properties/kanyon-podium-pool-aerial.jpg',
+      '/images/properties/kanyon-rooftop-pool-sunset.jpg',
+      '/images/properties/kanyon-grand-lobby.jpg',
+      '/images/properties/kanyon-living-room-sea-view.jpg',
+    ],
+    videoUrl: 'https://www.youtube.com/embed/TVl8q4QUZOA',
+    featured: true,
+    beds: '1–3',
+    sqft: '798–2,402 sq.ft.', // range spans the low/high figures cited across broker sources — unit-by-unit breakdown not in Beyond's own fact sheet
+    description: "Kanyon is a sculptural residential tower by Beyond, set within Dubai Maritime City's emerging Forest District — a nature-first urban precinct blending woodland paths, shaded promenades, and waterfront horizons between the city, sea, and forest. The tower's carved facade traces an incision of light and shadow through planted balconies, opening onto views toward Downtown Dubai, the World Islands, and Port Rashid. The arrival experience unfolds through a refined drop-off framed by landscaped terraces into a stone-and-glass grand lobby anchored by a signature marble feature wall. Residences are designed around flowing, human-scaled interiors with full-height sea-facing glazing. 5 minutes to Mina Rashid, 10 minutes to Jumeirah Beach Coast, 15 minutes to Downtown Dubai/Burj Khalifa, 20 minutes to Dubai International Airport and DIFC.",
+    amenities: [
+      'Sky Pool',
+      'Rooftop Exclusive Bar (Panoramic City & Sea Views)',
+      'Private Spa (Saunas, Steam Rooms & Relaxation Lounges)',
+      'Indoor Gym Club',
+      'Sea-Facing Business Lounge',
+      'Podium Pool & Landscaped Gardens',
+      'Kids Club',
+      'Multi-Functional Pavilions',
+      'Grand Lobby with Signature Stone & Water Feature Wall',
     ],
   },
 ]

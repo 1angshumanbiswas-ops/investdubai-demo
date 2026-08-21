@@ -29,7 +29,8 @@ export default function PropertyDetailPage({ params }: { params: Promise<{ id: s
   const [currency, setCurrency] = useState('AED')
 
   const images = property.gallery?.length ? property.gallery : [property.image]
-  const waText = `Hi Shylesh, I'm interested in ${property.projectName} by ${property.developerName} in ${property.location}. Price from AED ${property.startingPrice.toLocaleString()}. Please share available units and next steps.`
+  const priceText = property.startingPrice > 0 ? `Price from AED ${property.startingPrice.toLocaleString()}` : 'Price on request'
+  const waText = `Hi Shylesh, I'm interested in ${property.projectName} by ${property.developerName} in ${property.location}. ${priceText}. Please share available units and next steps.`
 
   return (
     <div className="min-h-screen bg-cream">
@@ -197,11 +198,17 @@ export default function PropertyDetailPage({ params }: { params: Promise<{ id: s
               </div>
 
               <p className="text-xs text-gray-400 mb-1">Starting From</p>
-              <p className="font-display text-2xl font-bold text-navy mb-1">
-                {formatPrice(property.startingPrice, currency)}
-              </p>
-              {currency !== 'AED' && (
-                <p className="text-xs text-gray-400 mb-4">AED {property.startingPrice.toLocaleString()}</p>
+              {property.startingPrice > 0 ? (
+                <>
+                  <p className="font-display text-2xl font-bold text-navy mb-1">
+                    {formatPrice(property.startingPrice, currency)}
+                  </p>
+                  {currency !== 'AED' && (
+                    <p className="text-xs text-gray-400 mb-4">AED {property.startingPrice.toLocaleString()}</p>
+                  )}
+                </>
+              ) : (
+                <p className="font-display text-2xl font-bold text-navy mb-4">Price on Request</p>
               )}
 
               {/* Key stat pills */}

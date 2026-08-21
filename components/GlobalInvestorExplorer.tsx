@@ -126,23 +126,27 @@ export default function GlobalInvestorExplorer() {
 
   const activeRange = rangeIdx !== null ? BUDGET_RANGES[rangeIdx] : null
 
+  // Price-on-Request listings (startingPrice === 0) are excluded from budget matching —
+  // they can't be compared against a budget range and would otherwise wrongly rank as "cheapest"
+  const pricedProperties = PROPERTIES.filter(p => p.startingPrice > 0)
+
   // Properties within the selected range max (affordable), ascending price
   const matching = (selected && activeRange)
-    ? PROPERTIES
+    ? pricedProperties
         .filter(p => p.startingPrice <= activeRange.max)
         .sort((a, b) => a.startingPrice - b.startingPrice)
     : []
 
   // Aspirational: just above range max, up to 30% over
   const aspirational = (selected && activeRange)
-    ? PROPERTIES
+    ? pricedProperties
         .filter(p => p.startingPrice > activeRange.max && p.startingPrice <= activeRange.max * 1.3)
         .sort((a, b) => a.startingPrice - b.startingPrice)
         .slice(0, 2)
     : []
 
   // Cheapest property for "too low" empty state
-  const cheapest = [...PROPERTIES].sort((a, b) => a.startingPrice - b.startingPrice)[0]
+  const cheapest = [...pricedProperties].sort((a, b) => a.startingPrice - b.startingPrice)[0]
 
   const panelOpen = selected !== null
 

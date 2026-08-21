@@ -1959,6 +1959,46 @@ export const PROPERTIES: Property[] = [
       'Grand Lobby with Signature Stone & Water Feature Wall',
     ],
   },
+  {
+    id: '45',
+    developerName: 'Beyond',
+    projectName: 'Passo — The Beach Mansions',
+    location: 'Palm Jumeirah, Dubai',
+    startingPrice: 0, // PRICE ON REQUEST — not published anywhere. Confirmed via brochure (no figure given) and 2 independent broker sites (both list "price on request"). Only 6 mansions exist total. DO NOT quote a figure to a client — contact Beyond directly for a quote.
+    paymentPlan: '10% on booking · 10% one month from booking · eight further 5% installments (01 Apr 2026 – 01 Jun 2029) · 40% on completion', // per official PAYMENT_PLAN.pdf from Beyond — confirmed, not broker-sourced
+    handoverDate: 'Q3 2029', // per official PAYMENT_PLAN.pdf — confirmed
+    unitTypes: ['6BR'],
+    goldenVisaEligible: true,
+    brochureUrl: '/brochures/Passo_Brochure.pdf',
+    roiEstimate: 6.0, // ESTIMATE — no project-specific yield data; broker sources cite general Palm Jumeirah returns of 5-7% long-term / up to 10-11% short-term rental. Confirm before publishing as final.
+    status: 'Off-Plan',
+    image: '/images/properties/passo-twin-towers-aerial-night.jpg',
+    gallery: [
+      '/images/properties/passo-twin-towers-aerial-night.jpg',
+      '/images/properties/passo-infinity-pool-dusk.jpg',
+      '/images/properties/passo-grand-salon-living.jpg',
+      '/images/properties/passo-master-suite-skyline.jpg',
+      '/images/properties/passo-kitchen-sea-view.jpg',
+    ],
+    videoUrl: 'https://www.youtube.com/embed/WGQsSvFlIG0',
+    featured: true,
+    beds: '6',
+    sqft: '~11,830 sq.ft.', // per Beach Mansions-specific broker listing (1,086 sqm / 11,688-11,830 sqft cited across sources)
+    description: "Passo — The Beach Mansions is an ultra-exclusive collection of just 6 standalone, yacht-inspired 6-bedroom mansions by Beyond on Palm Jumeirah's West Crescent, part of the wider Passo development alongside the Bella and Avita apartment towers. Inspired by nature and crafted by the sea, each mansion is a statement in fluid architecture — sculpted balconies, glass-framed gardens, and a private plunge pool set within a yacht-inspired deck that bleeds into the beach. Arrival is through secure gates and three dedicated climate-controlled parking bays with a private lift delivering residents directly into their home — no shared corridors. Inside, a 6-metre clear double-height Grand Salon opens onto landscaped terraces and uninterrupted sea views, a chef-calibre show kitchen with Gaggenau appliances serves both everyday life and grand entertaining, and the master suite features dual dressing rooms with marble-clad his-and-hers bathrooms and a secluded sea-facing terrace. A private indoor cinema and resort-level wellness and kids' pavilions round out the residence-level amenities.",
+    amenities: [
+      'Private Plunge Pool & Yacht-Inspired Deck',
+      'Private Indoor Cinema',
+      'Wellness Pavilion',
+      'Kids Pavilion',
+      'Spa & Deck',
+      'Sky Pool & Garden',
+      'Aquascape & Pools',
+      'The Social Deck',
+      'Landscaped Outdoor Gardens',
+      'Private 3-Car Basement Parking with Private Lift Lobby',
+      'Chef-Calibre Kitchen with Gaggenau Appliances',
+    ],
+  },
 ]
 
 export const STATUS_COLORS: Record<Status, string> = {

@@ -29,54 +29,55 @@ export interface NewsItem {
   date: string // human-readable, e.g. 'Jul 18, 2026'
 }
 
-export const NEWS_LAST_CURATED = 'August 19, 2026'
+export const NEWS_LAST_CURATED = 'September 24, 2026'
 
 export const NEWS_ITEMS: NewsItem[] = [
   {
-    id: 'dubai-186-new-developers-2026',
-    title: 'Dubai Attracts 186 New Property Developers in First Seven Months of 2026',
+    id: 'dubai-weekly-transactions-sep-2026',
+    title: 'Dubai Real Estate Transactions Hit AED 10.67 Billion in a Single Week',
     region: 'Dubai',
     category: 'Market Data',
     excerpt:
-      "New developer licences are landing at roughly 25 a month — 180 via Dubai's Department of Economy and Tourism alone — underlining sustained investor confidence in the emirate's real estate hub status.",
-    source: 'Gulf News',
+      "Dubai Land Department figures for September 7-11, 2026 show AED 6.78B in sales across 2,931 deals, plus AED 2.80B in mortgages and AED 1.09B in gift transfers - a snapshot of the market's current weekly pace.",
+    source: 'The Week (via DLD data)',
     sourceUrl:
-      'https://gulfnews.com/amp/story/business/property/dubai-attracts-186-new-property-developers-in-first-seven-months-of-2026-1.500641994',
-    date: 'Aug 15, 2026',
+      'https://www.theweek.in/news/middle-east/2026/09/12/dubai-real-estate-transactions-september.html',
+    date: 'Sep 12, 2026',
   },
   {
-    id: 'abu-dhabi-2026-sales-exceed-2025',
-    title: 'Abu Dhabi Residential Sales Already Exceed Full-Year 2025 Total by Mid-August',
+    id: 'abu-dhabi-adrec-h1-2026',
+    title: 'Abu Dhabi Residential Sales Value Nearly Triples to AED 70.4B in H1 2026',
     region: 'Abu Dhabi',
     category: 'Foreign Investment',
     excerpt:
-      'Adrec data shows residential sales hit AED 86.3B by mid-August 2026, already ahead of 2025\u2019s full-year AED 83.2B — foreign investment from 116 nationalities drove the record first-half pace.',
-    source: 'AGBI / Adrec',
+      "ADREC's official H1 2026 report shows residential sales value up 178% year-on-year from AED 25.3B, with resident-expat and foreign buyers together accounting for 70% of that value and off-plan deals dominating at 89%.",
+    source: 'ADREC (Abu Dhabi Real Estate Centre)',
     sourceUrl:
-      'https://www.agbi.com/analysis/real-estate/2026/08/abu-dhabi-property-sales-exceed-2025-by-mid-august/',
-    date: 'Aug 12, 2026',
+      'https://adrec.gov.ae/en/news/press-29---adrec-releases-the-abu-dhabi-real-estate-market-report-for-h1-2026',
+    date: 'Aug 18, 2026',
   },
   {
-    id: 'rak-wynn-al-marjan',
-    title: 'Wynn Al Marjan Island Advances Toward Spring 2027 Opening, Fuelling RAK Price Surge',
+    id: 'rak-q2-2026-cooling-wynn-autumn-2027',
+    title: 'RAK Prices Ease in Q2 but Still Up 6.5% Year-on-Year as Wynn Targets Autumn 2027',
     region: 'Ras Al Khaimah',
     category: 'Destination Project',
     excerpt:
-      "The UAE's first integrated resort — a $5.1B project — has driven Al Marjan Island villa and apartment prices up 20\u201340%+ year-on-year ahead of its 2027 debut.",
+      "Apartment prices dipped 0.7% quarter-on-quarter as 13,800 new homes are delivered through 2028, even as year-on-year apartment prices stay up 6.5% and villa rents up 8% - with Wynn Al Marjan Island's opening now guided to autumn 2027, a shift from earlier spring guidance.",
     source: 'Khaleej Times',
     sourceUrl:
-      'https://www.khaleejtimes.com/business/ras-al-khaimah-real-estate-witnessing-strong-progress-as-wynn-rapidly-moves-towards-completion',
-    date: 'Jul 2026',
+      'https://www.khaleejtimes.com/business/ras-al-khaimah-rents-rise-in-h1-2026-but-apartment-rates-drop-in-q2',
+    date: 'Sep 2, 2026',
   },
   {
-    id: 'henley-uae-millionaire-migration-2026',
-    title: "UAE Ranked World's #1 Millionaire Migration Destination — Again",
+    id: 'uae-wide-h1-2026-multi-emirate-growth',
+    title: 'All Five Emirates Post H1 2026 Real Estate Growth, Led by a Surge in Foreign Investment',
     region: 'UAE',
-    category: 'Global Wealth Trends',
+    category: 'National Trends',
     excerpt:
-      "Henley & Partners' 2026 report projects Dubai alone will add over 7,000 new millionaires and $7B in fresh capital this year, reinforcing the UAE's pull for globally mobile HNWIs.",
-    source: 'Henley & Partners',
-    sourceUrl: 'https://www.henleyglobal.com/newsroom/press-releases/henley-private-wealth-migration-report-2026',
-    date: 'Jun 16, 2026',
+      "Abu Dhabi (+112% to AED 117B), Dubai (+52% on 104 major projects) and Sharjah (+9.3%) all posted first-half gains, with Abu Dhabi alone drawing AED 13.8B in foreign direct investment (+309%) from 116 nationalities - a broad-based national picture, not a one-emirate story.",
+    source: 'Gulf Today',
+    sourceUrl:
+      'https://www.gulftoday.ae/business/2026/08/28/uae-real-estate-sector-records-strong-first-half-growth-driven-by-investment-demand',
+    date: 'Aug 28, 2026',
   },
 ]

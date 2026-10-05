@@ -1999,6 +1999,44 @@ export const PROPERTIES: Property[] = [
       'Chef-Calibre Kitchen with Gaggenau Appliances',
     ],
   },
+  {
+    id: '46',
+    developerName: 'Binghatti',
+    projectName: 'Starfall',
+    location: 'Al Jaddaf, Dubai',
+    startingPrice: 2_499_999, // 2 Bedroom Royal Suite — the entry point that clears the AED 2M+ Golden Visa threshold. *Lower tiers exist within this same project: Studio from AED 759,999 (528 units), 1BR from AED 1,234,999 (168 units), 1BR Royal Suite AED 1,599,999 (1 unit), 2BR (standard) from AED 1,974,999 (55 units) — all below AED 2M and shown here for completeness only, not as the headline price. Retail units from AED 2,397,999 (17 units). Source: broker price sheet, confirmed.
+    paymentPlan: '50/50 (Studio, 2BR & Retail) or 60/40 (1BR) — 50-60% during construction, remainder on handover', // Per broker-supplied payment plan slide: Studios/2BR/Retail run 50-50, 1BR units run 60-40. Exact milestone schedule (deposit %, instalment count/dates) not broken out beyond the split ratio — confirm full schedule with Binghatti/broker before quoting a client. Handover date still not disclosed.
+    handoverDate: null, // NOT DISCLOSED — no handover date in the official brochure. Confirm with Binghatti/broker before quoting a client.
+    unitTypes: ['Studio', '1BR', '2BR'], // Royal Suite variants (1 x 1BR Royal Suite, 2 x 2BR Royal Suite) sit within these same categories, not a separate UnitType
+    goldenVisaEligible: 'check', // Brochure markets "10-Year Golden Visa Eligibility" project-wide, but AED 2M is a per-unit threshold: only the 2BR Royal Suite (AED 2,499,999, 2 units) and retail units (AED 2,397,999+) actually clear it. Studio/1BR/2BR-standard units (AED 759,999–1,974,999) do not on price alone. Confirm per-unit eligibility with Binghatti/broker before telling a client a specific unit qualifies.
+    brochureUrl: '/brochures/Binghatti_Starfall_Brochure.pdf',
+    roiEstimate: 10.0, // ESTIMATE — Binghatti's own brochure quotes an "8% to 12% net" range project-wide; midpoint used, not independently sourced or unit-specific. Confirm before publishing as final.
+    status: 'Off-Plan',
+    image: '/images/properties/starfall-exterior-day.jpg',
+    gallery: [
+      '/images/properties/starfall-exterior-day.jpg',
+      '/images/properties/starfall-aerial-night.jpg',
+      '/images/properties/starfall-rooftop-sunset.jpg',
+      '/images/properties/starfall-pool-lounge-night.jpg',
+      '/images/properties/starfall-exterior-night.jpg',
+    ],
+    featured: true,
+    beds: 'Studio–2',
+    sqft: '315–1,117 sq.ft.', // suite area range across Studio/1BR/2BR per brochure; excludes the 2 Royal Suite variants (areas not individually disclosed)
+    description: "Binghatti Starfall is a 19-storey mixed-use residential and retail tower in Al Jaddaf, on the western bank of Dubai Creek — 2 minutes from Al Jaddaf Metro Station, 8 minutes from Downtown Dubai and Burj Khalifa, and 6 minutes from Dubai International Airport. The tower comprises 754 apartments across Studio, 1-Bedroom and 2-Bedroom configurations (including 1 and 2-Bedroom Royal Suites) plus 17 ground-floor retail units, raised above a 4-level podium that lifts the first residential floor clear of street noise and the adjacent elevated metro line. A signature open-frame peak extends past the roofline, lit at night to simulate falling starlight. The elevated podium deck holds 10+ lifestyle amenities — a temperature-controlled adults' pool and jacuzzi, a dedicated kids' pool and splash zone, a high-end gym with indoor and outdoor training areas, an outdoor yoga and aerobics platform, an observatory deck with telescopes for stargazing, and family zones with sunken seating — alongside a double-height lobby with bespoke concierge and a 17-store ground-floor retail promenade. Binghatti markets the project on 100% freehold ownership, 0% property/capital-gains/income tax, 10-Year Golden Visa eligibility for qualifying units, and Al Jaddaf's historical price appreciation of up to 100%.",
+    amenities: [
+      'Temperature-Controlled Adults Pool & Jacuzzi',
+      'Kids Pool & Aqua Splash Zone',
+      'High-End Gym & Fitness Center',
+      'Outdoor Yoga & Aerobics Platform',
+      'Observatory Deck with Telescopes',
+      'Family Zones & Sunken Seating',
+      'Outdoor Showers & Multi-Purpose Gazebo',
+      '17-Store Ground-Floor Retail Promenade',
+      'Bespoke Concierge & Double-Height Lobby',
+      'Binghatti After-Sales Property Management',
+    ],
+  },
 ]
 
 export const STATUS_COLORS: Record<Status, string> = {

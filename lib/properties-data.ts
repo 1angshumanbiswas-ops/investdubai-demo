@@ -2037,6 +2037,48 @@ export const PROPERTIES: Property[] = [
       'Binghatti After-Sales Property Management',
     ],
   },
+  {
+    id: '47',
+    developerName: 'Ellington Properties',
+    projectName: 'Eltiera Views',
+    location: 'Jumeirah Islands, Dubai',
+    startingPrice: 2_132_828, // Lowest-priced available unit per broker price sheet: Unit II-310, Tower 2, 1BR, 796.42 sq.ft total (712.25 internal + 84.17 external). 11 units were listed as available at time of sourcing, ranging AED 2,132,828 (1BR) to AED 4,689,828 (3BR). All 11 clear the AED 2M+ Golden Visa threshold on price alone. Source: broker price sheet, confirmed.
+    paymentPlan: '20% booking / 10% at 60 days / 5% at 120 days / 5% at 180 days / 5% at 240 days / 5% at 360 days / 5% at 20% construction / 5% at 30% construction / 5% at 40% construction / 5% at 50% construction / 30% on completion', // Per broker-supplied payment plan slide — construction-linked plan totaling 70% pre-handover, 30% on completion. Source: broker, confirmed.
+    handoverDate: 'Q4 2029', // Anticipated completion date per broker factsheet. Confirm with Ellington/broker closer to launch as off-plan timelines can shift.
+    unitTypes: ['1BR', '2BR', '3BR'], // Reflects the 11 units confirmed available on the broker price sheet (6x1BR, 3x2BR, 2x3BR) at time of sourcing. Ellington's own brochure markets the wider project as 1-4BR apartments plus penthouses — those tiers exist in the building but had no confirmed available units/pricing at time of sourcing.
+    goldenVisaEligible: 'check', // All 11 confirmed-available units clear the AED 2M price threshold, but Ellington's brochure does not explicitly market Golden Visa eligibility for this project (unlike some Binghatti/other developer brochures that state it outright). Confirm eligibility with Ellington/broker before telling a client a specific unit qualifies.
+    brochureUrl: '/brochures/Eltiera_Views_Brochure.pdf',
+    roiEstimate: 6.0, // ESTIMATE — no project-specific rental yield disclosed by Ellington or broker. Jumeirah Islands is an established, mature community (unlike most off-plan areas in this dataset); 6% reflects typical Dubai secondary/established-community yields, not a project-specific figure. Confirm before publishing as final.
+    status: 'Off-Plan',
+    image: '/images/properties/eltiera-views-exterior-dusk.jpg',
+    gallery: [
+      '/images/properties/eltiera-views-exterior-dusk.jpg',
+      '/images/properties/eltiera-views-balcony-lakeview.jpg',
+      '/images/properties/eltiera-views-exterior-day-lake.jpg',
+      '/images/properties/eltiera-views-podium-pool-skyline.jpg',
+      '/images/properties/eltiera-views-clubhouse-lounge.jpg',
+    ],
+    videoUrl: 'https://youtu.be/BV-uOtcTGjM',
+    featured: true,
+    beds: '1–3', // reflects currently available units per broker sheet; building spans 1-4BR + penthouses per Ellington's brochure
+    sqft: '796–1,672 sq.ft.', // total (internal + external) sq.ft range across the 11 available units per broker price sheet; internal-only range is 712–1,499 sq.ft.
+    description: "Eltiera Views by Ellington Properties is a refined continuation of the neighbouring Eltiera Heights, rising across two towers (Ground + 3 podium levels + 26 residential floors + roof) on the shores of Jumeirah Islands, with key views over Jumeirah Islands' own lakes, Emirates Hills and golf courses, Jumeirah Lake Towers, the Marina skyline, and Uptown Dubai. The residence is anchored by a landscaped podium deck with two infinity pools — one for families, one adults-only — framed by sculpted gardens and the community's signature lakes. A four-level clubhouse forms the social heart of the project: a club lounge, cinema room, games room, co-working suite with private rooms, a fully-equipped gym with a climbing wall, dedicated yoga and dance studios, and a full spa and wellness wing with sauna, hydrotherapy pool and treatment rooms. Families are served by indoor and outdoor kids' play areas, a storybook-themed play zone, padel courts, pet-friendly facilities and wash areas, while practical touches include EV charging, a dedicated car wash bay, and bicycle parking. The project is freehold, serviced by 6 passenger elevators and 1 service elevator, with an anticipated service charge of AED 21 per sq.ft. and anticipated completion in Q4 2029. The collection spans 1 to 4-bedroom apartments and penthouses, with 1-2BR units given 1 parking space and 3-4BR units given 2.",
+    amenities: [
+      'Two Infinity Pools (Family & Adults-Only)',
+      'Fully-Equipped Gym with Climbing Wall',
+      'Yoga & Pilates Studio',
+      'Dance Studio',
+      '4-Level Clubhouse (Cinema Room, Games Room, Co-Working Suite, Club Lounge)',
+      'Spa & Wellness Center with Sauna & Hydrotherapy Pool',
+      'Padel Courts',
+      'Indoor & Outdoor Kids Play Areas',
+      'Pet-Friendly Facilities & Wash Areas',
+      'F&B Terraces & Retail Shops',
+      'Drop-Off & Arrival Plaza with Lobby Lounge',
+      'EV Charging Station & Independent Car Wash Bay',
+      'Barbeque Area & Garden Courtyards',
+    ],
+  },
 ]
 
 export const STATUS_COLORS: Record<Status, string> = {

@@ -2058,7 +2058,7 @@ export const PROPERTIES: Property[] = [
       '/images/properties/eltiera-views-podium-pool-skyline.jpg',
       '/images/properties/eltiera-views-clubhouse-lounge.jpg',
     ],
-    videoUrl: 'https://youtu.be/BV-uOtcTGjM',
+    videoUrl: 'https://www.youtube.com/embed/BV-uOtcTGjM',
     featured: true,
     beds: '1–3', // reflects currently available units per broker sheet; building spans 1-4BR + penthouses per Ellington's brochure
     sqft: '796–1,672 sq.ft.', // total (internal + external) sq.ft range across the 11 available units per broker price sheet; internal-only range is 712–1,499 sq.ft.
